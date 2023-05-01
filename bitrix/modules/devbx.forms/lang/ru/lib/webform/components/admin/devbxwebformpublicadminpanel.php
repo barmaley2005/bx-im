@@ -1,0 +1,4 @@
+<?php
+$MESS['DEVBX_WEB_FORM_PUBLIC_ADMIN_JS_VALIDATION'] = 'Валидация JS';
+
+

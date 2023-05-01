@@ -1,0 +1,5 @@
+<?php
+$MESS['DEVBX_COMPONENTS_NAME'] = 'DEV-BX';
+$MESS['DEVBX_FORMS_COMPONENTS_NAME'] = 'Формы';
+$MESS['DEVBX_FORMS_COMPONENT_FORM_NAME'] = 'Форма';
+$MESS['DEVBX_FORMS_COMPONENT_FORM_DESCRIPTION'] = 'Размещение настраиваемой формы на странице';

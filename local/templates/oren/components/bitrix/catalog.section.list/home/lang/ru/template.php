@@ -1,0 +1,2 @@
+<?php
+$MESS['HOME_SECTION_LIST_BLOCK_TITLE'] = 'Каталог';

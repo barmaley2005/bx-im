@@ -1,0 +1,4 @@
+<?php
+$MESS['DEVBX_WEB_FORM_DIALOG_BTN_CLOSE_TITLE'] = 'Закрыть';
+$MESS['DEVBX_WEB_FORM_BTN_FORM_SAVE'] = 'Сохранить';
+$MESS['DEVBX_WEB_FORM_BTN_FORM_PREVIEW'] = 'Предпросмотр';

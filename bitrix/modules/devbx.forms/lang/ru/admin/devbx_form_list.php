@@ -1,0 +1,3 @@
+<?php
+$MESS['DEVBX_FORMS_FORM_LIST_TITLE'] = 'Формы';
+$MESS['DEVBX_FORMS_FORM_LIST_FORM_NAME'] = 'Название';

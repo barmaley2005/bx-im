@@ -1,0 +1,21 @@
+<?php
+$MESS['DEVBX_FORMS_COMPONENT_FORM_ID'] = 'Форма';
+$MESS['DEVBX_FORMS_COMPONENT_FORM_RESULT_LIST_PAGER_TITLE'] = 'Результаты';
+$MESS['C_DEVBX_FORM_RESULT_LIST_FILTER_NAME'] = 'Фильтр';
+$MESS['C_DEVBX_FORM_RESULT_LIST_SORT_ASC'] = 'По возрастранию';
+$MESS['C_DEVBX_FORM_RESULT_LIST_SORT_DESC'] = 'По убыванию';
+$MESS['C_DEVBX_FORM_RESULT_LIST_FIELD_ID'] = 'ID';
+$MESS['C_DEVBX_FORM_RESULT_LIST_FIELD_ACTIVE'] = 'Активность';
+$MESS['C_DEVBX_FORM_RESULT_LIST_FIELD_CREATED_DATE'] = 'Дата создания';
+$MESS['C_DEVBX_FORM_RESULT_LIST_FIELD_MODIFIED_DATE'] = 'Дата модификации';
+$MESS['C_DEVBX_FORM_RESULT_LIST_RESULTS_COUNT'] = 'Количество результатов';
+$MESS['C_DEVBX_FORM_RESULT_LIST_SORT_BY1'] = 'Поле для первой сортировки результатов';
+$MESS['C_DEVBX_FORM_RESULT_LIST_SORT_ORDER1'] = 'Направление для первой сортировки результатов';
+$MESS['C_DEVBX_FORM_RESULT_LIST_SORT_BY2'] = 'Поле для второй сортировки результатов';
+$MESS['C_DEVBX_FORM_RESULT_LIST_SORT_ORDER2'] = 'Направление для второй сортировки результатов';
+$MESS['C_DEVBX_FORM_RESULT_LIST_DISPLAY_FIELDS'] = 'Поля';
+$MESS['C_DEVBX_FORM_RESULT_LIST_FIELD_CREATED_DATE_FORMAT'] = 'Формат показа даты создания';
+$MESS['C_DEVBX_FORM_RESULT_LIST_FIELD_MODIFIED_DATE_FORMAT'] = 'Формат показа даты модификации';
+$MESS['C_DEVBX_FORM_RESULT_LIST_ONLY_ACTIVE_RESULTS'] = 'Только активные результаты';
+$MESS['C_DEVBX_FORM_RESULT_LIST_PAGEN_ID'] = 'Идентификатор страницы';
+$MESS['C_DEVBX_FORM_RESULT_LIST_PAGER_NAME'] = 'Результаты';

@@ -1,0 +1,4 @@
+<?php
+$MESS['DEVBX_USER_TYPE_CATALOG_PRICE_DESCRIPTION'] = 'DEV-BX Привязка к типу цены';
+$MESS['DEVBX_USER_TYPE_CATALOG_PRICE_DEFAULT_VALUE_TITLE'] = 'Значение по умолчанию';
+$MESS['DEVBX_USER_TYPE_CATALOG_PRICE_NOT_SELECTED'] = 'Тип цены не выбран';

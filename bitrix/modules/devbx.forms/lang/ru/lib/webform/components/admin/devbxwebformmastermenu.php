@@ -1,0 +1,3 @@
+<?php
+$MESS['DEVBX_WEB_FORM_MENU_ITEM_CONSTRUCTOR'] = 'Конструктор формы';
+$MESS['DEVBX_WEB_FORM_MENU_ITEM_SETTINGS'] = 'Настройки';

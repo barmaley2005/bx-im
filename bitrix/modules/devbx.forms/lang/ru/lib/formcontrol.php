@@ -1,0 +1,3 @@
+<?php
+$MESS['DEVBX_FORM_FORM_CONTROL_FIELD_NOT_FOUND'] = 'Поле формы #FIELD_NAME# не найдено';
+$MESS['DEVBX_FORM_FORM_CONTROL_SUBMIT_BUTTON_TEXT'] = 'Отправить';

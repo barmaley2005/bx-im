@@ -1,0 +1,3 @@
+<?php
+$MESS['DEVBX_IBLOCK_PROPERTY_SITE'] = 'DEV-BX Привязка к сайту';
+$MESS['DEVBX_IBLOCK_PROPERTY_SITE_NOT_SELECTED'] = 'Сайт не выбран';

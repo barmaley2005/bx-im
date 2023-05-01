@@ -1,0 +1,3 @@
+<?php
+$MESS['DEVBX_WEB_FORM_PREV_PAGE_TITLE'] = 'Назад';
+$MESS['DEVBX_WEB_FORM_NEXT_PAGE_TITLE'] = 'Вперед';

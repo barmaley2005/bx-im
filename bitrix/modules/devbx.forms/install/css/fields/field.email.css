@@ -1,0 +1,6 @@
+.devbx-webform .devbx-webform-field-email {
+  margin-bottom: calc(var(--devbx-webform-gutter) / 4);
+  padding-top: calc(var(--devbx-webform-gutter) / 4);
+  display: block;
+  max-width: 100%;
+}

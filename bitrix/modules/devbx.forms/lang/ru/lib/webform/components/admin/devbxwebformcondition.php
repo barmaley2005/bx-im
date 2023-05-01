@@ -1,0 +1,5 @@
+<?php
+$MESS['DEVBX_WEB_FORM_FIELD_RULE_ALWAYS'] = 'Всегда';
+$MESS['DEVBX_WEB_FORM_FIELD_RULE_WHEN'] = 'Когда';
+$MESS['DEVBX_WEB_FORM_FIELD_RULE_NEVER'] = 'Никогда';
+$MESS['DEVBX_WEB_FORM_EDIT_CONDITION'] = 'Редактировать условие';

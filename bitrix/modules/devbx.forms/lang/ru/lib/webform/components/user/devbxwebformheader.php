@@ -1,0 +1,2 @@
+<?php
+$MESS['DEVBX_WEB_FORM_NAVIGATION_PAGE_TITLE'] = 'Шаг #NUM#';

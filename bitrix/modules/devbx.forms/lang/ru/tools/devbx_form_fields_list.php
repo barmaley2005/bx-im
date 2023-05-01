@@ -1,0 +1,7 @@
+<?php
+$MESS['DEVBX_FORM_FIELDS_FILTER_SHOW_N'] = 'не показывать';
+$MESS['DEVBX_FORM_FIELDS_FILTER_SHOW_I'] = 'точное совпадение';
+$MESS['DEVBX_FORM_FIELDS_FILTER_SHOW_E'] = 'поиск по маске';
+$MESS['DEVBX_FORM_FIELDS_FILTER_SHOW_S'] = 'поиск по подстроке';
+$MESS['DEVBX_FORMS_FIELDS_LIST_TITLE'] = 'Поля формы';
+$MESS['DEVBX_FORMS_FIELDS_LIST_USER_FIELD_LANG_NAME'] = 'Название';

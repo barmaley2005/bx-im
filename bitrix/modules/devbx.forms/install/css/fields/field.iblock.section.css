@@ -1,0 +1,20 @@
+.multiselect__content .option__image, .multiselect__content .option__desc, .multiselect__single .option__image, .multiselect__single .option__desc {
+  display: inline-block;
+  vertical-align: middle;
+}
+.multiselect__content .option__image, .multiselect__single .option__image {
+  padding-right: 15px;
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.multiselect__content .option__desc, .multiselect__single .option__desc {
+  max-width: calc(100% - 100px);
+}

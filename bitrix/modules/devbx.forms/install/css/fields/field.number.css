@@ -1,0 +1,36 @@
+.devbx-webform-spinner-number {
+  position: relative;
+}
+
+.devbx-webform-number-decrease, .devbx-webform-number-increase {
+  position: absolute;
+  bottom: var(--devbx-webform-border-width);
+  top: var(--devbx-webform-border-width);
+  z-index: 10;
+  width: min(28%, 2.5em);
+  background-color: var(--devbx-webform-button-bg-color);
+  cursor: pointer;
+  -webkit-transition: calc(var(--devbx-webform-speed) / 3);
+  -o-transition: calc(var(--devbx-webform-speed) / 3);
+  transition: calc(var(--devbx-webform-speed) / 3);
+}
+.devbx-webform-number-decrease:hover, .devbx-webform-number-increase:hover {
+  background-color: var(--devbx-webform-button-bg-hover-color);
+}
+.devbx-webform-number-decrease.devbx-webform-disabled, .devbx-webform-number-increase.devbx-webform-disabled {
+  background-color: var(--devbx-webform-button-disabled-bg-color);
+}
+
+.devbx-webform-number-decrease {
+  left: var(--devbx-webform-border-width);
+}
+
+.devbx-webform-number-increase {
+  right: var(--devbx-webform-border-width);
+}
+
+.devbx-webform-spinner-number .devbx-webform-input {
+  padding-right: min(28%, 2.5em);
+  padding-left: min(28%, 2.5em);
+  text-align: center;
+}

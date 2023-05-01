@@ -1,0 +1,2 @@
+<?php
+$MESS['DEVBX_CORE_VALUE_TYPE_LIST_NOT_SELECTED'] = 'Не выбрано';

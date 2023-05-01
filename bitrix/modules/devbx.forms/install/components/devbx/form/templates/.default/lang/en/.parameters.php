@@ -1,0 +1,7 @@
+<?php
+$MESS['DEVBX_FORMS_COMPONENT_FORM_USE_BOOTSTRAP'] = 'Include Bootstrap styles';
+$MESS['DEVBX_FORMS_COMPONENT_FORM_SUBMIT_BUTTON_NAME'] = 'Submit button name';
+$MESS['DEVBX_FORMS_COMPONENT_FORM_SUBMIT_BUTTON_NAME_DEFAULT'] = 'Send';
+
+$MESS['DEVBX_FORMS_COMPONENT_FORM_MSG_SUCCESS'] = 'Successful form submission message';
+$MESS['DEVBX_FORMS_COMPONENT_FORM_MSG_SUCCESS_DEFAULT'] = 'Thank you, the form has been submitted.';

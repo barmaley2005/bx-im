@@ -1,0 +1,14 @@
+<?
+$MESS["DEVBX_ADMIN_EDIT_EDIT_TITLE"] = "Editing";
+$MESS["DEVBX_ADMIN_EDIT_ADD_TITLE"] = "Adding";
+$MESS["DEVBX_ADMIN_DEFAULT_LIST_TEXT"] = "List";
+$MESS["DEVBX_ADMIN_DEFAULT_LIST_TITLE"] = "Go to the list";
+$MESS["DEVBX_ADMIN_DEFAULT_ADD_TEXT"] = "Add";
+$MESS["DEVBX_ADMIN_DEFAULT_ADD_TITLE"] = "Add new entry";
+$MESS["DEVBX_ADMIN_DEFAULT_COPY_TEXT"] = "Copy";
+$MESS["DEVBX_ADMIN_DEFAULT_COPY_TITLE"] = "Copy this entry";
+$MESS["DEVBX_ADMIN_DEFAULT_DEL_TEXT"] = "Delete";
+$MESS["DEVBX_ADMIN_DEFAULT_DEL_TITLE"] = "Delete entry";
+$MESS["DEVBX_ADMIN_DEFAULT_DEL_CONF"] = "Are you sure you want to delete the entry?";
+$MESS["DEVBX_ADMIN_EDIT_SAVED"] = "Record saved successfully";
+?>

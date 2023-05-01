@@ -1,0 +1,15 @@
+<?
+$MESS["DEVBX_ADMIN_LIST_DEFAULT_NAV_TEXT"] = "Записи";
+$MESS["DEVBX_ADMIN_LIST_BOOL_FALSE"] = "Нет";
+$MESS["DEVBX_ADMIN_LIST_BOOL_TRUE"] = "Да";
+$MESS["DEVBX_ADMIN_LIST_FILTER_VALUE_NOT_SETTED"] = "Не установлено";
+$MESS["DEVBX_ADMIN_LIST_DELETE_CONF"] = "Удалить запись ?";
+$MESS["DEVBX_ADMIN_LIST_PROGRESS_MESSAGE"] = "Обработка действий";
+$MESS["DEVBX_ADMIN_LIST_PROGRESS_DETAIL"] = "Прогресс <br>#PROGRESS_BAR#";
+$MESS["DEVBX_ADMIN_LIST_PROGRESS_AJAX_ERROR"] = "Ошибка обработки действий";
+$MESS["DEVBX_ADMIN_AJAX_FAILED_WITH_RETRY"] = "Ошибка при оработке ajax запроса, повторить запрос ?";
+$MESS["DEVBX_ADMIN_LIST_FILTER_SUBSTRING"] = "содержит";
+$MESS["DEVBX_ADMIN_LIST_FILTER_EXACT"] = "точное св.";
+$MESS["DEVBX_ADMIN_LIST_FILTER_NULL"] = "если пусто";
+$MESS["DEVBX_ADMIN_LIST_EXCEL_EXPORT"] = "Выгрузить в EXCEL";
+?>

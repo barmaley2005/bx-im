@@ -1,0 +1,1824 @@
+.devbx-webform-builder {
+  max-width: 1200px;
+  padding: 25px 0 55px;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  position: relative;
+}
+
+.devbx-webform-builder * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.devbx-webform-builder {
+  --devbx-webform-active-bg-color: #f4f9e5;
+  --devbx-webform-active-border-color: #aed136;
+  --devbx-webform-button-bg-color: #e0e9ec;
+  --devbx-webform-button-bg-hover-color: #f5f5f5;
+  --devbx-webform-button-border-color: #808080;
+  --devbx-webform-button-font-color: #000;
+}
+
+.devbx-webform-field {
+  padding: 8px 0;
+  width: 100%;
+  margin: 0;
+  float: none !important;
+}
+
+.devbx-webform-left-panel .devbx-webform-edit {
+  padding-right: 15px;
+  position: relative;
+}
+
+.devbx-webform-edit textarea, .devbx-webform-edit input[type=text], .devbx-webform-edit select {
+  width: 100%;
+}
+
+.devbx-webform-edit textarea {
+  resize: vertical;
+}
+
+.list-enter-active, .list-leave-active {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.list-enter-from, .list-leave-to {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.devbx-hint-enter-active, .devbx-hint-leave-active {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.devbx-hint-enter-from, .devbx-hint-leave-to {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.devbx-dropdown-enter-active, .devbx-dropdown-leave-active {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.devbx-dropdown-enter-from, .devbx-dropdown-leave-to {
+  opacity: 0;
+  max-height: 0 !important;
+  overflow: hidden;
+}
+
+.devbx-form-element {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2px 3px;
+  width: 50%;
+  float: left;
+  position: relative;
+}
+
+.devbx-form-element-content {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 5px 1px 5px 1px;
+  margin: 0;
+  width: 100%;
+  border: 1px solid #ceeae9;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.devbx-form-element-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.devbx-form-element-label span {
+  margin-left: 5px;
+}
+
+.devbx-webform-content-layout {
+  margin-top: 0;
+  border: none !important;
+  /*padding-left: 290px;*/
+  width: 100%;
+  max-width: calc(100% - 292px);
+}
+
+.devbx-webform-content {
+  padding-left: 60px;
+  background: #fff;
+}
+
+.devbx-webform-layout-control {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 5px;
+  overflow: hidden;
+  min-height: 26px !important;
+  vertical-align: bottom;
+  margin: 0 0 2px 0;
+  position: relative;
+  -o-text-overflow: clip;
+     text-overflow: clip;
+  white-space: nowrap;
+  text-wrap: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.devbx-webform-layout-control .fa {
+  color: #ccc;
+  margin-right: 5px;
+}
+
+.devbx-webform-layout-field {
+  outline: none;
+}
+
+.devbx-webform-layout-placeholder {
+  color: #ccc;
+}
+
+.devbx-webform-layout-dropdown-button {
+  width: 22px;
+  height: 25px;
+  border-left: 1px solid #ccc;
+  text-align: center;
+  background: #f4f4f4;
+  padding: 5px 0;
+  overflow: hidden;
+  margin: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.devbx-webform-preview-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: calc(100% - 130px);
+  margin: 0;
+  border: 0;
+  display: block;
+  padding: 0;
+}
+
+.devbx-webform-preview-container iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.devbx-webform-error-label {
+  color: #f00;
+  font-weight: bold;
+  text-align: center;
+}
+
+.devbx-webform-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.devbx-webform-layout-label {
+    font-weight: bold;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    padding: 0 8px 2px 8px;
+}
+
+.devbx-webform-layout-label p {
+    display: inline;
+}
+
+.devbx-webform-layout-label-hidden {
+    visibility: hidden;
+}
+
+.devbx-webform-layout-helptext {
+    overflow: hidden;
+    white-space: normal;
+}
+
+.devbx-webform-layout-helptext img {
+    max-width:100%;
+    max-height:100%;
+    width: 100%;
+    height: 100%;
+}
+
+.devbx-webform-macros-field {
+    display: inline-block;
+    margin-top: 0 !important;
+    background-color: #ffe2b6;
+    color: #444;
+    -webkit-box-shadow: 0 0 0 1px white;
+            box-shadow: 0 0 0 1px white;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 3px;
+    padding: 0.2em 0.4em 0.1em;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .9em;
+    line-height: 1.1;
+    vertical-align: middle;
+}
+.devbx-webform-admin-menu {
+  background: #fff;
+  width: 100%;
+  margin: 0 0 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  padding: 0px 10px 0px 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.devbx-webform-admin-menu-item {
+  background: #c5e7f4;
+  padding: 5px;
+  cursor: pointer;
+  color: #535c69;
+  margin-right: 15px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.devbx-webform-admin-menu-item.active {
+  background: #3bc8f5;
+  color: #fff;
+}
+
+.devbx-webform-description {
+    padding-top: 1em;
+    margin-bottom: 1em;
+}
+
+.devbx-webform-heading {
+    border: 1px solid transparent;
+    padding: 0 8px !important;
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 50px;
+}
+
+.devbx-webform-heading h2 {
+    margin-bottom: 0;
+}
+
+.devbx-webform-page-steps, .devbx-webform-page-progress-bar {
+    padding-top: 25px;
+    display: block;
+}
+
+.devbx-webform-page-steps ul {
+    counter-reset: mycounter;
+    position: relative;
+    display: inline-block;
+    padding: 0 !important;
+    margin: 0;
+    clear: both;
+}
+
+.devbx-webform-page-steps li {
+    float: left;
+    position: relative;
+    list-style-type: none;
+    margin-bottom: 5px;
+    margin-right: 1em
+}
+
+.devbx-webform-page-steps li a {
+    text-decoration:none;
+    color: #333;
+}
+
+.devbx-webform-page-steps li a:before {
+    content: counter(mycounter);
+    counter-increment: mycounter;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    vertical-align: middle;
+    color: #999;
+    font-size: .8em;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+}
+
+.devbx-webform-page-steps.devbx-webform-page-steps-no-title li a:before {
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.devbx-webform-page-steps li span {
+    padding-left: .5em;
+    vertical-align: middle;
+}
+
+.devbx-webform-page-steps .devbx-webform-page-step-active a:before {
+    background-color: var(--devbx-webform-button-bg-color);
+    border-color: var(--devbx-webform-button-border-color);
+    color: var(--devbx-webform-button-font-color);
+}
+
+.devbx-webform-page-progress-bar ul {
+    counter-reset: mycounter;
+    position: relative;
+    display: inline-block;
+    padding: 0 !important;
+    margin: 0;
+    clear: both;
+    width: 100%;
+}
+
+.devbx-webform-page-progress-bar li {
+    float: left;
+    position: relative;
+    list-style-type: none;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.devbx-webform-page-progress-bar li a {
+    display: block;
+    margin-right:  1em;
+    margin-top: 5px;
+    text-decoration:none;
+    color: #333;
+}
+
+.devbx-webform-page-progress-bar li a:before {
+    /*
+    background-color: #efefef;
+    border-color: #9b9b9b;
+    color: #fff;
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    display: block;
+    transition: 0.3s all;*/
+}
+
+.devbx-webform-page-progress-bar li.devbx-webform-page-step-active a:before,
+.devbx-webform-page-progress-bar li.devbx-webform-page-step-passed a:before {
+    /*
+    background-color: #9b9b9b;
+    border-color: #9b9b9b;
+    color: #fff;*/
+}
+
+.devbx-webform-page-progress-bar li.devbx-webform-page-step-active a:after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    display: block;
+    border: 5px solid transparent;
+    margin-left: -5px;
+    border-top-color: #9b9b9b !important;
+}
+
+.devbx-webform-page-progress-bar li.devbx-webform-progress-bar-line {
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    background-color: #efefef;
+    border-color: #9b9b9b;
+    width: 100%;
+    height: 6px;
+    display: block;
+}
+
+.devbx-webform-page-progress-bar li.devbx-webform-progress-bar-pos {
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    background-color: #9b9b9b;
+    border-color: #9b9b9b;
+    height: 6px;
+    display: block;
+    z-index: 1;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+.devbx-webform-form-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.devbx-webform-form-settings-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #EAF8F8;
+  width: 250px;
+  padding: 10px 20px 10px 0px;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.devbx-webform-form-settings-panel-item {
+  background: #c5e7f4;
+  color: #535c69;
+  font-size: 12pt;
+  padding: 5px;
+  margin: 0px 10px 10px 10px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.devbx-webform-form-settings-panel-item:hover, .devbx-webform-form-settings-panel-item.active {
+  background: #3bc8f5;
+  color: #fff;
+}
+
+.devbx-webform-form-settings-content {
+  margin-left: 250px;
+  padding: 15px;
+  background: #fff;
+}
+
+.devbx-webform-settings-label {
+  color: #000;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.devbx-webform-settings-content-center {
+  text-align: center;
+}
+
+.devbx-webform-settings-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.devbx-webform-settings-field-3 {
+  width: 33.3%;
+  margin: 10px 5px;
+}
+
+.devbx-webform-settings-field-2 {
+  width: 50%;
+  margin: 10px 5px;
+}
+
+.devbx-webform-settings-separator {
+  width: 100%;
+  border-bottom: 3px solid #cdedec;
+  margin: 5px 0;
+}
+
+.devbx-webform-left-panel {
+    position: relative;
+    min-width: 292px;
+    max-width: 292px;
+    padding: 5px;
+    padding-bottom: 15px;
+    min-height: 175px;
+    background-color: #EAF8F8;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.devbx-webform-left-panel input[type="text"], .devbx-webform-left-panel select {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.devbx-webform-navigation {
+    position: absolute;
+    left: 292px;
+    color: #cdedec;
+    font-size: 4em;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.devbx-webform-navigation-hidden {
+    display: none;
+}
+.devbx-webform-layout {
+    display: none;
+}
+
+.devbx-webform-layout-active {
+    display: block;
+}
+.devbx-webform-row {
+    overflow: visible;
+    white-space: nowrap;
+    position: relative;
+    padding: 0;
+}
+
+.devbx-webform-fields {
+    overflow: hidden;
+}
+
+.devbx-webform-layout-element {
+    display: inline-block;
+    float: none !important;
+    vertical-align: top;
+
+    border: transparent solid 1px !important;
+    -o-text-overflow: clip;
+       text-overflow: clip;
+    white-space: nowrap;
+    text-wrap: none;
+    position: relative;
+    min-height: 64px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 7px;
+    margin: 0;
+    cursor: pointer;
+    -webkit-transition: width .3s, padding .3s, 0.7s background-color;
+    -o-transition: width .3s, padding .3s, 0.7s background-color;
+    transition: width .3s, padding .3s, 0.7s background-color;
+    background: #fff;
+}
+
+.devbx-webform-layout-element:focus { outline: none; }
+
+.devbx-webform-content-layout:not(.item-resize) .devbx-webform-layout-element-hover {
+    background: #f5f5f5;
+}
+
+.devbx-webform-layout-element-active {
+    border: var(--devbx-webform-active-border-color) solid 1px !important;
+    padding: 7px;
+    outline: none;
+    background: var(--devbx-webform-active-bg-color);
+}
+
+.devbx-webform-layout-element[data-colspan="0"] {width:0 !important;padding: 0; border: 0 !important;}
+
+.devbx-webform-layout-element[data-colspan="1"] {width: 4.166666666666666%;}
+.devbx-webform-layout-element[data-colspan="2"] {width: 8.333333333333332%;}
+.devbx-webform-layout-element[data-colspan="3"] {width: 12.5%;}
+.devbx-webform-layout-element[data-colspan="4"] {width: 16.666666666666664%;}
+.devbx-webform-layout-element[data-colspan="5"] {width: 20.833333333333336%;}
+.devbx-webform-layout-element[data-colspan="6"] {width: 25%;}
+.devbx-webform-layout-element[data-colspan="7"] {width: 29.166666666666668%;}
+.devbx-webform-layout-element[data-colspan="8"] {width: 33.33333333333333%;}
+.devbx-webform-layout-element[data-colspan="9"] {width: 37.5%;}
+.devbx-webform-layout-element[data-colspan="10"] {width: 41.66666666666667%;}
+.devbx-webform-layout-element[data-colspan="11"] {width: 45.83333333333333%;}
+.devbx-webform-layout-element[data-colspan="12"] {width: 50%;}
+.devbx-webform-layout-element[data-colspan="13"] {width: 54.166666666666664%;}
+.devbx-webform-layout-element[data-colspan="14"] {width: 58.333333333333336%;}
+.devbx-webform-layout-element[data-colspan="15"] {width: 62.5%;}
+.devbx-webform-layout-element[data-colspan="16"] {width: 66.66666666666666%;}
+.devbx-webform-layout-element[data-colspan="17"] {width: 70.83333333333334%;}
+.devbx-webform-layout-element[data-colspan="18"] {width: 75%;}
+.devbx-webform-layout-element[data-colspan="19"] {width: 79.16666666666666%;}
+.devbx-webform-layout-element[data-colspan="20"] {width: 83.33333333333334%;}
+.devbx-webform-layout-element[data-colspan="21"] {width: 87.5%;}
+.devbx-webform-layout-element[data-colspan="22"] {width: 91.66666666666666%;}
+.devbx-webform-layout-element[data-colspan="23"] {width: 95.83333333333334%;}
+.devbx-webform-layout-element[data-colspan="24"] {width: 100%;}
+
+.devbx-webform-content-layout.item-resize .devbx-webform-layout-element {
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+.devbx-webform-layout-resizer {
+    width: 20px;
+    left: -10px;
+    height: 1980px;
+    cursor: col-resize;
+    background-color: transparent;
+    position: absolute;
+    z-index: 6;
+    top: 20px;
+}
+
+.devbx-webform-layout-quick-insert {
+    width: 40px;
+    height: 2000px;
+    position: absolute;
+    top: -1px;
+    left: -21px;
+    background: none;
+    z-index: 5;
+    opacity: 0.8;
+}
+
+.devbx-webform-plus {
+    width: 19px;
+    height: 19px;
+    border: 1px #e68f1a solid;
+    border-radius: 10px;
+    color: #e68f1a;
+    font-size: 11px;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+.devbx-webform-plus .fa {
+    line-height: 19px;
+}
+
+.devbx-webform-layout-quick-insert .devbx-webform-line {
+    margin-top: 1px;
+    width: 3px;
+    border-left: 1px #e68f1a solid;
+    border-right: 1px #e68f1a solid;
+    height: calc(100% - 19px);
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+    vertical-align: middle;
+}
+
+.devbx-webform-row > .devbx-webform-fields > .devbx-webform-layout-element:first-child > .devbx-webform-layout-resizer,
+.devbx-webform-row > .devbx-webform-fields > .devbx-webform-layout-element:first-child > .devbx-webform-layout-quick-insert
+{
+    display:none;
+}
+
+.devbx-webform-layout-quick-insert .devbx-webform-plus,
+.devbx-webform-layout-quick-insert .devbx-webform-line
+{
+    -webkit-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    transition: opacity .4s;
+    opacity: 0;
+}
+
+.devbx-webform-content-layout.item-resize .devbx-webform-layout-quick-insert {
+    visibility: hidden !important;
+}
+
+.devbx-webform-layout-quick-insert:hover .devbx-webform-plus,
+.devbx-webform-layout-quick-insert:hover .devbx-webform-line,
+.devbx-webform-layout-resizer:hover +.devbx-webform-layout-quick-insert .devbx-webform-plus,
+.devbx-webform-layout-resizer:hover +.devbx-webform-layout-quick-insert .devbx-webform-line
+{
+    opacity: 0.8;
+}
+
+.devbx-webform-layout-quick-insert-row {
+    height: 20px;
+    width: 100%;
+    top: -9px;
+    left: 0;
+    position: absolute;
+    z-index: 4;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.devbx-webform-content-layout.item-resize .devbx-webform-layout-quick-insert-row {
+    visibility: hidden;
+}
+
+.devbx-webform-layout-quick-insert-row:hover {
+    opacity: 0.8;
+}
+
+.devbx-webform-layout-quick-insert-row > div {
+    display: inline-block !important;
+}
+
+.devbx-webform-layout-quick-insert-row .devbx-webform-plus {
+    float: left;
+    margin: 0;
+}
+
+.devbx-webform-layout-quick-insert-row .devbx-webform-line {
+    margin: 0;
+    border-left: none;
+    border-right: none;
+    border-top: 1px #e68f1a solid;
+    border-bottom: 1px #e68f1a solid;
+    width: calc(100% - 20px);
+    height: 3px;
+    cursor: pointer;
+}
+.devbx-webform-caption h5 {
+    font-size: 16px;
+    border-bottom: 3px solid #cdedec;
+}
+
+
+.devbx-webform-separator {
+    padding: 10px 0px 0px 0px;
+    clear: both;
+}
+.devbx-webform-edit-with-checkbox input[type="text"] {
+    padding-right: 20px;
+}
+
+.devbx-webform-field-hide-value {
+    position: absolute;
+    right: 14px;
+    top: 5px;
+}
+
+.devbx-webform-field-hide-value input {
+    opacity: 0;
+}
+
+.devbx-webform-field-hide-value input+label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.devbx-webform-field-hide-value input+label:before {
+    content: "\f06e";
+    color: #e68f1a;
+}
+
+.devbx-webform-field-hide-value input:checked+label:before {
+    content: "\f070";
+}
+
+
+.devbx-webform-html-toolbar {
+    position: absolute;
+    left: 0px;
+    top: -30px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 1px solid #aaa!important;
+    -webkit-box-shadow: 3px 3px 6px rgb(50 50 50 / 25%) !important;
+            box-shadow: 3px 3px 6px rgb(50 50 50 / 25%) !important;
+    background-color: #fff !important;
+    border-radius: 3px !important;
+    padding: 4px;
+    z-index: 1000;
+}
+
+.devbx-webform-html-toolbar.active {
+    opacity: 1;
+}
+
+.devbx-webform-html-toolbar button {
+    border: 0;
+    opacity: 0.7;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.devbx-webform-html-toolbar button:disabled {
+    cursor: default;
+}
+
+.devbx-webform-html-toolbar button:hover {
+    opacity: 1;
+}
+
+.devbx-webform-html-toolbar button.is-active {
+    background: #D3F1FB;
+    opacity: 1;
+}
+
+.devbx-webform-html-editor {
+    border: 1px solid #ccc;
+    padding: 8px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: white;
+}
+
+.devbx-webform-html-editor .ProseMirror {
+    min-height: 50px;
+    max-height: 300px;
+    overflow-y: auto;
+    line-height: 1.3em;
+    outline: none;
+}
+
+.html-editor-config-full .bxhtmled-toolbar-cnt {
+    height: 69px;
+}
+
+.html-editor-config-full .bxhtmled-top-bar-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.devbx-webform-range-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.devbx-webform-selection-values-tbl {
+    width: 100%;
+}
+
+.devbx-webform-selection-values-select {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.devbx-webform-selection-values-text {
+
+}
+
+.devbx-webform-selection-values-text input[type="text"] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.devbx-webform-selection-values-value {
+    width: 25%;
+}
+
+.devbx-webform-selection-values-value input[type="text"] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.devbx-webform-selection-values-actions {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.devbx-webform-selection-values-actions a {
+    color: #55727b !important;
+}
+
+.devbx-webform-selection-values-actions a:hover {
+    background-color: #ffe2b6;
+}
+
+.devbx-webform-selection-values-del-disabled .devbx-webform-selection-values-action-remove {
+    color: #92b8b8 !important;
+    cursor: default;
+}
+
+.devbx-webform-selection-values-drag {
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    cursor: move;
+    text-align: center;
+}
+
+
+.adm-workarea .devbx-webform-select-input-multiple, .devbx-webform-builder .devbx-webform-select-input-multiple {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.adm-workarea .devbx-webform-select-input-sel-values, .devbx-webform-builder .devbx-webform-select-input-sel-values {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: normal;
+  white-space: normal;
+  width: 100%;
+  top: 50%;
+  padding-right: 30px;
+  /*max-width: 290px;*/
+}
+.adm-workarea .devbx-webform-select-input-sel-values > span, .devbx-webform-builder .devbx-webform-select-input-sel-values > span {
+  display: contents;
+  max-width: 100%;
+}
+.adm-workarea .devbx-webform-select-input-value-tag, .devbx-webform-builder .devbx-webform-select-input-value-tag {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: calc(100% - 5px);
+  background-color: #fff;
+  border-radius: 0.2em;
+  margin: 2px 0 2px 3px;
+  padding-left: 0.2em;
+  line-height: 1.4;
+  position: relative;
+  padding-right: 18px;
+  border: var(--devbx-webform-active-border-color) solid 1px !important;
+  outline: none;
+  background: var(--devbx-webform-active-bg-color);
+  /*white-space: nowrap;*/
+}
+.adm-workarea .devbx-webform-select-input-value-tag span, .devbx-webform-builder .devbx-webform-select-input-value-tag span {
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+}
+.adm-workarea .devbx-webform-select-input-value-tag .devbx-webform-select-remove-value, .devbx-webform-builder .devbx-webform-select-input-value-tag .devbx-webform-select-remove-value {
+  position: absolute;
+  right: 0;
+}
+.adm-workarea .devbx-webform-select-input-sel-values input, .devbx-webform-builder .devbx-webform-select-input-sel-values input {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 100%;
+  width: 100%;
+  height: 32px;
+  padding: 5px 20px 5px 5px;
+  border-radius: unset;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.adm-workarea .devbx-webform-select-input-fake input, .devbx-webform-builder .devbx-webform-select-input-fake input {
+  width: 100%;
+  padding-right: 1.7em;
+  height: 32px;
+  border: 1px solid #ccc;
+}
+.adm-workarea .devbx-webform-select-input-fake > span, .devbx-webform-builder .devbx-webform-select-input-fake > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  color: #000;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  pointer-events: none;
+  right: 5px;
+}
+.adm-workarea .devbx-webform-select-input-fake > span::after, .devbx-webform-builder .devbx-webform-select-input-fake > span::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f063";
+  position: absolute;
+  top: 15px;
+  right: 4px;
+  padding: 2px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+}
+.adm-workarea .devbx-webform-select-value-dropdown-selected, .devbx-webform-builder .devbx-webform-select-value-dropdown-selected {
+  background: var(--devbx-webform-active-bg-color);
+  padding-right: 1.7em;
+}
+.adm-workarea .devbx-webform-select-value-dropdown-selected:after, .devbx-webform-builder .devbx-webform-select-value-dropdown-selected:after {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f00c";
+  position: absolute;
+  right: 4px;
+  color: var(--devbx-webform-active-border-color);
+}
+.adm-workarea .devbx-webform-select-value-list .field > span, .devbx-webform-builder .devbx-webform-select-value-list .field > span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  border: 2px solid #ffe49d;
+  border-radius: 0.2em;
+  padding-left: 0.2em;
+  line-height: 1.4;
+  white-space: nowrap;
+  background: #efefef;
+  border-color: transparent;
+  margin: 0;
+}
+.adm-workarea .devbx-webform-select-input-value-tag.field, .devbx-webform-builder .devbx-webform-select-input-value-tag.field {
+  border-radius: 0.2em;
+  padding-left: 0.2em;
+  line-height: 1.4;
+  white-space: nowrap;
+  background: #efefef;
+}
+
+.devbx-webform-select-input-value {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.devbx-webform-select-value .devbx-webform-select-value-input {
+    width: 100%;
+    height: 32px;
+    border: 1px solid #ccc;
+    padding: 5px 20px 5px 5px;
+}
+
+.devbx-webform-select-dropdown {
+    max-height: calc(50vh - 40px);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,.1);
+            box-shadow: 0 2px 6px 0 rgba(0,0,0,.1);
+    position: absolute;
+    top: 32px;
+    width: 100%;
+    z-index: 100;
+}
+
+.devbx-webform-select-value-list {
+    width: 100%;
+    max-height: 40vh;
+    list-style: none;
+    left: 0px;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.devbx-webform-select-value-list li {
+    width: 100%;
+    position: relative;
+    border-top: 1px solid #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0.5em 0.7em;
+    cursor: pointer;
+    font-size: 14px;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    white-space: break-spaces;
+}
+
+.devbx-webform-select-value-list li:hover {
+    background: rgba(0,0,0,.025);
+}
+
+.devbx-webform-select-value-selected {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+    background-color: #ffe49d;
+    border: 2px solid #ffe49d;
+    border-radius: .2em;
+    margin: 4px 0 2px 3px;
+    padding-left: .2em;
+    line-height: 1.6;
+    /*white-space: nowrap;*/
+}
+
+.devbx-webform-select-remove-value {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: .2em;
+    margin-left: .2em;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+}
+.devbx-webform-edit-rule {
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+}
+
+.devbx-webform-edit-rule-link {
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom-style: dotted;
+    border-bottom-width: 2px;
+}
+
+.devbx-webform-condition-popup {
+    width: 100%;
+    height: 100%;
+}
+
+.devbx-webform-condition-popup * {
+    outline: none;
+}
+
+.devbx-webform-layout-element-empty {
+    border: 1px dashed #ddd;
+    padding: 15px 0 5px;
+    overflow: hidden;
+    width: 100%;
+    height: 48px;
+    margin: 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+.devbx-webform-layout-toolbar {
+    border: 1px solid #aaa;
+    width: auto;
+    z-index: 10;
+    position: absolute;
+    -webkit-box-shadow: 3px 3px 6px rgba(50, 50, 50, 0.25);
+            box-shadow: 3px 3px 6px rgba(50, 50, 50, 0.25);
+    background-color: #fff;
+    opacity: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 3px;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.devbx-webform-layout-toolbar-active {
+    opacity: 1;
+}
+
+.devbx-webform-layout-toolbar-option {
+    float: left;
+    position: relative;
+    padding: 8px 0;
+    width: 44px;
+    height: 46px;
+    /*font-family: 'Open Sans', sans-serif;*/
+    background-color: #fff;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.devbx-webform-layout-toolbar-option:hover {
+    background-color: #ffe2b6 !important;
+}
+
+.devbx-webform-layout-toolbar-option .fa {
+    font-size: 12pt;
+}
+
+.devbx-webform-layout-toolbar-option.disabled {
+    cursor: default;
+    color: #ccc;
+}
+
+.devbx-webform-layout-toolbar-option.selected {
+    background-color: #ffe2b6 !important;
+}
+
+.devbx-webform-lauout-toolbar-items-enter-active, .devbx-webform-lauout-toolbar-items-leave-active {
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+}
+
+.devbx-webform-lauout-toolbar-items-enter-from, .devbx-webform-lauout-toolbar-items-leave-to {
+    opacity: 0;
+}
+
+.devbx-webform-layout-toolbar-option-children {
+    position: absolute;
+    z-index: -1;
+    top: calc(100% + 2px);
+    -webkit-transition: max-height .1s;
+    -o-transition: max-height .1s;
+    transition: max-height .1s;
+    max-width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-box-shadow: 3px 3px 6px rgba(50, 50, 50, 0.25);
+            box-shadow: 3px 3px 6px rgba(50, 50, 50, 0.25);
+    max-height: 100px;
+    display: block;
+    border: 1px solid #d8b165;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.devbx-webform-layout-toolbar-option.selected .devbx-webform-layout-toolbar-option-children {
+    opacity: 1;
+    visibility: visible;
+}
+
+.devbx-webform-layout-toolbar-option-children .devbx-webform-layout-toolbar-option {
+    display: inline-block;
+    float: none;
+    white-space: normal;
+}
+
+.devbx-webform-layout-toolbar-option-title {
+    word-break: break-word;
+}
+.devbx-webform-element-hint {
+    position: absolute;
+    left: 5px;
+    top: 30px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #ffe2b6;
+    border-radius: 3px;
+    padding: 4px;
+    border: 1px solid #ffc978;
+    min-width: 200px;
+    z-index: 10;
+}
+
+.devbx-webform-layout-input-single-line {
+}
+
+.devbx-webform-layout-input-multi-line {
+    height: 70px;
+}
+.devbx-webform-layout-choice-column-1 .devbx-webform-layout-choice-option {
+    -webkit-columns: 1;
+       -moz-columns: 1;
+            columns: 1;
+}
+
+.devbx-webform-layout-choice-column-2 {
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2;
+}
+
+.devbx-webform-layout-choice-column-0 .devbx-webform-layout-choice-option {
+    float: left;
+}
+.devbx-webform-layout-date > div,
+.devbx-webform-layout-datetime > div,
+.devbx-webform-layout-time > div {
+    float: right;
+}
+.devbx-webform-layout-boolean-checkbox-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.fa-number:before {
+    content: "#";
+}
+
+.devbx-webform-layout-number-spinner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.devbx-webform-layout-control-spinner {
+    height: 26px;
+}
+
+.devbx-webform-layout-number-spinner button {
+    display: inline-block;
+    width: 35px;
+    height: 26px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+}
+
+.spinner-decrease:before {
+    content: "\2212";
+}
+
+.spinner-increase:before {
+    content: "+";
+}
+.decbx-webform-layouy-file-upload-dropzone {
+    padding: 5px;
+    background: #f9f9f9;
+}
+
+.devbx-webform-layout-section {
+    outline: none;
+}
+
+.devbx-webform-layout-section > .devbx-webform-layout-label {
+    font-size: 1.5em;
+}
+.devbx-webform-layout-content {
+    padding: 8px;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.devbx-webform-layout-content img {
+    max-width: 100%;
+    height: auto;
+}
+.devbx-webform-page-form-actions {
+    padding: 0px 0px 20px 0;
+    text-align: right;
+}
+
+.devbx-webform-page-actions {
+    padding-left: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.devbx-webform-page-button {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 7px 25px 7px 7px;
+    margin: 0;
+    border: 1px solid #ceeae9;
+    line-height: 1.2;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+    position: relative;
+    float: left;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.devbx-webform-page-button:hover {
+    background: var(--devbx-webform-button-bg-hover-color);
+}
+
+.devbx-webform-page-title {
+
+}
+
+.devbx-webform-page-delete {
+    position: absolute;
+    right: 10px;
+}
+
+.devbx-webform-page-add {
+    position: absolute;
+    left: calc(50% - 6px);
+}
+
+.devbx-webform-page-button-active {
+    border: var(--devbx-webform-active-border-color) solid 1px !important;
+    outline: none;
+    background: var(--devbx-webform-active-bg-color);
+}
+
+.devbx-webform-page-delete {
+    text-align: right;
+}
+
+.devbx-webform-page-settings {
+    float: left;
+}
+.devbx-webform-form-actions {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.devbx-webform-form-action {
+    min-width: 50px;
+    padding: 10px;
+    border: 1px solid transparent;
+    -webkit-transition: padding .3s;
+    -o-transition: padding .3s;
+    transition: padding .3s;
+    cursor: pointer;
+}
+
+.devbx-webform-form-action-active {
+    border: 1px solid var(--devbx-webform-active-border-color);
+    background-color: var(--devbx-webform-active-bg-color);
+}
+
+.devbx-webform-form-button {
+    border-color: var(--devbx-webform-button-border-color);
+    color: var(--devbx-webform-button-font-color);
+    background-color: var(--devbx-webform-button-bg-color);
+
+    text-decoration: none;
+    display: inline-block;
+    -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
+            box-shadow: inset 0px 0px 0px 1px #fff;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    text-shadow: none;
+    padding: .4em .8em;
+    min-width: 60px;
+    border-radius: 3px;
+    letter-spacing: 0.0125em;
+    border: 0;
+}
+
+.devbx-webform-form-button-text {
+
+}
+.devbx-webform-admin-actions {
+    text-align: center;
+    /*
+    background: #fff;
+    padding: 20px 0px 20px 0px;
+    border-top: 1px solid #ceeae9;
+     */
+}
+.devbx-webform-cond-wizard {
+    height: calc(100% - 50px);
+}
+
+.devbx-webform-cond-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 5px;
+    background: #fff;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.devbx-webform-cond-tabs .devbx-webform-page-button {
+    margin-right: 5px;
+}
+
+.devbx-webform-cond-error {
+    padding: 5px;
+    background: red;
+    color: #fff;
+}
+
+.devbx-webform-cond-error .devbx-webform-message {
+
+}
+.devbx-webform-edit-filter {
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.devbx-webform-edit-filter-link {
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom-style: dotted;
+    border-bottom-width: 2px;
+}
+.devbx-webform-public-admin-panel {
+  position: absolute;
+  bottom: 50px;
+  height: 50px;
+  left: 0;
+  width: 100%;
+}
+
+.devbx-webform-public-admin-panel-items {
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.devbx-webform-cond-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 6px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.devbx-webform-cond-dropdown select {
+    width: 100%;
+    height: 32px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #ccc;
+    padding: 5px 20px 5px 5px;
+}
+
+.devbx-webform-cond-dropdown {
+    position: relative;
+}
+
+.devbx-webform-cond-dropdown:after {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f063";
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    padding: 2px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.devbx-webform-cond-field {
+    width: 40%;
+}
+
+.devbx-webform-cond-type {
+    width: 20%;
+}
+
+.devbx-webform-cond-dropdown {
+    margin-right: 5px;
+}
+
+.devbx-webform-cond-container .devbx-webform-select-value-multiple {
+    width: calc(50% - 20px);
+}
+
+.devbx-webform-cond-container .devbx-webform-select-value {
+    position: relative;
+    margin-right: 6px;
+}
+
+
+.devbx-webform-cond-group {
+    width: 100%;
+    display: block;
+    margin: 0px 0px 5px 0px;
+    padding: 5px;
+    background: #f9f9f9;
+}
+
+.devbx-webform-cond-add-and {
+    margin-right: 6px;
+    margin-top: 8px;
+}
+
+.devbx-webform-cond-add-and i {
+    display: block;
+}
+
+.devbx-webform-cond-add-and-label {
+    display: block;
+    color: #999;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+}
+
+.devbx-webform-cond-add-and a {
+    color: #000;
+    text-decoration: none;
+}
+
+.devbx-webform-cond-remove {
+    color: #607890;
+    text-decoration: none;
+    margin-left: auto;
+    font-size: 12pt;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+
+.devbx-webform-cond-remove:hover {
+    color: #000;
+}
+.devbx-webform-cond-string {
+    width: calc(50% - 20px);
+}
+
+.devbx-webform-cond-string .cond-field {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 2px solid #ffe49d;
+    border-radius: .2em;
+    padding-left: .2em;
+    line-height: 1.4;
+    white-space: nowrap;
+    background: #efefef;
+    border-color: transparent;
+    margin: 0;
+}
+.devbx-webform-date-value {
+    position: relative;
+    margin-right: 6px;
+}
+
+.devbx-webform-date-value input {
+    width: 100%;
+    height: 32px;
+    border: 1px solid #ccc;
+    padding: 5px 20px 5px 5px;
+}
+
+.devbx-webform-date-icon {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.devbx-webform-cond-number {
+    width: calc(50% - 20px);
+}
+
+.devbx-webform-cond-number .cond-field {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 2px solid #ffe49d;
+    border-radius: .2em;
+    padding-left: .2em;
+    line-height: 1.4;
+    white-space: nowrap;
+    background: #efefef;
+    border-color: transparent;
+    margin: 0;
+}
+.devbx-webform-cond-add-group, .devbx-webform-cond-or {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #000;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.devbx-webform-cond-or {
+    margin-bottom: 5px;
+}
+
+.devbx-webform-cond-line {
+    display: inline-block;
+    width: 48%;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.devbx-webform-cond-label {
+    display: inline-block;
+    width: 4%;
+    text-align: center;
+}
+.devbx-webform-cond-code {
+    height: 100%;
+}
+
+.devbx-webform-cond-code .cm-editor {
+    height: 100%;
+    border: 1px solid #ddd
+}
+
+.devbx-webform-filter-popup {
+    width: 100%;
+}
+
+.devbx-webform-filter-popup .devbx-webform-iblock-select {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 20px;
+}
+
+.devbx-webform-filter-popup .devbx-webform-iblock-select .select-iblock-label {
+    margin: auto 0;
+    padding-right: 20px;
+}
+
+.devbx-webform-filter-popup .devbx-webform-iblock-select .devbx-webform-cond-dropdown {
+    width: 40%;
+}

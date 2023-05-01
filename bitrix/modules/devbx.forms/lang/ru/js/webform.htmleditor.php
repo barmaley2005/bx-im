@@ -1,0 +1,4 @@
+<?php
+$MESS['DEVBX_WEB_FORM_HTML_EDITOR_INSERT_FIELD_TEXT'] = 'Вставить поле';
+$MESS['DEVBX_WEB_FORM_HTML_EDITOR_INSERT_FIELD_TITLE'] = 'Вставить поле из формы';
+$MESS['DEVBX_WEB_FORM_HTML_EDITOR_FIELD_CODE'] = 'Поле формы';

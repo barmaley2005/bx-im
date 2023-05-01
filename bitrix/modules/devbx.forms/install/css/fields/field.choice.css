@@ -1,0 +1,23 @@
+.devbx-webform .devbx-webform-choice-column-1 .devbx-webform-choice-option {
+  -webkit-columns: 1;
+     -moz-columns: 1;
+          columns: 1;
+  display: block;
+}
+.devbx-webform .devbx-webform-choice-column-2 {
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+  display: block;
+}
+.devbx-webform .devbx-webform-choice-column-2 .devbx-webform-choice-option {
+  display: block;
+}
+.devbx-webform .devbx-webform-choice-column-0 .devbx-webform-choice-option {
+  float: left;
+}
+.devbx-webform .devbx-webform-choice-drop-down, .devbx-webform .devbx-webform-choice-radio, .devbx-webform .devbx-webform-choice-checkbox {
+  margin-bottom: calc(var(--devbx-webform-gutter) / 4);
+  padding-top: calc(var(--devbx-webform-gutter) / 4);
+  display: block;
+}

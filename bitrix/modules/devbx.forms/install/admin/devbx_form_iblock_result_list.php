@@ -1,0 +1,1 @@
+<?require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/devbx.forms/admin/devbx_form_iblock_result_list.php");

@@ -1,0 +1,3 @@
+<?php
+$MESS['DEVBX_CORE_MODULE_OPTIONS_IBLOCK_PROPERTY'] = 'Iblock properties';
+$MESS['DEVBX_CORE_MODULE_OPTIONS_USER_TYPE'] = 'Custom user types';

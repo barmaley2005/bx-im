@@ -7,67 +7,39 @@ define("HIDE_SIDEBAR", true);
 
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
+$APPLICATION->SetPageProperty('NOT_SHOW_NAV_CHAIN', 'Y');
+
 $APPLICATION->SetTitle("Страница не найдена");?>
+    <section class="oops">
+        <div class="container">
+            <div class="oops-container">
+                <h2 class="oops-title">Упс! Страница не найдена</h2>
 
-	<div class="bx-404-container">
-		<div class="bx-404-block"><img src="<?=SITE_DIR?>images/404.png" alt=""></div>
-		<div class="bx-404-text-block">Неправильно набран адрес, <br>или такой страницы на сайте больше не существует.</div>
-		<div class="">Вернитесь на <a href="<?=SITE_DIR?>">главную</a> или воспользуйтесь картой сайта.</div>
-	</div>
-	<div class="map-columns row">
-		<div class="col-sm-10 col-sm-offset-1">
-			<div class="bx-maps-title">Карта сайта:</div>
-		</div>
-	</div>
+                <div class="oops-row">
+                    <div class="oops-col order-1 order-md-0">
+                        <a href="<?=SITE_DIR?>" class="oops-link">
+                            <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 7L21 7M1 7L8.86667 1M1 7L8.86667 13" stroke-linecap="round" />
+                            </svg>
+                            На главную
+                        </a>
+                    </div>
+                    <div class="oops-col order-0 order-md-1">
+                        <div class="oops-img">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/img/oops/img-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="oops-col order-2">
+                        <a href="<?=SITE_DIR?>catalog/" class="oops-link">
+                            В каталог
+                            <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 7H1M21 7L13.1333 13M21 7L13.1333 1" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
-	<div class="col-sm-offset-2 col-sm-4">
-		<div class="bx-map-title"><i class="fa fa-leanpub"></i> Каталог</div>
-		<?$APPLICATION->IncludeComponent(
-			"bitrix:catalog.section.list",
-			"tree",
-			array(
-				"COMPONENT_TEMPLATE" => "tree",
-				"IBLOCK_TYPE" => "catalog",
-				"IBLOCK_ID" => "2",
-				"SECTION_ID" => $_REQUEST["SECTION_ID"],
-				"SECTION_CODE" => "",
-				"COUNT_ELEMENTS" => "Y",
-				"TOP_DEPTH" => "2",
-				"SECTION_FIELDS" => array(
-					0 => "",
-					1 => "",
-				),
-				"SECTION_USER_FIELDS" => array(
-					0 => "",
-					1 => "",
-				),
-				"SECTION_URL" => "",
-				"CACHE_TYPE" => "A",
-				"CACHE_TIME" => "36000000",
-				"CACHE_GROUPS" => "Y",
-				"ADD_SECTIONS_CHAIN" => "Y"
-			),
-			false
-		);
-		?>
-	</div>
-
-	<div class="col-sm-offset-1 col-sm-4">
-		<div class="bx-map-title"><i class="fa fa-info-circle"></i> О магазине</div>
-		<?
-		$APPLICATION->IncludeComponent(
-			"bitrix:main.map",
-			".default",
-			array(
-				"CACHE_TYPE" => "A",
-				"CACHE_TIME" => "36000000",
-				"SET_TITLE" => "N",
-				"LEVEL" => "3",
-				"COL_NUM" => "2",
-				"SHOW_DESCRIPTION" => "Y",
-				"COMPONENT_TEMPLATE" => ".default"
-			),
-			false
-		);?>
-	</div>
+            </div>
+        </div>
+    </section>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

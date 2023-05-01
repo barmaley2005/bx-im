@@ -1,0 +1,15 @@
+<?
+$MESS["DEVBX_ADMIN_LIST_DEFAULT_NAV_TEXT"] = "Items";
+$MESS["DEVBX_ADMIN_LIST_BOOL_FALSE"] = "No";
+$MESS["DEVBX_ADMIN_LIST_BOOL_TRUE"] = "Yes";
+$MESS["DEVBX_ADMIN_LIST_FILTER_VALUE_NOT_SETTED"] = "Not installed";
+$MESS["DEVBX_ADMIN_LIST_DELETE_CONF"] = "Delete entry?";
+$MESS["DEVBX_ADMIN_LIST_PROGRESS_MESSAGE"] = "Processing actions";
+$MESS["DEVBX_ADMIN_LIST_PROGRESS_DETAIL"] = "Progress <br>#PROGRESS_BAR#";
+$MESS["DEVBX_ADMIN_LIST_PROGRESS_AJAX_ERROR"] = "Action processing error";
+$MESS["DEVBX_ADMIN_AJAX_FAILED_WITH_RETRY"] = "An error occurred while processing ajax request, repeat the request?";
+$MESS["DEVBX_ADMIN_LIST_FILTER_SUBSTRING"] = "contains";
+$MESS["DEVBX_ADMIN_LIST_FILTER_EXACT"] = "exact match";
+$MESS["DEVBX_ADMIN_LIST_FILTER_NULL"] = "if empty";
+$MESS["DEVBX_ADMIN_LIST_EXCEL_EXPORT"] = "Import to EXCEL";
+?>

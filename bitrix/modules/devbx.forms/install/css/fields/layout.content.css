@@ -1,0 +1,8 @@
+.devbx-webform-col-content {
+  overflow: hidden;
+}
+
+.devbx-webform-col-content img {
+  max-width: 100%;
+  height: auto;
+}

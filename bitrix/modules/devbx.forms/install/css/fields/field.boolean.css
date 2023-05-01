@@ -1,0 +1,26 @@
+.devbx-webform-boolean-radio-group {
+  padding-top: calc(var(--devbx-webform-input-padding-v) * 1);
+}
+
+.devbx-webform-boolean-radio {
+  display: inline-block;
+  margin-bottom: calc(var(--devbx-webform-gutter) / 4);
+}
+
+.devbx-webform-boolean-checkbox-inline {
+  display: inline-block;
+  margin-bottom: calc(var(--devbx-webform-gutter) / 4);
+}
+
+.devbx-webform-boolean-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.devbx-webform-boolean-checkbox-input {
+  margin-right: calc(var(--devbx-webform-gutter) / 4);
+}

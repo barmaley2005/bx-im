@@ -1,0 +1,3 @@
+<?php
+$MESS["DEVBX_ADMIN_OPTIONS_DEFAULT_GROUP_TITLE"] = "General settings";
+$MESS["DEVBX_ADMIN_OPTIONS_SITE_NAME"] = "Site [#ID#] #NAME#";

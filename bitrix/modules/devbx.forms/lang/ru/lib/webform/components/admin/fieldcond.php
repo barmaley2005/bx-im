@@ -1,0 +1,44 @@
+<?php
+$MESS['DEVBX_WEB_FORM_FIELD_SHOW_THIS_FIELD_TITLE'] = 'Показывать поле';
+$MESS['DEVBX_WEB_FORM_FIELD_REQUIRE_THIS_FIELD_TITLE'] = 'Обязательное поле';
+$MESS['DEVBX_WEB_FORM_FIELD_READ_ONLY_THIS_FIELD_TITLE'] = 'Поле только для чтения';
+$MESS['DEVBX_WEB_FORM_FIELD_SHOW_CUSTOM_ERROR_TITLE'] = 'Показывать собственную ошибку';
+$MESS['DEVBX_WEB_FORM_COND_WIZARD_SHOW_THIS_FIELD_TITLE'] = 'Редактирования правила "Показывать если"';
+$MESS['DEVBX_WEB_FORM_COND_WIZARD_REQUIRE_THIS_FIELD_TITLE'] = 'Редактирования правила "Обязательно если"';
+$MESS['DEVBX_WEB_FORM_COND_WIZARD_READ_ONLY_THIS_FIELD_TITLE'] = 'Редактирования правила "Только для чтения если"';
+$MESS['DEVBX_WEB_FORM_COND_WIZARD_SHOW_CUSTOM_ERROR_TITLE'] = 'Редактирования правила "Собственная ошибка если"';
+$MESS['DEVBX_WEB_FORM_FIELD_CUSTOM_ERROR_TITLE'] = 'Текст ошибки';
+
+$MESS['DEVBX_WEB_FORM_COND_FIELD_NOT_FOUND'] = 'Свойство формы не найдено "#FIELD_NAME#"';
+$MESS['DEVBX_WEB_FORM_COND_INVALID_FIELD_TYPE'] = 'Свойство формы "#FIELD_NAME#" имеет другой тип';
+$MESS['DEVBX_WEB_FORM_COND_FIELD_VALUE_NOT_FOUND'] = 'Значение "#FIELD_VALUE#" не найдено в свойстве "#FIELD_NAME#"';
+
+$MESS['DEVBX_WEB_FORM_COND_IS_FILLED_OUT'] = 'Заполнено';
+$MESS['DEVBX_WEB_FORM_COND_IS_NOT_FILLED_OUT'] = 'Не заполнено';
+$MESS['DEVBX_WEB_FORM_COND_IS'] = 'Равно';
+$MESS['DEVBX_WEB_FORM_COND_IS_NOT'] = 'Не равно';
+$MESS['DEVBX_WEB_FORM_COND_CONTAINS'] = 'Содержит';
+$MESS['DEVBX_WEB_FORM_COND_DOES_NOT_CONTAIN'] = 'Не содержит';
+$MESS['DEVBX_WEB_FORM_COND_STARTS_WITH'] = 'Начинается с';
+$MESS['DEVBX_WEB_FORM_COND_DOES_NOT_START_WITH'] = 'Не начинается с';
+$MESS['DEVBX_WEB_FORM_COND_ENDS_WITH'] = 'Закачнивается на';
+$MESS['DEVBX_WEB_FORM_COND_DOES_NOT_END_WITH'] = 'Не заканчивается на';
+$MESS['DEVBX_WEB_FORM_COND_LOGIN_OR'] = 'Или';
+$MESS['DEVBX_WEB_FORM_COND_LOGIN_AND'] = 'И';
+$MESS['DEVBX_WEB_FORM_COND_IS_AFTER'] = 'После';
+$MESS['DEVBX_WEB_FORM_COND_IS_BEFORE'] = 'До';
+$MESS['DEVBX_WEB_FORM_COND_ON_OR_AFTER'] = 'Равно или после';
+$MESS['DEVBX_WEB_FORM_COND_ON_OR_BEFORE'] = 'Равно или раньше';
+$MESS['DEVBX_WEB_FORM_COND_IS_TODAY'] = 'Сегодня';
+$MESS['DEVBX_WEB_FORM_COND_IS_IN_FUTURE'] = 'В будущем';
+$MESS['DEVBX_WEB_FORM_COND_IS_IN_PAST'] = 'В прошлом';
+$MESS['DEVBX_WEB_FORM_COND_IS_NOW'] = 'Сейчас';
+$MESS['DEVBX_WEB_FORM_COND_HAS_AT_LEAST_ONE_FILE'] = 'Хотя бы один файл';
+$MESS['DEVBX_WEB_FORM_COND_HAS_NO_FILES'] = 'Нет файлов';
+$MESS['DEVBX_WEB_FORM_COND_NUMBER_OF_FILES_IS'] = 'Кол. файлов равно';
+$MESS['DEVBX_WEB_FORM_COND_IS_TRUE'] = 'Да';
+$MESS['DEVBX_WEB_FORM_COND_IS_FALSE'] = 'Нет';
+$MESS['DEVBX_WEB_FORM_COND_IS_GREATER'] = 'Если больше';
+$MESS['DEVBX_WEB_FORM_COND_IS_LESS'] = 'Если меньше';
+$MESS['DEVBX_WEB_FORM_COND_IS_GREATER_OR_EQUAL'] = 'Если больше или равно';
+$MESS['DEVBX_WEB_FORM_COND_IS_LESS_OR_EQUAL'] = 'Если меньше или равно';

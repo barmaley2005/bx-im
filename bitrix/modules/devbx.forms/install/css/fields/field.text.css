@@ -1,0 +1,8 @@
+.devbx-webform .devbx-webform-field-input {
+  margin-bottom: calc(var(--devbx-webform-gutter) / 4);
+  padding-top: calc(var(--devbx-webform-gutter) / 4);
+  display: block;
+}
+.devbx-webform .devbx-webform-field-input .devbx-webform-textarea {
+  max-width: 100%;
+}

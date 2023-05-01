@@ -1,0 +1,3 @@
+<?php
+$MESS['DEVBX_FORMS_FORM_RESULT_EDIT_TAB1'] = 'Данные формы';
+$MESS['DEVBX_FORMS_FORM_RESULT_EDIT_TAB1_TITLE'] = 'Данные формы';
