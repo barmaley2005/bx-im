@@ -13,6 +13,7 @@
 /** @var \CBitrixComponent $component */
 $this->setFrameMode(true);
 
-if (empty($arResult['ITEMS']))
-
+echo '<pre>';
+print_r($arResult);
+echo '</pre>';
 ?>

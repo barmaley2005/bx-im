@@ -1453,6 +1453,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
 
   // Бестселлеры
+/*
   const bestseller = () => {
     $(document).ready(function () {
       $(".bestseller-link").brazzersCarousel();
@@ -1491,6 +1492,11 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     });
   }
   bestsellerSlider()
+
+  if (width > 992) {
+    bestseller();
+  }
+*/
 
   // Ваши образы
   const collectionsSlider = () => {

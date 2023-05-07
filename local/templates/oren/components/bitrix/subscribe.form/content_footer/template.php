@@ -37,8 +37,8 @@
 								</defs>
 							</svg>
 						</div>
-						<h2 class="title sale-form__title"><?=GetMessage('subscr_title')?></h2>
-						<h4 class="sale-form__subtitle"><?=GetMessage('subscr_subtitle')?></h4>
+						<h2 class="title sale-form__title">Узнайте первым о наших новинках, акциях и распродажах</h2>
+						<h4 class="sale-form__subtitle">Рассылка новинок, скидок и советов стилиста</h4>
 					</div>
 
 					<div class="sale-form__footer">

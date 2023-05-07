@@ -13,9 +13,6 @@
 /** @var \CBitrixComponent $component */
 $this->setFrameMode(true);
 
-if (empty($arResult['ITEMS']))
-    return;
-
 $elementEdit = CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_EDIT');
 $elementDelete = CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_DELETE');
 $elementDeleteParams = array('CONFIRM' => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_CONFIRM'));
