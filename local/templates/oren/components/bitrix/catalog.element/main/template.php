@@ -112,6 +112,8 @@ $this->setFrameMode(true);
                 ?>
 
                 <?
+                $arSelOffer = false;
+
                 if (!empty($arResult['OFFERS']))
                 {
                     $arSelOffer = $arResult['OFFERS'][$arResult['OFFERS_SELECTED']];
@@ -192,14 +194,18 @@ $this->setFrameMode(true);
                                 <path d="M0.2 2.2V0.96H5.44V2.2H0.2Z" />
                             </svg>
                         </div>
-                        <input class="price-input" type="text" value="1">
+                        <input class="price-input" type="text" value="1" data-entity="product-quantity">
                         <div class="price-plus"> <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                                                       xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.12 9.24V0.759999H5.38V9.24H4.12ZM0.4 5.6V4.42H9.1V5.6H0.4Z" />
                             </svg> </div>
                     </div>
 
-                    <button class="product-button__add">
+                    <?
+                    $basketProductId = $arSelOffer ? $arSelOffer['ID'] : $arResult['ID'];
+                    ?>
+
+                    <button class="product-button__add" data-action="add2basket" data-product-id="<?=$basketProductId?>">
                         Добавить в корзину
                     </button>
 

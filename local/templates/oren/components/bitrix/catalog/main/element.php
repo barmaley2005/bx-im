@@ -186,6 +186,9 @@ if (isset($arParams['USER_CONSENT_IS_LOADED']))
     $componentElementParams['USER_CONSENT_IS_LOADED'] = $arParams['USER_CONSENT_IS_LOADED'];
 }
 
+$componentElementParams['OID'] = $request->get("oid");
+
+
 $elementId = $APPLICATION->IncludeComponent(
     'bitrix:catalog.element',
     'main',
@@ -242,7 +245,6 @@ if (!$elementId)
         "SHOW_PRICE_COUNT" => "1",
         "TEMPLATE_THEME" => "blue",
         "USE_PRODUCT_QUANTITY" => "N",
-        "OID" => $request->get("oid"),
     )
 );?><?
 
