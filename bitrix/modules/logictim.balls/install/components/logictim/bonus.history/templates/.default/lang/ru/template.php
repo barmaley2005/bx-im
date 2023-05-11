@@ -1,0 +1,47 @@
+<?
+$MESS["LOGICTIM_BONUS_BALLANCE_CHANGE"] = "Изменение баланса администратором";
+$MESS["LOGICTIM_BONUS_FIELD_ID"] = "Код";
+$MESS["LOGICTIM_BONUS_FIELD_DATE"] = "Дата";
+$MESS["LOGICTIM_BONUS_FIELD_TYPE"] = "Операция";
+$MESS["LOGICTIM_BONUS_FIELD_SUM"] = "Сумма операции";
+$MESS["LOGICTIM_BONUS_FIELD_BEFORE"] = "Баланс До";
+$MESS["LOGICTIM_BONUS_FIELD_AFTER"] = "Баланс После";
+$MESS["LOGICTIM_BONUS_FIELD_DETAIL"] = "Состав начисления";
+$MESS["LOGICTIM_BONUS_BALANCE"] = "Состав начисления";
+$MESS["LOGICTIM_BONUS_HAVE"] = "Доступно бонусов:";
+$MESS["LOGICTIM_BONUS_HISTORY"] = "История начислений и списаний:";
+$MESS["LOGICTIM_BONUS_ACTIVE_TO"] = "Активны до ";
+$MESS["LOGICTIM_BONUS_ACTIVE_WAIT"] = "Ожидают активацию";
+$MESS["LOGICTIM_BONUS_ACTIVE_FROM"] = "Дата активации: ";
+$MESS["LOGICTIM_BONUS_HAVE_H"] = "Доступно: ";
+$MESS["LOGICTIM_BONUS_PAID"] = "Использовано: ";
+$MESS["LOGICTIM_BONUS_LIVE_END"] = "Срок активности закончился";
+$MESS["LOGICTIM_BONUS_END"] = "Использованы";
+$MESS["LOGICTIM_BONUS_ADD_FROM_REGISTER"] = "Бонус при регистрации";
+$MESS["LOGICTIM_BONUS_ADD_FROM_BIRTHDAY"] = "Начисление на день рождения";
+$MESS["LOGICTIM_BONUS_SUBSCRIBE_TEXT"] = "Получать предупреждения о сгорании бонусов: ";
+$MESS["LOGICTIM_BONUS_YES"] = "Да";
+$MESS["LOGICTIM_BONUS_NO"] = "Нет";
+$MESS["LOGICTIM_BONUS_SUBSCRIBE"] = "Подписаться";
+$MESS["LOGICTIM_BONUS_UNSUBSCRIBE"] = "Отписаться";
+$MESS["LOGICTIM_BONUS_REF_LINK"] = "Ссылка для привлечения посетителей";
+$MESS["LOGICTIM_REFERALS_REF_COUPON"] = "Код реферального купона";
+$MESS["LOGICTIM_REFERALS_REF_COUPON_GENERATE"] = "Сгенерировать";
+$MESS["LOGICTIM_BONUS_MIN_EXIT"] = "Минимальная сумма для вывода";
+$MESS["LOGICTIM_BONUS_MAX_EXIT"] = "Максимальная сумма для вывода";
+$MESS["LOGICTIM_BONUS_EXIT_LABEL"] = "";
+$MESS["LOGICTIM_BONUS_EXIT_LINK"] = "Вывести";
+$MESS["LOGICTIM_BONUS_ENTER_COUPONE_CODE"] = "Введите код купона";
+$MESS["LOGICTIM_BONUS_ADD_COUPONE_CODE"] = "Создать купон";
+
+$MESS["LOGICTIM_BONUS_DATE_INSERT"] = "Дата создания";
+$MESS["LOGICTIM_BONUS_DATE_CLOSE"] = "Дата закрытия";
+$MESS["LOGICTIM_BONUS_EXIT_SUM"] = "Сумма";
+$MESS["LOGICTIM_BONUS_EXIT_NAME"] = "Наименование";
+$MESS["LOGICTIM_BONUS_EXIT_STATUS"] = "Статус";
+$MESS["LOGICTIM_BONUS_EXIT_COMMENT_ADMIN"] = "Комментарий администратора";
+$MESS["LOGICTIM_BONUS_OPERATIONS_LIST"] = "История по счету";
+$MESS["LOGICTIM_BONUS_OPERATIONS_EXIT"] = "Вывод бонусов";
+$MESS["LOGICTIM_BONUS_OPERATIONS_EXIT_HISTORY"] = "Заявки на вывод бонусов";
+$MESS[""] = "";
+?>

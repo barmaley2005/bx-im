@@ -403,7 +403,7 @@ foreach ($this->basketItems as $row)
         $result['BUY_COUNT']++;
     }
 
-    $rowData['BONUS'] = 200*$rowData['QUANTITY'];
+    $rowData['BONUS'] = \Local\Lib\Bonus::getProductBonus($rowData['PRODUCT_ID'])*$rowData['QUANTITY'];
     $rowData['BONUS_FORMATED'] = '+'.$rowData['BONUS'].' баллов';
 
     $result['TOTAL_BONUS'] += $rowData['BONUS'];

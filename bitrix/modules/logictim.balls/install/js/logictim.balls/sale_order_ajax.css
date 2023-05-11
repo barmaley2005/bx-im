@@ -1,0 +1,70 @@
+#bonus_payment_block #bonus_payfield_block .bx-soa-coupon-input {
+	max-width: 200px;
+	margin-right:10px;
+}
+#bonus_payment_block .bx-soa-coupon-input #paybonus_input {
+	text-align:center;
+	padding:5px;
+	height:36px;
+}
+#bonus_payfield_block strong {
+	margin-right:10px;
+}
+#bonus_payment_block #bonus_payfield_block a.btn {
+	height:36px;
+}
+#bonus_payment_block .bx-soa-coupon-input.lt_no_arrow:after {
+	display:none !important;
+}
+#bonus_payment_block .bonus_comment strong {
+	display:block;
+	width:100%;
+}
+#bonus_payment_block .bonus_comment .bonus_comment_min_max span {
+	display:block;
+	width:100%;
+}
+#bonus_payment_block .lt_bonus_cont_success .bonus_comment {
+	margin-bottom:15px;
+}
+#bonus_pay_sum .bx-soa-cart-t, #bonus_pay_sum .bx-soa-cart-d, #bonus_add_sum .bx-soa-cart-t, #bonus_add_sum .bx-soa-cart-d {
+	position: relative;
+    z-index: 1;
+    background: #fff;
+}
+#bonus_payment_block .bx-soa-section-title-container {
+	display:none;
+}
+
+
+.bx-soa-section-content.lt_bonus_cont_success {
+	background:#f2f2f2;
+}
+
+.bx-soa-section-content.lt_bonus_cont_error {
+	margin: 0px;
+    padding: 17px 17px 17px 17px;
+	border: 1px solid #ffe4e4;
+    border-radius: 2px;
+    background: #ffeeee;
+    position: relative;
+    box-sizing: border-box;
+}
+.bx-soa-section-content.lt_bonus_cont_error .bonus_comment {
+	position:relative;
+	padding-left:55px;
+}
+.lt_bonus_cont_error .bonus_comment:before {
+	content: "";
+	background-image: url(/bitrix/js/logictim.balls/images/info.svg);
+	background-size: 40px;
+    display: block;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+}
+
+
+

@@ -1,0 +1,41 @@
+#logictim_table {
+  border-collapse: collapse;
+  width:100%;
+}
+#logictim_table tr td {
+	 border:1px solid #ccc;
+	 padding:5px;
+}
+.logictim_table_header td {
+	font-weight:bold;
+	text-align:center;
+}
+.logictim_minus {
+	color:red;
+}
+.logictim_plus {
+	color:green;
+}
+.logictim_user_bonus {
+	margin-bottom:15px;
+	font-weight:bold;
+}
+.logictim_user_bonus #partnet_coupon {
+	font-weight:bold;
+	color:green;
+	margin-left:10px;
+}
+.logictim_user_bonus #partnet_coupon #coupon_error {
+	color:red;
+	font-size:12px;
+}
+.logictim_user_bonus.coupon_block {
+	display:flex;
+}
+.table_block {
+	overflow: auto;
+}
+.generate_coupon {
+	text-decoration:underline;
+	cursor:pointer;
+}

@@ -1,0 +1,250 @@
+.lb_wait {
+	opacity:0.5;
+}
+.logictim_wait {
+	color: green;
+}
+#logictim_table {
+  border-collapse: collapse;
+  width:100%;
+}
+#logictim_table tr td {
+	 border:1px solid #ccc;
+	 padding:5px;
+}
+.logictim_table_header td {
+	font-weight:bold;
+	text-align:center;
+}
+.logictim_minus {
+	color:red;
+}
+.logictim_plus {
+	color:green;
+}
+.logictim_user_bonus {
+	margin-bottom:15px;
+	font-weight:bold;
+}
+.logictim_user_bonus span {
+	font-weight:bold;
+	color:green;
+}
+.table_block {
+	overflow: auto;
+}
+.generate_coupon {
+	text-decoration:underline;
+	cursor:pointer;
+}
+#partnet_coupon a.btn {
+	margin-left:10px;
+}
+#partnet_coupon input.inputtext {
+	padding:5px;
+}
+.exit_bonus_input {
+	border: 1px solid #ccc;
+    border-radius: 5px;
+	padding: 6px;
+}
+.send_error, #coupon_error {
+	color:red;
+}
+.send_ok {
+	color:green;
+}
+#exit_bonus_result {
+	margin-top: 20px;
+    font-size: 18px;
+}
+a.exit_link{
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+color: #fff;
+width:100px;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+padding: 8px 16px;
+margin: 20px auto;
+text-decoration: none;
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+-webkit-transition: background-color 0.1s linear;
+-moz-transition: background-color 0.1s linear;
+-o-transition: background-color 0.1s linear;
+transition: background-color 0.1s linear;        
+}
+a.exit_link {
+background-color: rgb( 43, 153, 91 );
+border: 1px solid rgb( 33, 126, 74 );
+}
+        
+a.exit_link:hover {
+background-color: rgb( 75, 183, 141 );
+}
+.logictim_bonus_exit_list {
+	font-size: 20px;
+    margin-top: 35px;
+	margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.lb_tabs {
+	min-width: 320px;
+	padding: 0px;
+	margin: 0 auto;
+}
+.lb_tabs>section {
+	display: none;
+	padding: 15px;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+.lb_tabs>section>p {
+	margin: 0 0 5px;
+	line-height: 1.5;
+	color: #383838;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+ 
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.lb_tabs>input {
+	display: none;
+	position: absolute;
+}
+.lb_tabs>label {
+	display: inline-block;
+	margin: 0 0 -1px;
+	padding: 15px 25px;
+	font-weight: 600;
+	text-align: center;
+	color: #aaa;
+	border: 0px solid #ddd;
+	border-width: 1px 1px 1px 1px;
+	background: #f1f1f1;
+	border-radius: 3px 3px 0 0;
+}
+td.lt_col_date {
+	font-size:13px;
+	text-align:center;
+}
+ 
+.lb_tabs>label:hover {
+	color: #888;
+	cursor: pointer;
+}
+.lb_tabs>input:checked+label {
+	color: #555;
+	border-top: 1px solid #009933;
+	border-bottom: 1px solid #fff;
+	background: #fff;
+}
+#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
+	display: block;
+}
+ 
+@media screen and (max-width: 680px) {
+	.lb_tabs>label {
+		font-size: 0;
+	}
+	.lb_tabs>label:before {
+		margin: 0;
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.lb_tabs>label {
+		padding: 15px;
+	}
+}
+
+
+
+.lb_table-wrap {
+	text-align: center;
+	display: inline-block;
+	background-color: #fff;
+	color: #000;
+}
+ 
+ table.lb_history {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+ 
+  table.lb_history tr {
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+ 
+  table.lb_history th, table.lb_history td {
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+  }
+ 
+  table.lb_history th {
+    color: #fff;
+    background-color: #444;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+
+@media screen and (max-width: 1000px) {
+  table.lb_history {
+    border: 0;
+  }
+  table.lb_history thead {
+    display: none;
+  }
+  table.lb_history tr {
+    margin-bottom: 10px;
+    display: block;
+    border-bottom: 2px solid #ddd;
+  }
+  table.lb_history td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    border-bottom: 1px dotted #ccc;
+    border-right: 1px solid transparent;
+  }
+  table.lb_history td:last-child {
+    border-bottom: 0;
+  }
+  table.lb_history td:before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

@@ -123,7 +123,7 @@ if (!empty($templateData['PRODUCTS'])) {
             "SLIDER_PROGRESS" => "N",
             "TEMPLATE_THEME" => "blue",
             "USE_ENHANCED_ECOMMERCE" => "N",
-            "USE_MAIN_ELEMENT_SECTION" => "N",
+            "USE_MAIN_ELEMENT_SECTION" => "Y",
             "USE_PRICE_COUNT" => "N",
             "USE_PRODUCT_QUANTITY" => "N"
         ),false,array("HIDE_ICONS"=>"Y")

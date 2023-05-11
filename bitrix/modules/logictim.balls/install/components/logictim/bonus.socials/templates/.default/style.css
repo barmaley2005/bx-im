@@ -1,0 +1,35 @@
+.social-buttons {
+	position:relative;
+}
+
+.button {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 2px;
+    vertical-align: middle;
+    background: #969696;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.button.facebook {
+    background: #486194 url("images/facebook.png");
+}
+
+.button.odnoklassniki {
+    background: #ff9c43 url("images/odnoklassniki.png");
+}
+
+.button.vk {
+    background: #6896c7 url("images/vk.png");
+}
+
+.button.success {
+    background-color: #4fc761;
+}
+
+.button:not(.active) {
+    cursor: not-allowed;
+    background-color: #969696;
+}

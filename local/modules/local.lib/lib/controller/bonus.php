@@ -10,7 +10,7 @@ class Bonus extends Main\Engine\Controller {
     {
         $data = array(
             'productId' => $productId,
-            'value' => '+200 бонусов'
+            'value' => '+'.\Local\Lib\Bonus::getProductBonus($productId).' бонусов'
         );
 
         return $data;
