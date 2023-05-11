@@ -13,9 +13,12 @@
 /** @var \CBitrixComponent $component */
 $this->setFrameMode(true);
 
+$containerId = $this->GetEditAreaId('reviews');
+$obName = 'reviews_'.$arParams['PRODUCT_ID'];
+
 ?>
-<div class="accordeon-recall__container<?if (empty($arResult['ITEMS'])):?> _empty<?endif?>">
-    <div class="accordeon-recall__box">
+<div class="accordeon-recall__container<?if (empty($arResult['ITEMS'])):?> _empty<?endif?>" id="<?=$containerId?>">
+    <div class="accordeon-recall__box" data-entity="items">
         <?
         foreach ($arResult['ITEMS'] as $arItem)
         {
@@ -24,17 +27,34 @@ $this->setFrameMode(true);
             if ($arItem['UF_CITY'])
                 $arDisplayName[] = $arItem['UF_CITY'];
 
-            $displayDate = CIBlockFormatProperties::DateFormat("j F Y", MakeTimeStamp($arItem["CREATED_DATE"], CSite::GetDateFormat()));
+            $displayDate = CIBlockFormatProperties::DateFormat("j F Y", MakeTimeStamp($arItem["CREATED_DATE"], 'YYYY-MM-DD HH:MI:SS'));
+
+            $arPhoto = false;
+
+            $arUser = \Bitrix\Main\UserTable::getList([
+                'filter' => array(
+                    '=ID' => $arItem['CREATED_USER_ID'],
+                ),
+                'select' => array('PERSONAL_PHOTO')
+            ])->fetch();
+
+            if ($arUser)
+            {
+                $arPhoto = \CFile::ResizeImageGet($arUser['PERSONAL_PHOTO'], array('width'=>50,'height'=>50));
+            }
 
             ?>
             <div class="accordeon-recall__row">
                 <div class="accordeon-recall__head">
                     <div class="accordeon-recall__user">
                         <div class="accordeon-recall__img">
-                            <?/*<img src="img/accordeon/img-3.jpg" alt="">*/?>
+                            <?if ($arPhoto):?>
+                            <img src="<?=$arPhoto['src']?>" alt="">
+                            <?endif?>
                         </div>
                         <div class="accordeon-recall__info">
                             <p class="accordeon-recall__name"><?=implode(', ', $arDisplayName)?></p>
+                            <?if (intval($arItem['UF_RECOMMEND'])):?>
                             <div class="accordeon-recall__subname">
                                 <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -49,10 +69,9 @@ $this->setFrameMode(true);
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <?if (intval($arItem['UF_RECOMMEND'])):?>
-                                <p>Я рекомендую данный товар</p>
-                                <?endif?>
+                                <p><?=GetMessage('REVIEWS_I_RECOMMEND')?></p>
                             </div>
+                            <?endif?>
                         </div>
                     </div>
                     <div class="accordeon-recall__star">
@@ -93,13 +112,25 @@ $this->setFrameMode(true);
     </div>
 
     <div class="accordeon-recall__text">
-        <span>Отзывов пока нет. Будьте первым, оставьте свой отзыв</span>
+        <span><?=GetMessage('REVIEWS_NO_ITEMS')?></span>
 
     </div>
     <div class="accordeon-recall__button">
-        <button class="view d-sm-none">Смотреть ещё</button>
-        <button class="view d-none d-sm-flex">Смотреть ещё отзывы</button>
-        <button class="submit" data-bs-toggle="modal" data-bs-target="#comment-modal">Оставить
-            отзыв</button>
+        <button class="view d-sm-none"><?=GetMessage('REVIEWS_MOBILE_VIEW_MORE')?></button>
+        <button class="view d-none d-sm-flex"><?=GetMessage('REVIEWS_VIEW_MORE')?></button>
+        <button class="submit" data-action="writeReview"><?=GetMessage('REVIEWS_WRITE_REVIEW')?></button>
     </div>
 </div>
+
+<?
+$arJSParams = array(
+    'CONTAINER_ID' => $containerId,
+    'PRODUCT_ID' => $arParams['PRODUCT_ID'],
+    'SITE_ID' => $component->getSiteId(),
+    'TEMPLATE_ID' => $component->getSiteTemplateId(),
+);
+?>
+
+<script>
+    <?echo $obName?> = new ProductReviews(<?=\Bitrix\Main\Web\Json::encode($arJSParams)?>);
+</script>

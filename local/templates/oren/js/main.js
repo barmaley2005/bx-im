@@ -332,6 +332,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   accrualHistory()
 
   // like
+  /*
   const like = () => {
     let bestsellerBoxAll = document.querySelectorAll('.bestseller-box, .gallery-top__info, .product-button__like, .goods-item__left');
 
@@ -347,6 +348,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
   }
   like();
+   */
 
   // 2 Ползунка
   const rangeSlide = () => {
@@ -747,6 +749,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   banner()
 
   // Цвет в карточке товара
+  /*
   const colorProduct = () => {
     const productItemAll = document.querySelectorAll('.product-box__item');
 
@@ -775,8 +778,10 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     })
   }
   colorProduct();
+   */
 
   // Счётчик количиства
+  /*
   const countNum = () => {
     let
       boxAll = document.querySelectorAll('.price-box');
@@ -809,6 +814,8 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
   };
   countNum();
+
+   */
 
   // Выбор города в продукте
   const city = () => {
@@ -972,6 +979,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   photoLoad()
 
   // увеличение изображения в катрочке товара
+  /*
   const enlarge = () => {
     const block = document.getElementById('gallery-top-wrap');
 
@@ -1005,6 +1013,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     }
   }
   enlarge();
+   */
 
   // корзина на мобильном
   const mobBasket = () => {
@@ -1021,6 +1030,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   mobBasket()
 
   // Уведомление о добавлении товара
+  /*
   const productAdd = () => {
     const
       productAdded = document.querySelector('.product-added'),
@@ -1040,8 +1050,10 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     })
   }
   productAdd()
+   */
 
   // Покупаете подарок?
+  /*
   const present = () => {
     const presentContainer = document.querySelector('.present');
 
@@ -1067,6 +1079,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     }
   }
   present();
+   */
 
   // фиксирование блока в  Вопросы и ответы
   const fixedMenu = () => {
@@ -1550,6 +1563,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   quizSwiper()
 
   // Слайдер в карточке товара
+  /*
   const cardSlider = () => {
     const swiper = new Swiper('.gallery-thumbs-swiper', {
       direction: 'vertical', // вертикальная прокрутка
@@ -1593,6 +1607,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
   }
   cardSlider()
+   */
 
   // Слайдер в Подарочный сертификат
   const giftSlider = () => {

@@ -40,7 +40,20 @@ if ($arPrice['PERCENT']>0)
 
 ?>
 <div class="bestseller-box<?if ($arPrice['DISCOUNT']>0):?> _discount<?endif?>" id="<?=$arResult['AREA_ID']?>">
+    <?
+    if ($arParams['LOOK_ID'])
+    {
+        ?>
+        <div id="anchor-<?=$arItem['ID']?>" class="anchor-block"></div>
+        <?
+    }
+    ?>
     <div class="bestseller-head">
+        <?if ($arParams['LOOK_ID']):?>
+            <div class="look-description__point" data-id="<?=$arItem['ID']?>">
+                <span><?=$arParams['LOOK_ID']?></span>
+            </div>
+        <?endif?>
         <div class="bestseller-head__left">
             <?
             foreach ($arLabels as $arLabel)
@@ -147,7 +160,7 @@ if ($arPrice['PERCENT']>0)
                 <?endif?>
             </div>
         </div>
-        <div class="bestseller-content__button view" data-bs-toggle="modal" data-bs-target="#quick-view">
+        <div class="bestseller-content__button view" data-action="quickView" data-product-id="<?=$arItem['ID']?>">
             <?=GetMessage('ITEM_QUICK_VIEW_TEXT')?>
         </div>
     </div>

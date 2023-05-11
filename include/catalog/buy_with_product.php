@@ -1,517 +1,111 @@
 <?
-$containerId = 'buy_with_product';
+$GLOBALS['arrPopularFilter'] = array('>PROPERTY_REVIEW_COUNT'=>0);
 ?>
-<section class="section bestseller" id="<?=$containerId?>">
-    <div class="container">
-        <h2 class="title">С этим покупают</h2>
-
-        <div class="bestseller-container">
-            <div class="swiper bestseller-swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-
-                    <div class="swiper-slide">
-                        <div class="bestseller-box">
-                            <div class="bestseller-head">
-                                <div class="bestseller-head__left">
-                                    <div class="bestseller-head__info">
-                                        <p> new</p>
-                                    </div>
-                                </div>
-                                <div class="bestseller-head__like">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.1767 14.094C10.9562 13.647 15.0591 8.32951 15.0591 5.55291C15.0591 3.4118 13.5591 1.88232 11.5296 1.88232C9.80917 1.88232 8.39717 3.2705 8.00023 4.35298C7.60329 3.2705 6.19129 1.88232 4.47082 1.88232C2.44141 1.88232 0.941406 3.4118 0.941406 5.55291C0.941406 8.32951 5.04447 13.647 7.82376 14.094C7.88195 14.1066 7.94094 14.1145 8.00023 14.1176C8.05789 14.1019 8.11718 14.094 8.1767 14.094Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <a href="" class="bestseller-link">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-6.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-7.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-8.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-9.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-10.jpg" alt="" loading="lazy">
-                            </a>
-                            <div class="bestseller-colors">
-                                <a href="" class="bestseller-colors_circle _black"></a>
-                            </div>
-
-                            <div class="bestseller-content">
-                                <div class="bestseller-content__main">
-                                    <h4 class="bestseller-content__title">Шарф из шерсти</h4>
-                                    <div class="bestseller-content__price">
-                                        <p class="bestseller-content__old">9 990 ₽</p>
-                                        <p class="bestseller-content__new">1 490 ₽ </p>
-                                    </div>
-                                </div>
-                                <button class="bestseller-content__button view">
-                                    Быстрый просмотр
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bestseller-box">
-                            <div class="bestseller-head">
-                                <div class="bestseller-head__left">
-                                    <div class="bestseller-head__info">
-                                        <p> new</p>
-                                    </div>
-                                </div>
-                                <div class="bestseller-head__like">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.1767 14.094C10.9562 13.647 15.0591 8.32951 15.0591 5.55291C15.0591 3.4118 13.5591 1.88232 11.5296 1.88232C9.80917 1.88232 8.39717 3.2705 8.00023 4.35298C7.60329 3.2705 6.19129 1.88232 4.47082 1.88232C2.44141 1.88232 0.941406 3.4118 0.941406 5.55291C0.941406 8.32951 5.04447 13.647 7.82376 14.094C7.88195 14.1066 7.94094 14.1145 8.00023 14.1176C8.05789 14.1019 8.11718 14.094 8.1767 14.094Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <a href="" class="bestseller-link">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-7.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-1.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-8.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-9.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-10.jpg" alt="" loading="lazy">
-                            </a>
-                            <div class="bestseller-colors">
-                                <a href="" class="bestseller-colors_circle _white"></a>
-                                <a href="" class="bestseller-colors_circle _brown"></a>
-                                <a href="" class="bestseller-colors_circle _purple"></a>
-                            </div>
-
-                            <div class="bestseller-content">
-                                <div class="bestseller-content__main">
-                                    <h4 class="bestseller-content__title">Шапка из шерсти</h4>
-                                    <div class="bestseller-content__price">
-                                        <p class="bestseller-content__old">4 090 ₽</p>
-                                        <p class="bestseller-content__new">1 490 ₽ </p>
-                                    </div>
-                                </div>
-                                <button class="bestseller-content__button view">
-                                    Быстрый просмотр
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bestseller-box">
-                            <div class="bestseller-head">
-                                <div class="bestseller-head__left">
-                                    <div class="bestseller-head__info">
-                                        <p> new</p>
-                                    </div>
-                                </div>
-                                <div class="bestseller-head__like">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.1767 14.094C10.9562 13.647 15.0591 8.32951 15.0591 5.55291C15.0591 3.4118 13.5591 1.88232 11.5296 1.88232C9.80917 1.88232 8.39717 3.2705 8.00023 4.35298C7.60329 3.2705 6.19129 1.88232 4.47082 1.88232C2.44141 1.88232 0.941406 3.4118 0.941406 5.55291C0.941406 8.32951 5.04447 13.647 7.82376 14.094C7.88195 14.1066 7.94094 14.1145 8.00023 14.1176C8.05789 14.1019 8.11718 14.094 8.1767 14.094Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <a href="" class="bestseller-link">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-8.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-7.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-4.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-9.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-10.jpg" alt="" loading="lazy">
-                            </a>
-                            <div class="bestseller-colors">
-                                <a href="" class="bestseller-colors_circle _black"></a>
-                                <a href="" class="bestseller-colors_circle _brown"></a>
-                                <a href="" class="bestseller-colors_circle _red"></a>
-                                <a href="" class="bestseller-colors_circle _purple"></a>
-                            </div>
-
-                            <div class="bestseller-content">
-                                <div class="bestseller-content__main">
-                                    <h4 class="bestseller-content__title">Балаклава из шерсти</h4>
-                                    <div class="bestseller-content__price">
-                                        <p class="bestseller-content__old">2 990 ₽</p>
-                                        <p class="bestseller-content__new">1 490 ₽ </p>
-                                    </div>
-                                </div>
-                                <button class="bestseller-content__button view">
-                                    Быстрый просмотр
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bestseller-box">
-                            <div class="bestseller-head">
-                                <div class="bestseller-head__left">
-                                    <div class="bestseller-head__info">
-                                        <p> new</p>
-                                    </div>
-                                </div>
-                                <div class="bestseller-head__like">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.1767 14.094C10.9562 13.647 15.0591 8.32951 15.0591 5.55291C15.0591 3.4118 13.5591 1.88232 11.5296 1.88232C9.80917 1.88232 8.39717 3.2705 8.00023 4.35298C7.60329 3.2705 6.19129 1.88232 4.47082 1.88232C2.44141 1.88232 0.941406 3.4118 0.941406 5.55291C0.941406 8.32951 5.04447 13.647 7.82376 14.094C7.88195 14.1066 7.94094 14.1145 8.00023 14.1176C8.05789 14.1019 8.11718 14.094 8.1767 14.094Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <a href="" class="bestseller-link">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-9.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-7.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-8.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-3.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-10.jpg" alt="" loading="lazy">
-                            </a>
-                            <div class="bestseller-colors">
-                                <a href="" class="bestseller-colors_circle _brown"></a>
-                            </div>
-
-                            <div class="bestseller-content">
-                                <div class="bestseller-content__main">
-                                    <h4 class="bestseller-content__title">Платок ажурный пуховый из шерсти и вискозы</h4>
-                                    <div class="bestseller-content__price">
-                                        <p class="bestseller-content__old">7 790 ₽</p>
-                                        <p class="bestseller-content__new">1 490 ₽ </p>
-                                    </div>
-                                </div>
-                                <button class="bestseller-content__button view">
-                                    Быстрый просмотр
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bestseller-box">
-                            <div class="bestseller-head">
-                                <div class="bestseller-head__left">
-                                    <div class="bestseller-head__info">
-                                        <p> new</p>
-                                    </div>
-                                </div>
-                                <div class="bestseller-head__like">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.1767 14.094C10.9562 13.647 15.0591 8.32951 15.0591 5.55291C15.0591 3.4118 13.5591 1.88232 11.5296 1.88232C9.80917 1.88232 8.39717 3.2705 8.00023 4.35298C7.60329 3.2705 6.19129 1.88232 4.47082 1.88232C2.44141 1.88232 0.941406 3.4118 0.941406 5.55291C0.941406 8.32951 5.04447 13.647 7.82376 14.094C7.88195 14.1066 7.94094 14.1145 8.00023 14.1176C8.05789 14.1019 8.11718 14.094 8.1767 14.094Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <a href="" class="bestseller-link">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-10.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-7.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-8.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-9.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-5.jpg" alt="" loading="lazy">
-                            </a>
-                            <div class="bestseller-colors">
-                                <a href="" class="bestseller-colors_circle _white"></a>
-                                <a href="" class="bestseller-colors_circle _red"></a>
-                            </div>
-
-                            <div class="bestseller-content">
-                                <div class="bestseller-content__main">
-                                    <h4 class="bestseller-content__title">Шарф из шерсти</h4>
-                                    <div class="bestseller-content__price">
-                                        <p class="bestseller-content__old">Шапка и снуд</p>
-                                        <p class="bestseller-content__new">1 490 ₽ </p>
-                                    </div>
-                                </div>
-                                <button class="bestseller-content__button view">
-                                    Быстрый просмотр
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="bestseller-box">
-                            <div class="bestseller-head">
-                                <div class="bestseller-head__left">
-                                    <div class="bestseller-head__info">
-                                        <p> new</p>
-                                    </div>
-                                </div>
-                                <div class="bestseller-head__like">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.1767 14.094C10.9562 13.647 15.0591 8.32951 15.0591 5.55291C15.0591 3.4118 13.5591 1.88232 11.5296 1.88232C9.80917 1.88232 8.39717 3.2705 8.00023 4.35298C7.60329 3.2705 6.19129 1.88232 4.47082 1.88232C2.44141 1.88232 0.941406 3.4118 0.941406 5.55291C0.941406 8.32951 5.04447 13.647 7.82376 14.094C7.88195 14.1066 7.94094 14.1145 8.00023 14.1176C8.05789 14.1019 8.11718 14.094 8.1767 14.094Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <a href="" class="bestseller-link">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-6.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-7.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-8.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-9.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-10.jpg" alt="" loading="lazy">
-                            </a>
-                            <div class="bestseller-colors">
-                                <a href="" class="bestseller-colors_circle _black"></a>
-                            </div>
-
-                            <div class="bestseller-content">
-                                <div class="bestseller-content__main">
-                                    <h4 class="bestseller-content__title">Шарф из шерсти</h4>
-                                    <div class="bestseller-content__price">
-                                        <p class="bestseller-content__old">9 990 ₽</p>
-                                        <p class="bestseller-content__new">1 490 ₽ </p>
-                                    </div>
-                                </div>
-                                <button class="bestseller-content__button view">
-                                    Быстрый просмотр
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bestseller-box">
-                            <div class="bestseller-head">
-                                <div class="bestseller-head__left">
-                                    <div class="bestseller-head__info">
-                                        <p> new</p>
-                                    </div>
-                                </div>
-                                <div class="bestseller-head__like">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.1767 14.094C10.9562 13.647 15.0591 8.32951 15.0591 5.55291C15.0591 3.4118 13.5591 1.88232 11.5296 1.88232C9.80917 1.88232 8.39717 3.2705 8.00023 4.35298C7.60329 3.2705 6.19129 1.88232 4.47082 1.88232C2.44141 1.88232 0.941406 3.4118 0.941406 5.55291C0.941406 8.32951 5.04447 13.647 7.82376 14.094C7.88195 14.1066 7.94094 14.1145 8.00023 14.1176C8.05789 14.1019 8.11718 14.094 8.1767 14.094Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <a href="" class="bestseller-link">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-7.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-1.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-8.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-9.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-10.jpg" alt="" loading="lazy">
-                            </a>
-                            <div class="bestseller-colors">
-                                <a href="" class="bestseller-colors_circle _white"></a>
-                                <a href="" class="bestseller-colors_circle _brown"></a>
-                                <a href="" class="bestseller-colors_circle _purple"></a>
-                            </div>
-
-                            <div class="bestseller-content">
-                                <div class="bestseller-content__main">
-                                    <h4 class="bestseller-content__title">Шапка из шерсти</h4>
-                                    <div class="bestseller-content__price">
-                                        <p class="bestseller-content__old">4 090 ₽</p>
-                                        <p class="bestseller-content__new">1 490 ₽ </p>
-                                    </div>
-                                </div>
-                                <button class="bestseller-content__button view">
-                                    Быстрый просмотр
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bestseller-box">
-                            <div class="bestseller-head">
-                                <div class="bestseller-head__left">
-                                    <div class="bestseller-head__info">
-                                        <p> new</p>
-                                    </div>
-                                </div>
-                                <div class="bestseller-head__like">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.1767 14.094C10.9562 13.647 15.0591 8.32951 15.0591 5.55291C15.0591 3.4118 13.5591 1.88232 11.5296 1.88232C9.80917 1.88232 8.39717 3.2705 8.00023 4.35298C7.60329 3.2705 6.19129 1.88232 4.47082 1.88232C2.44141 1.88232 0.941406 3.4118 0.941406 5.55291C0.941406 8.32951 5.04447 13.647 7.82376 14.094C7.88195 14.1066 7.94094 14.1145 8.00023 14.1176C8.05789 14.1019 8.11718 14.094 8.1767 14.094Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <a href="" class="bestseller-link">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-8.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-7.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-4.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-9.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-10.jpg" alt="" loading="lazy">
-                            </a>
-                            <div class="bestseller-colors">
-                                <a href="" class="bestseller-colors_circle _black"></a>
-                                <a href="" class="bestseller-colors_circle _brown"></a>
-                                <a href="" class="bestseller-colors_circle _red"></a>
-                                <a href="" class="bestseller-colors_circle _purple"></a>
-                            </div>
-
-                            <div class="bestseller-content">
-                                <div class="bestseller-content__main">
-                                    <h4 class="bestseller-content__title">Балаклава из шерсти</h4>
-                                    <div class="bestseller-content__price">
-                                        <p class="bestseller-content__old">2 990 ₽</p>
-                                        <p class="bestseller-content__new">1 490 ₽ </p>
-                                    </div>
-                                </div>
-                                <button class="bestseller-content__button view">
-                                    Быстрый просмотр
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bestseller-box">
-                            <div class="bestseller-head">
-                                <div class="bestseller-head__left">
-                                    <div class="bestseller-head__info">
-                                        <p> new</p>
-                                    </div>
-                                </div>
-                                <div class="bestseller-head__like">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.1767 14.094C10.9562 13.647 15.0591 8.32951 15.0591 5.55291C15.0591 3.4118 13.5591 1.88232 11.5296 1.88232C9.80917 1.88232 8.39717 3.2705 8.00023 4.35298C7.60329 3.2705 6.19129 1.88232 4.47082 1.88232C2.44141 1.88232 0.941406 3.4118 0.941406 5.55291C0.941406 8.32951 5.04447 13.647 7.82376 14.094C7.88195 14.1066 7.94094 14.1145 8.00023 14.1176C8.05789 14.1019 8.11718 14.094 8.1767 14.094Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <a href="" class="bestseller-link">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-9.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-7.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-8.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-3.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-10.jpg" alt="" loading="lazy">
-                            </a>
-                            <div class="bestseller-colors">
-                                <a href="" class="bestseller-colors_circle _brown"></a>
-                            </div>
-
-                            <div class="bestseller-content">
-                                <div class="bestseller-content__main">
-                                    <h4 class="bestseller-content__title">Платок ажурный пуховый из шерсти и вискозы</h4>
-                                    <div class="bestseller-content__price">
-                                        <p class="bestseller-content__old">7 790 ₽</p>
-                                        <p class="bestseller-content__new">1 490 ₽ </p>
-                                    </div>
-                                </div>
-                                <button class="bestseller-content__button view">
-                                    Быстрый просмотр
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bestseller-box">
-                            <div class="bestseller-head">
-                                <div class="bestseller-head__left">
-                                    <div class="bestseller-head__info">
-                                        <p> new</p>
-                                    </div>
-                                </div>
-                                <div class="bestseller-head__like">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.1767 14.094C10.9562 13.647 15.0591 8.32951 15.0591 5.55291C15.0591 3.4118 13.5591 1.88232 11.5296 1.88232C9.80917 1.88232 8.39717 3.2705 8.00023 4.35298C7.60329 3.2705 6.19129 1.88232 4.47082 1.88232C2.44141 1.88232 0.941406 3.4118 0.941406 5.55291C0.941406 8.32951 5.04447 13.647 7.82376 14.094C7.88195 14.1066 7.94094 14.1145 8.00023 14.1176C8.05789 14.1019 8.11718 14.094 8.1767 14.094Z" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <a href="" class="bestseller-link">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-10.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-7.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-8.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-9.jpg" alt="" loading="lazy">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/bestseller/img-5.jpg" alt="" loading="lazy">
-                            </a>
-                            <div class="bestseller-colors">
-                                <a href="" class="bestseller-colors_circle _white"></a>
-                                <a href="" class="bestseller-colors_circle _red"></a>
-                            </div>
-
-                            <div class="bestseller-content">
-                                <div class="bestseller-content__main">
-                                    <h4 class="bestseller-content__title">Шарф из шерсти</h4>
-                                    <div class="bestseller-content__price">
-                                        <p class="bestseller-content__old">Шапка и снуд</p>
-                                        <p class="bestseller-content__new">1 490 ₽ </p>
-                                    </div>
-                                </div>
-                                <button class="bestseller-content__button view">
-                                    Быстрый просмотр
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="_prev2 bestseller-prev">
-                    <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 6H17M1 6L7.29333 11M1 6L7.29333 1" stroke-width="0.75" />
-                    </svg>
-                </div>
-                <div class="_next2 bestseller-next">
-                    <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 6L-2.98023e-07 6M16 6L9.70667 1M16 6L9.70667 11" stroke-width="0.75" />
-                    </svg>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="bestseller-button">
-            <div class="button-box">
-                <a href="" class="button">Смотреть все товары</a>
-                <svg class="button-bg" width="238" height="68" viewBox="0 0 238 68" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M63.8598 11.0954C63.8598 11.0954 87.0187 6.81025 136.7 6.81025C166.972 6.81025 237 14.3733 237 37.169C237 61.644 171.494 67 117.487 67C65.1837 67 0.999788 62.4177 1 37.169C1.00032 -0.818731 136.7 1.0142 136.7 1.0142"
-                        stroke-linecap="round" class="button-bg__elem" />
-                </svg>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<script>
-    (function(){
-
-        console.log($('#<?=$containerId?> .bestseller-swiper'));
-
-        const swiper = new Swiper('#<?=$containerId?> .bestseller-swiper', {
-            speed: 400,
-            slidesPerView: 5,
-            spaceBetween: 15,
-            loop: true,
-            navigation: {
-                nextEl: '.bestseller-next',
-                prevEl: '.bestseller-prev',
-            },
-            breakpoints: {
-                // when window width is >= 320px
-                320: {
-                    spaceBetween: 10,
-                    slidesPerView: "auto",
-                },
-                992: {
-                    slidesPerView: 4,
-                    spaceBetween: 10,
-                },
-                // when window width is >= 480px
-                1200: {
-                    slidesPerView: 4,
-                },
-                // when window width is >= 640px
-                1400: {
-                    slidesPerView: 5,
-                }
-            }
-        });
-
-        $("#<?=$containerId?> .bestseller-link").brazzersCarousel();
-    })();
-</script>
+<?$APPLICATION->IncludeComponent(
+    "bitrix:catalog.section",
+    "slider",
+    Array(
+        "ACTION_VARIABLE" => "action",
+        "ADD_PROPERTIES_TO_BASKET" => "Y",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "ADD_TO_BASKET_ACTION" => "ADD",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "BACKGROUND_IMAGE" => "-",
+        "BASKET_URL" => "/personal/cart/",
+        "BROWSER_TITLE" => "-",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "CACHE_TIME" => "36000000",
+        "CACHE_TYPE" => "A",
+        "COMPATIBLE_MODE" => "N",
+        "CONVERT_CURRENCY" => "N",
+        "DETAIL_URL" => "",
+        "DISABLE_INIT_JS_IN_COMPONENT" => "N",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_COMPARE" => "N",
+        "DISPLAY_TOP_PAGER" => "N",
+        "ELEMENT_SORT_FIELD" => "PROPERTY_REVIEW_COUNT",
+        "ELEMENT_SORT_FIELD2" => "id",
+        "ELEMENT_SORT_ORDER" => "asc",
+        "ELEMENT_SORT_ORDER2" => "desc",
+        "ENLARGE_PRODUCT" => "STRICT",
+        "FILTER_NAME" => "arrPopularFilter",
+        "HIDE_NOT_AVAILABLE" => "N",
+        "HIDE_NOT_AVAILABLE_OFFERS" => "N",
+        "IBLOCK_ID" => "2",
+        "IBLOCK_TYPE" => "catalog",
+        "INCLUDE_SUBSECTIONS" => "Y",
+        "LAZY_LOAD" => "N",
+        "LINE_ELEMENT_COUNT" => "3",
+        "LOAD_ON_SCROLL" => "N",
+        "MESSAGE_404" => "",
+        "MESS_BTN_ADD_TO_BASKET" => "В корзину",
+        "MESS_BTN_BUY" => "Купить",
+        "MESS_BTN_DETAIL" => "Подробнее",
+        "MESS_BTN_LAZY_LOAD" => "Показать ещё",
+        "MESS_BTN_SUBSCRIBE" => "Подписаться",
+        "MESS_NOT_AVAILABLE" => "Нет в наличии",
+        "MESS_NOT_AVAILABLE_SERVICE" => "Недоступно",
+        "META_DESCRIPTION" => "-",
+        "META_KEYWORDS" => "-",
+        "OFFERS_FIELD_CODE" => array("", ""),
+        "OFFERS_LIMIT" => "5",
+        "OFFERS_SORT_FIELD" => "sort",
+        "OFFERS_SORT_FIELD2" => "id",
+        "OFFERS_SORT_ORDER" => "asc",
+        "OFFERS_SORT_ORDER2" => "desc",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => ".default",
+        "PAGER_TITLE" => "Товары",
+        "PAGE_ELEMENT_COUNT" => "10",
+        "PARTIAL_PRODUCT_PROPERTIES" => "N",
+        "PRICE_CODE" => array("BASE"),
+        "PRICE_VAT_INCLUDE" => "Y",
+        "PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+        "PRODUCT_ID_VARIABLE" => "id",
+        "PRODUCT_PROPS_VARIABLE" => "prop",
+        "PRODUCT_QUANTITY_VARIABLE" => "quantity",
+        "PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+        "PRODUCT_SUBSCRIPTION" => "Y",
+        "RCM_TYPE" => "personal",
+        "SECTION_CODE" => "",
+        "SECTION_ID" => is_array($arCurSection) ? $arCurSection['ID'] : '',
+        "SECTION_ID_VARIABLE" => "SECTION_ID",
+        "SECTION_URL" => "",
+        "SECTION_USER_FIELDS" => array("", ""),
+        "SEF_MODE" => "N",
+        "SET_BROWSER_TITLE" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SHOW_404" => "N",
+        "SHOW_ALL_WO_SECTION" => "Y",
+        "SHOW_CLOSE_POPUP" => "N",
+        "SHOW_DISCOUNT_PERCENT" => "N",
+        "SHOW_FROM_SECTION" => "N",
+        "SHOW_MAX_QUANTITY" => "N",
+        "SHOW_OLD_PRICE" => "N",
+        "SHOW_PRICE_COUNT" => "1",
+        "SHOW_SLIDER" => "Y",
+        "SLIDER_LINK" => "",
+        "SLIDER_LINK_TEXT" => "",
+        "SLIDER_TITLE" => "Популярные товары",
+        "TEMPLATE_THEME" => "blue",
+        "USE_ENHANCED_ECOMMERCE" => "N",
+        "USE_MAIN_ELEMENT_SECTION" => "N",
+        "USE_PRICE_COUNT" => "N",
+        "USE_PRODUCT_QUANTITY" => "N"
+    ),
+    false,
+    array('HIDE_ICONS'=>'Y')
+);?>

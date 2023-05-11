@@ -100,9 +100,6 @@ $containerId = 'slider'.'_'.md5($this->randString().$component->getAction());
 
 <script>
     (function(){
-
-        console.log($('#<?=$containerId?> .bestseller-swiper'));
-
         const swiper = new Swiper('#<?=$containerId?> .bestseller-swiper', {
             speed: 400,
             slidesPerView: 5,

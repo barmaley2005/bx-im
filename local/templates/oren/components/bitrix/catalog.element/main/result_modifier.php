@@ -6,10 +6,11 @@
 /** @global \CDatabase $DB */
 /** @var CBitrixComponentTemplate $this */
 
-\Bitrix\Main\Loader::includeModule('highloadblock');
-
 $component = $this->getComponent();
+/* @var CatalogElementComponent $component */
 $arParams = $component->applyTemplateModifications();
+
+//echo '<pre>';print_r($arResult['SKU_PROPS']);echo '</pre>';
 
 if ($arParams['OID']) {
     $arResult['OFFER_ID_SELECTED'] = $arParams['OID'];
@@ -18,10 +19,6 @@ if ($arParams['OID']) {
 if (!empty($arResult['OFFERS']))
 {
     $intSelected = -1;
-
-    $arTreeProp = array();
-    $arTreePropValues = array();
-    $arHLProp = array();
 
     foreach ($arResult['OFFERS'] as $keyOffer=>&$arOffer)
     {
@@ -33,58 +30,7 @@ if (!empty($arResult['OFFERS']))
         if ($foundOffer)
             $intSelected = $keyOffer;
 
-        foreach ($arParams['OFFER_TREE_PROPS'] as $propCode)
-        {
-            $arProp = $arOffer['PROPERTIES'][$propCode];
-
-            if ($arProp['VALUE'])
-            {
-                $value = $arOffer['PROPERTIES'][$propCode]['VALUE'];
-
-                if ($arTreePropValues[$propCode][$value])
-                    continue;
-
-                $arTreeProp[$propCode] = array(
-                    'NAME' => $arProp['NAME'],
-                    'USER_TYPE' => $arProp['USER_TYPE'],
-                );
-
-                if ($arProp['USER_TYPE'] == 'directory')
-                {
-                    $arHLProp[$propCode] = $arProp['USER_TYPE_SETTINGS'];
-                }
-
-                $arTreePropValues[$propCode][$value] = $value;
-            }
-        }
-
         $arOffer['DISPLAY_PRICE'] = $arOffer['ITEM_PRICES'][$arOffer['ITEM_PRICE_SELECTED']];
-    }
-
-    foreach ($arHLProp as $propCode=>$settings)
-    {
-        $hlblock = \Bitrix\Highloadblock\HighloadBlockTable::getList([
-            'filter' => [
-                '=TABLE_NAME' => $settings['TABLE_NAME']
-            ],
-        ])->fetch();
-
-        if ($hlblock)
-        {
-            $hlEntity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlblock);
-
-            $iterator = $hlEntity->getDataClass()::getList([
-                'filter' => [
-                    '=UF_XML_ID' => $arTreePropValues[$propCode]
-                ],
-            ]);
-
-            while ($row = $iterator->fetch())
-            {
-                $row['UF_FILE'] = \CFile::GetFileArray($row['UF_FILE']);
-                $arTreePropValues[$propCode][$row['UF_XML_ID']] = $row;
-            }
-        }
     }
 
     if (-1 == $intSelected){
@@ -93,9 +39,6 @@ if (!empty($arResult['OFFERS']))
 
     $arResult['OFFERS_SELECTED'] = $intSelected;
     $arResult['DISPLAY_PRICE'] = $arResult['OFFERS'][$intSelected]['DISPLAY_PRICE'];
-
-    $arResult['TREE_PROP'] = $arTreeProp;
-    $arResult['TREE_PROP_VALUES'] = $arTreePropValues;
 } else {
     $arResult['DISPLAY_PRICE'] = $arResult['ITEM_PRICES'][$arResult['ITEM_PRICE_SELECTED']];
 }

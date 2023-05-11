@@ -147,6 +147,56 @@ $settings = \Local\Lib\Settings::getInstance();
     </div>
 </div>
 
+<?
+\Bitrix\Main\Loader::includeModule('iblock');
+
+$iblockId = \Local\Lib\Utils::getIblockIdByCode('ADV_BLOCK');
+if ($iblockId)
+{
+    $obElement = \CIBlockElement::GetList(array('RAND'=>'ASC'),array('IBLOCK_ID'=>$iblockId), false,array('nTopCount'=>1))->GetNextElement();
+    if ($obElement)
+    {
+        $arElement = $obElement->GetFields();
+        $arProperties = $obElement->GetProperties();
+        $arElement['PREVIEW_PICTURE'] = \CFile::GetFileArray($arElement['PREVIEW_PICTURE']);
+
+        ?>
+        <div class="banner">
+            <div class="conatiner">
+                <div class="banner-container">
+                    <div class="banner-close">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5 3.5L12.5 12.5" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3.5 12.5L12.5 3.5" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="banner-img">
+                        <img src="<?=$arElement['PREVIEW_PICTURE']['SRC']?>" alt="">
+                    </div>
+                    <div class="banner-content">
+                        <p class="banner-title"><?=$arElement['NAME']?></p>
+                        <p class="banner-description"><?=$arElement['PREVIEW_TEXT']?></p>
+
+                        <div class="banner-button">
+                            <div class="button-box">
+                                <a class="button" href="<?=$arProperties['URL']['VALUE']?>">Подробнее</a>
+                                <svg class="button-bg" width="238" height="68" viewBox="0 0 238 68" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M63.8598 11.0954C63.8598 11.0954 87.0187 6.81025 136.7 6.81025C166.972 6.81025 237 14.3733 237 37.169C237 61.644 171.494 67 117.487 67C65.1837 67 0.999788 62.4177 1 37.169C1.00032 -0.818731 136.7 1.0142 136.7 1.0142"
+                                        stroke-linecap="round" class="button-bg__elem" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?
+    }
+}
+?>
+
 <div class="menu-footer">
     <div class="container">
         <div class="menu-footer-container">

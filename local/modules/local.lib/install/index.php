@@ -79,6 +79,17 @@ Class local_lib extends CModule
 
 		\DevBx\Core\Admin\Utils::installModuleDB(self::MODULE_ID, true);
 
+		$eventManager = Main\EventManager::getInstance();
+
+		$eventManager->registerEventHandlerCompatible(
+			"iblock",
+			"OnIBlockPropertyBuildList",
+			"local.lib",
+			"Local\Lib\PropElementImage",
+			"GetUserTypeDescription",
+			1000
+		);
+
 		$this->InstallEvents();
 	}
 
@@ -120,6 +131,16 @@ Class local_lib extends CModule
 	{
 		if (!\Bitrix\Main\Loader::includeModule(self::MODULE_ID))
 			return;
+
+		$eventManager = Main\EventManager::getInstance();
+
+		$eventManager->unRegisterEventHandler(
+			"iblock",
+			"OnIBlockPropertyBuildList",
+			"local.lib",
+			"Local\Lib\PropElementImage",
+			"GetUserTypeDescription"
+		);
 
 		$this->UnInstallEvents();
 

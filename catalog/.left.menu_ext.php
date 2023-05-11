@@ -16,7 +16,7 @@ if (\Local\Lib\Utils::getCatalogIblockId())
         "CACHE_TYPE" => "N",
     ), false, Array('HIDE_ICONS' => 'Y'));
 
-    $aMenuLinks = array_merge($aMenuLinks, $aMenuLinksExt);
+    $aMenuLinks = array_merge($aMenuLinksExt, $aMenuLinks);
 }
 
 ?>

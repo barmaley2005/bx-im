@@ -78,11 +78,11 @@ $isHome = $curPage == SITE_DIR;
                                     d="M10.2199 17.6172C13.6943 17.0584 18.8228 10.4115 18.8228 6.94077C18.8228 4.26438 16.9478 2.35254 14.4111 2.35254C12.2605 2.35254 10.4955 4.08775 9.99931 5.44085C9.50313 4.08775 7.73813 2.35254 5.58755 2.35254C3.05078 2.35254 1.17578 4.26438 1.17578 6.94077C1.17578 10.4115 6.3046 17.0584 9.77872 17.6172C9.85146 17.6329 9.92519 17.6427 9.99931 17.6467C10.0714 17.627 10.1455 17.6171 10.2199 17.6172V17.6172Z"
                                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            <div class="header-desctop__count">
-                                <span>4</span>
+                            <div class="header-desctop__count" data-entity="favorite-count">
+                                <span></span>
                             </div>
                         </a>
-                        <button class="header-desctop__item" data-bs-toggle="modal" data-bs-target="#cart">
+                        <button class="header-desctop__item" data-action="showBasket">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.6181 18.272H3.38281L3.93428 6.13965H16.0666L16.6181 18.272Z" stroke-miterlimit="10"
                                       stroke-linecap="round" stroke-linejoin="round" />
@@ -90,8 +90,8 @@ $isHome = $curPage == SITE_DIR;
                                     d="M7.24219 8.34519V4.48489C7.24219 3.7536 7.53269 3.05225 8.0498 2.53515C8.5669 2.01805 9.26824 1.72754 9.99954 1.72754C10.3616 1.72754 10.7202 1.79886 11.0547 1.93743C11.3893 2.076 11.6932 2.27911 11.9493 2.53515C12.2053 2.79119 12.4084 3.09516 12.547 3.4297C12.6856 3.76424 12.7569 4.12279 12.7569 4.48489V8.34519"
                                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            <div class="header-desctop__count">
-                                <span>19</span>
+                            <div class="header-desctop__count" data-entity="basket-ready-count">
+                                <span></span>
                             </div>
                         </button>
                         <a href="" class="header-desctop__item">
