@@ -11,6 +11,8 @@ use Bitrix\Sale\PriceMaths;
  * @var array $result
  */
 
+\Bitrix\Main\Loader::includeModule('local.lib');
+
 $this->arParams['BRAND_PROPERTY'] ??= '';
 
 $mobileColumns = $this->arParams['COLUMNS_LIST_MOBILE'] ?? $this->arParams['COLUMNS_LIST'];
