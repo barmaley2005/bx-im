@@ -20,7 +20,10 @@ $mobileColumns = array_fill_keys($mobileColumns, true);
 
 $result['BASKET_ITEM_RENDER_DATA'] = array();
 $result['BUY_COUNT'] = 0;
-$result['TOTAL_BONUS'] = 0;
+
+\Bitrix\Main\Loader::includeModule('logictim.balls');
+$arBonus = cHelperCalc::CartBonus($this->basketItems);
+$result['TOTAL_BONUS'] = $arBonus['ALL_BONUS'];
 
 foreach ($this->basketItems as $row)
 {
@@ -69,6 +72,9 @@ foreach ($this->basketItems as $row)
 
     $iblockid = \CIBlockElement::GetIBlockByID($row['PRODUCT_ID']);
     $rowData['IBLOCK_CODE'] = \CIBlock::GetArrayByID($iblockid, 'CODE');
+
+    $rowData['BONUS'] = $arBonus['ITEMS'][$rowData['PRODUCT_ID']]['ADD_BONUS'];
+    $rowData['BONUS_FORMATED'] = '+'.$rowData['BONUS'].' баллов';
 
 	// show price including ratio
 	if ($rowData['MEASURE_RATIO'] != 1)
@@ -405,11 +411,6 @@ foreach ($this->basketItems as $row)
         $result['BUY_COUNT']++;
     }
 
-    $rowData['BONUS'] = \Local\Lib\Bonus::getProductBonus($rowData['PRODUCT_ID'])*$rowData['QUANTITY'];
-    $rowData['BONUS_FORMATED'] = '+'.$rowData['BONUS'].' баллов';
-
-    $result['TOTAL_BONUS'] += $rowData['BONUS'];
-
     $arProductInfo = \CCatalogSku::GetProductInfo($rowData['PRODUCT_ID']);
     if (is_array($arProductInfo))
     {
@@ -418,6 +419,10 @@ foreach ($this->basketItems as $row)
 
 	$result['BASKET_ITEM_RENDER_DATA'][] = $rowData;
 }
+
+$rowData['BONUS'] = \Local\Lib\Bonus::getProductBonus($rowData['PRODUCT_ID'])*$rowData['QUANTITY'];
+$rowData['BONUS_FORMATED'] = '+'.$rowData['BONUS'].' баллов';
+$result['TOTAL_BONUS'] += $rowData['BONUS'];
 
 $totalData = array(
 	'DISABLE_CHECKOUT' => (int)$result['ORDERABLE_BASKET_ITEMS_COUNT'] === 0,

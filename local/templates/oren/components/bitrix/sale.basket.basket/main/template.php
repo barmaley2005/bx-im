@@ -19,6 +19,8 @@ $this->setFrameMode(true);
 \Bitrix\Main\Loader::includeModule('devbx.core');
 CJSCore::Init('devbx_core_utils');
 
+$this->addExternalJs(SITE_TEMPLATE_PATH.'/js/theia-sticky-sidebar.min.js');
+
 $containerId = $this->GetEditAreaId('basket');
 ?>
 <section class="section basket" id="<?=$containerId?>">
