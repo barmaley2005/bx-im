@@ -68,7 +68,7 @@ $containerId = $this->GetEditAreaId('quickBasket');
                                 </div>
 
                                 <div class="goods-item__content">
-                                    <a href="<?=$row['DETAIL_PAGE_URL']?>" class="goods-item__article">Арт: <?=$row['PROPS_ALL']['ARTNUMBER']['VALUE']?></a>
+                                    <a href="<?=$row['DETAIL_PAGE_URL']?>" class="goods-item__article"><?=GetMessage('BASKET_ARTICLE')?> <?=$row['PROPS_ALL']['ARTNUMBER']['VALUE']?></a>
                                     <a href="<?=$row['DETAIL_PAGE_URL']?>" class="goods-item__title"><?=$row['NAME']?></a>
 
                                     <div class="goods-item__box">

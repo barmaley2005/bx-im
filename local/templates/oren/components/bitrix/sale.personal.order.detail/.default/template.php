@@ -144,7 +144,7 @@ if ($arResult['CANCELED'] == 'Y')
                         <a href="<?=$arBasketItem['DETAIL_PAGE_URL']?>" class="order-info__product-link"><?=$arBasketItem['NAME']?></a>
                         <p class="order-info__product-cost">
                             <span class="order-info__product-price"><?=$arBasketItem['PRICE_FORMATED']?></span>
-                            <span class="order-info__product-quantity">х <?=$arBasketItem['QUANTITY']?></span>
+                            <span class="order-info__product-quantity">x <?=$arBasketItem['QUANTITY']?></span>
                         </p>
                         <?
                         foreach ($arBasketItem['PROPS'] as $arSkuProp)

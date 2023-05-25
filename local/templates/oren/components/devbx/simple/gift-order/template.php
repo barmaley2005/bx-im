@@ -17,6 +17,8 @@ $this->setFrameMode(true);
 \Bitrix\Main\Loader::includeModule('catalog');
 \Bitrix\Main\Loader::includeModule('currency');
 
+$messages = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__);
+
 $request = \Bitrix\Main\Context::getCurrent()->getRequest();
 
 $offerId = intval($request['giftId']);
@@ -123,7 +125,7 @@ if ($request['nominal']>=5000)
 
             <div class="certificate-form__footer">
                 <p class="certificate-form__total">
-                    Итого: <span class="certificate-form__count"><?=CCurrencyLang::CurrencyFormat($nominal, 'RUB', true)?></span>
+                    <?=GetMessage('GIFT_ORDER_TOTAL')?> <span class="certificate-form__count"><?=CCurrencyLang::CurrencyFormat($nominal, 'RUB', true)?></span>
                 </p>
 
                 <div class="certificate-form__pay">
@@ -158,6 +160,8 @@ $arJSParams = array(
 
 <script>
     (function() {
+
+        BX.message(<?= CUtil::PhpToJSObject($messages) ?>);
 
         window.giftOrder = createVueGiftOrder(<?=\Bitrix\Main\Web\Json::encode($arJSParams)?>);
 

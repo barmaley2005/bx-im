@@ -9,6 +9,8 @@ $MESS["SPS_BASKET_PAGE_NAME"] = "Корзина";
 $MESS["SPS_CONTACT_PAGE_NAME"] = "Контакты";
 $MESS["SPS_ERROR_NOT_CHOSEN_ELEMENT"] = "Отсутвуют выбранные элементы";
 $MESS["SPS_CHAIN_MAIN"] = "Мой кабинет";
-$MESS["SPS_TITLE_MAIN"] = "Персональный раздел";
-
-
+$MESS["SPS_TITLE_MAIN"] = "Личный кабинет";
+$MESS["SPS_BONUS_PAGE_NAME"] = "Бонусные баллы";
+$MESS["SPS_FAVORITE_PAGE_NAME"] = "Избранное";
+$MESS["SPS_LOGOUT"] = "Выход";
+$MESS["SPS_MY_ORDERS"] = "Мои заказы";

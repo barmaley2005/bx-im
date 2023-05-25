@@ -71,7 +71,7 @@ if ($arResult['DESCRIPTION'])
                 </div>
             </div>
 
-            <p class="election-more">Читать полностью</p>
+            <p class="election-more"><?=GetMessage('CATALOG_SECTION_READ_MORE')?></p>
 
         </div>
     </section>

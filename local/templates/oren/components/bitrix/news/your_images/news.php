@@ -103,7 +103,7 @@ $this->setFrameMode(true);
 			</div>
 		</div>
 
-		<p class="election-more">Читать полностью</p>
+		<p class="election-more"><?=GetMessage('YOUR_IMAGES_READ_MORE')?></p>
 
 	</div>
 </section>

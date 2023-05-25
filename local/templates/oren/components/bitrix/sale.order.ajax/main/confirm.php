@@ -15,9 +15,8 @@ if ($arParams["SET_TITLE"] == "Y")
 ?>
 	<section class="section elected">
 		<div class="container">
-			<h1 class="title text-left">Успешное оформление заказа</h1>
+			<h1 class="title text-left"><?=GetMessage('ORDER_SUCCESS_TITLE')?></h1>
 
-			<!--Если пусто добавить класс _empty -->
 			<div class="elected-container _empty">
 				<div class="elected-content">
 					<div class="elected-content__icon">
@@ -28,7 +27,7 @@ if ($arParams["SET_TITLE"] == "Y")
 						</svg>
 					</div>
 
-					<p class="elected-content__text">Спасибо за ваш заказ. Подробности можно посмотреть в личном кабинете</p>
+					<p class="elected-content__text"><?=GetMessage('ORDER_SUCCESS_TEXT')?></p>
 
 					<?
 					if ($arResult["ORDER"]["IS_ALLOW_PAY"] === 'Y')
@@ -109,7 +108,7 @@ if ($arParams["SET_TITLE"] == "Y")
 
 					<div class="elected-content__button">
 						<div class="button-box">
-							<a href="<?=SITE_DIR?>personal/" class="button">Личный кабинет</a>
+							<a href="<?=SITE_DIR?>personal/" class="button"><?=GetMessage('ORDER_PERSONAL_SECTION_TITLE')?></a>
 							<svg class="button-bg" width="238" height="68" viewBox="0 0 238 68" fill="none"
 								 xmlns="http://www.w3.org/2000/svg">
 								<path

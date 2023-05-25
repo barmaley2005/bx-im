@@ -35,7 +35,7 @@ $arJSParams = $arResult;
                         </svg>
                         <p class="quiz-all">5</p>
                     </div>
-                    <p class="quiz-progress__text">Шаг</p>
+                    <p class="quiz-progress__text"><?=GetMessage('QUIZ_STEP')?></p>
                 </div>
                 <component :is="'quiz-step-'+step" :config="config"></component>
             </div>
@@ -47,15 +47,14 @@ $arJSParams = $arResult;
 <script id="vue-quiz-step-1-tpl" type="text/html">
     <div class="quiz-question _active">
         <div class="quiz-content">
-            <h3 class="quiz-title">Идеальный платок</h3>
+            <h3 class="quiz-title"><?=GetMessage('QUIZ_TITLE')?></h3>
             <div class="quiz-description">
-                <p>В нашем ассортименте более 200 видов платков, иногда так сложно определиться!</p>
-                <p>Ответьте на 5 вопросов и мы поможем с выбором.</p>
+                <?=GetMessage('QUIZ_DESCRIPTION')?>
             </div>
         </div>
 
         <div class="quiz-choice">
-            <p>1. Выберите платок, который Вам нужен:</p>
+            <p><?=GetMessage('QUIZ_STEP_1')?></p>
         </div>
 
         <div class="quiz-check">
@@ -79,7 +78,7 @@ $arJSParams = $arResult;
         </div>
 
         <div class="quiz-button">
-            <button class="quiz-button__further" :class="{'_disable': !$root.form.wrapType}" @click.stop.prevent="$root.step++">Далее</button>
+            <button class="quiz-button__further" :class="{'_disable': !$root.form.wrapType}" @click.stop.prevent="$root.step++"><?=GetMessage('QUIZ_FORWARD')?></button>
         </div>
     </div>
 </script>
@@ -87,15 +86,14 @@ $arJSParams = $arResult;
 <script id="vue-quiz-step-2-tpl" type="text/html">
     <div class="quiz-question _active">
         <div class="quiz-content">
-            <h3 class="quiz-title">Идеальный платок</h3>
+            <h3 class="quiz-title"><?=GetMessage('QUIZ_TITLE')?></h3>
             <div class="quiz-description">
-                <p>В нашем ассортименте более 200 видов платков, иногда так сложно определиться!</p>
-                <p>Ответьте на 5 вопросов и мы поможем с выбором.</p>
+                <?=GetMessage('QUIZ_DESCRIPTION')?>
             </div>
         </div>
 
         <div class="quiz-choice">
-            <p>2. Выберите форму платка:</p>
+            <p><?=GetMessage('QUIZ_STEP_2')?></p>
         </div>
 
         <div class="quiz-check">
@@ -123,10 +121,10 @@ $arJSParams = $arResult;
                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 6H17.5M1.5 6L7.79333 11M1.5 6L7.79333 1" stroke-width="0.75" />
                 </svg>
-                Назад
+                <?=GetMessage('QUIZ_BACK')?>
             </button>
 
-            <button class="quiz-button__further" :class="{'_disable': !$root.form.wrapForm}" @click.stop.prevent="$root.step++">Далее</button>
+            <button class="quiz-button__further" :class="{'_disable': !$root.form.wrapForm}" @click.stop.prevent="$root.step++"><?=GetMessage('QUIZ_FORWARD')?></button>
         </div>
     </div>
 </script>
@@ -134,15 +132,14 @@ $arJSParams = $arResult;
 <script id="vue-quiz-step-3-tpl" type="text/html">
     <div class="quiz-question _active">
         <div class="quiz-content">
-            <h3 class="quiz-title">Идеальный платок</h3>
+            <h3 class="quiz-title"><?=GetMessage('QUIZ_TITLE')?></h3>
             <div class="quiz-description">
-                <p>В нашем ассортименте более 200 видов платков, иногда так сложно определиться!</p>
-                <p>Ответьте на 5 вопросов и мы поможем с выбором.</p>
+                <?=GetMessage('QUIZ_DESCRIPTION')?>
             </div>
         </div>
 
         <div class="quiz-choice">
-            <p>3. Выберите размер платка:</p>
+            <p><?=GetMessage('QUIZ_SELECT_STEP_3')?></p>
         </div>
 
         <div class="quiz-check">
@@ -170,10 +167,10 @@ $arJSParams = $arResult;
                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 6H17.5M1.5 6L7.79333 11M1.5 6L7.79333 1" stroke-width="0.75" />
                 </svg>
-                Назад
+                <?=GetMessage('QUIZ_BACK')?>
             </button>
 
-            <button class="quiz-button__further" :class="{'_disable': !$root.form.wrapSize}" @click.stop.prevent="$root.step++">Далее</button>
+            <button class="quiz-button__further" :class="{'_disable': !$root.form.wrapSize}" @click.stop.prevent="$root.step++"><?=GetMessage('QUIZ_FORWARD')?></button>
         </div>
     </div>
 </script>
@@ -181,15 +178,14 @@ $arJSParams = $arResult;
 <script id="vue-quiz-step-4-tpl" type="text/html">
     <div class="quiz-question _active">
         <div class="quiz-content">
-            <h3 class="quiz-title">Идеальный платок</h3>
+            <h3 class="quiz-title"><?=GetMessage('QUIZ_TITLE')?></h3>
             <div class="quiz-description">
-                <p>В нашем ассортименте более 200 видов платков, иногда так сложно определиться!</p>
-                <p>Ответьте на 5 вопросов и мы поможем с выбором.</p>
+                <?=GetMessage('QUIZ_DESCRIPTION')?>
             </div>
         </div>
 
         <div class="quiz-choice">
-            <p>4. Выберите цвет платка:</p>
+            <p><?=GetMessage('QUIZ_STEP_4')?></p>
         </div>
 
         <div class="quiz-check">
@@ -217,10 +213,10 @@ $arJSParams = $arResult;
                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 6H17.5M1.5 6L7.79333 11M1.5 6L7.79333 1" stroke-width="0.75" />
                 </svg>
-                Назад
+                <?=GetMessage('QUIZ_BACK')?>
             </button>
 
-            <button class="quiz-button__further" :class="{'_disable': !$root.form.wrapColor}" @click.stop.prevent="$root.step++">Далее</button>
+            <button class="quiz-button__further" :class="{'_disable': !$root.form.wrapColor}" @click.stop.prevent="$root.step++"><?=GetMessage('QUIZ_FORWARD')?></button>
         </div>
     </div>
 </script>
@@ -228,20 +224,19 @@ $arJSParams = $arResult;
 <script id="vue-quiz-step-5-tpl" type="text/html">
     <div class="quiz-question _active" v-if="loaded">
         <div class="quiz-content">
-            <h3 class="quiz-title">Идеальный платок</h3>
+            <h3 class="quiz-title"><?=GetMessage('QUIZ_TITLE')?></h3>
             <div class="quiz-description">
-                <p>В нашем ассортименте более 200 видов платков, иногда так сложно определиться!</p>
-                <p>Ответьте на 5 вопросов и мы поможем с выбором.</p>
+                <?=GetMessage('QUIZ_DESCRIPTION')?>
             </div>
         </div>
 
         <div class="quiz-choice">
-            <p>5. Выберите ценовой диапазон:</p>
+            <p><?=GetMessage('QUIZ_STEP_5')?></p>
         </div>
 
         <div class="quiz-toddler">
             <h4 class="quiz-toddler__title">
-                Потяните за ползунки влево или вправо, в зависимости от нужного диапазона цен или укажите вручную.
+                <?=GetMessage('QUIZ_STEP_5_HELP_TEXT')?>
             </h4>
 
             <div class="filters-price">
@@ -266,10 +261,10 @@ $arJSParams = $arResult;
                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 6H17.5M1.5 6L7.79333 11M1.5 6L7.79333 1" stroke-width="0.75" />
                 </svg>
-                Назад
+                <?=GetMessage('QUIZ_BACK')?>
             </button>
 
-            <button class="quiz-button__further" @click.stop.prevent="$root.showResult = true">Далее</button>
+            <button class="quiz-button__further" @click.stop.prevent="$root.showResult = true"><?=GetMessage('QUIZ_FORWARD')?></button>
         </div>
     </div>
 </script>
@@ -277,14 +272,13 @@ $arJSParams = $arResult;
 <script id="vue-quiz-show-result-tpl" type="text/html">
     <div class="quiz-final">
         <div class="quiz-progress">
-            <button class="quiz-final__button" @click.stop.prevent="resetTest()">Пройти тест заново</button>
+            <button class="quiz-final__button" @click.stop.prevent="resetTest()"><?=GetMessage('QUIZ_RESTART')?></button>
         </div>
         <div class="quiz-question _active">
             <div class="quiz-content">
-                <h3 class="quiz-title">Идеальный платок</h3>
+                <h3 class="quiz-title"><?=GetMessage('QUIZ_TITLE')?></h3>
                 <div class="quiz-description">
-                    <p>В нашем ассортименте более 200 видов платков, иногда так сложно определиться!</p>
-                    <p>Ответьте на 5 вопросов и мы поможем с выбором.</p>
+                    <?=GetMessage('QUIZ_DESCRIPTION')?>
                 </div>
             </div>
 

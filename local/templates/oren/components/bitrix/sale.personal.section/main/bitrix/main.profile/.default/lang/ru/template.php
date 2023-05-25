@@ -19,3 +19,4 @@ $MESS['SEX'] = 'Пол:';
 $MESS['SEX_M'] = 'Мужской';
 $MESS['SEX_F'] = 'Женский';
 $MESS['PHONE'] = 'Номер телефона';
+$MESS['PERSONAL_DATA'] = 'Личные данные';

@@ -18,7 +18,7 @@ $elementDelete = CIBlock::GetArrayByID($arParams['IBLOCK_ID'], 'ELEMENT_DELETE')
 $elementDeleteParams = array('CONFIRM' => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_CONFIRM'));
 ?>
 <div class="look-description">
-    <p class="look-description__title">Товары на фотографии</p>
+    <p class="look-description__title"><?=GetMessage('CATALOG_LOOK_TITLE')?></p>
     <div class="look-description__container">
     <?
 

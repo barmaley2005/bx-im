@@ -48,7 +48,7 @@ $this->setFrameMode(true);
 						stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
 				<p class="collections-head__look">
-					Посмотреть товары
+					<?=GetMessage('YOUR_IMAGES_VIEW_PRODUCTS')?>
 				</p>
 			</a>
 		</div>
@@ -57,7 +57,7 @@ $this->setFrameMode(true);
 			<div class="collections-description">
 				<p><?=$arItem['PREVIEW_TEXT']?></p>
 			</div>
-			<a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="collections-more">Продолжить читать</a>
+			<a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="collections-more"><?=GetMessage('YOUR_IMAGES_READ_MORE')?></a>
 		</div>
 	</div>
 <?endforeach;?>

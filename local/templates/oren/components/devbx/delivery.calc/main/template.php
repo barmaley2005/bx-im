@@ -36,7 +36,7 @@ $arResult['SITE_ID'] = $component->getSiteId();
 <script id="delivery-calc-tpl" type="text/html">
     <div class="product-city" v-if="loaded">
         <div class="product-city__head">
-            <p>Доставка в <span class="product-city__name" @click.stop.prevent="this.showLocationSearch = !this.showLocationSearch">{{cityName}}</span></p>
+            <p><?=GetMessage('DELIVERY_CALC_TO')?><span class="product-city__name" @click.stop.prevent="this.showLocationSearch = !this.showLocationSearch">{{cityName}}</span></p>
         </div>
         <div class="product-city__box" :class="{'_show': showLocationSearch}">
             <div class="product-city__container">

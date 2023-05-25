@@ -69,7 +69,7 @@ foreach ($arResult['ITEMS'] as $arItem)
     <div class="menu-item">
         <div class="menu-head">
             <p>
-                <span class="menu-head__link" href="">Сортировать по:</span>
+                <span class="menu-head__link" href=""><?=GetMessage('CATALOG_FILTER_SORT_BY')?></span>
             </p>
             <div class="menu-head__arrow">
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">

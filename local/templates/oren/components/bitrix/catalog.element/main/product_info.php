@@ -1,13 +1,4 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-?>
-
-<!-- Если есть скидка добавить класс _new для product-price-->
-
-<?
-
-if (!empty($arResult['OFFERS'])) {
-
-}
 
 ?>
 

@@ -27,11 +27,11 @@ $elementDeleteParams = array('CONFIRM' => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_
             </svg>
         </div>
 
-        <p class="elected-content__text">Ваш список избранных товаров пока что пуст</p>
+        <p class="elected-content__text"><?=GetMessage('CATALOG_FAVORITE_EMPTY')?></p>
 
         <div class="elected-content__button">
             <div class="button-box">
-                <a href="<?=SITE_DIR?>catalog/" class="button">Открыть каталог</a>
+                <a href="<?=SITE_DIR?>catalog/" class="button"><?=GetMessage('CATALOG_FAVORITE_OPEN_CATALOG')?></a>
                 <svg class="button-bg" width="238" height="68" viewBox="0 0 238 68" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <path

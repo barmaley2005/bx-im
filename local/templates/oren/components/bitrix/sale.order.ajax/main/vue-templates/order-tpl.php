@@ -3,12 +3,10 @@
     <div id="bx-soa-order">
         <section class="section placement">
             <div class="container">
-                <h1 class="title text-left">Оформление заказа</h1>
+                <h1 class="title text-left"><?=GetMessage('ORDER_TITLE')?></h1>
 
                 <p class="placement-account" v-if="!result.IS_AUTHORIZED">
-                    <a href="" data-action="showAuthForm">Войдите</a> в свой аккаунт и мы заполним форму за вас. Нет аккаунта? Мы создадим
-                    его автоматически
-                    в ходе оформления заказа.
+                    <?=GetMessage('ORDER_AUTH_TEXT')?>
 
                     <error-block :result="result" block="AUTH"></error-block>
                 </p>

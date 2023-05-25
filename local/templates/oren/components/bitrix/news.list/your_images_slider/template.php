@@ -17,8 +17,7 @@ $this->setFrameMode(true);
     <div class="container">
         <h2 class="title text-lg-left"><?=$arParams['BLOCK_TITLE']?></h2>
         <div class="subtitle-box text-center d-lg-none">
-            <h3 class="subtitle">Делитесь образами, отмечайте <a href="">@orenshal</a> и мы разместим Ваш образ на сайте.
-            </h3>
+            <h3 class="subtitle"><?=GetMessage('YOUR_IMAGES_SLIDER_TITLE')?></h3>
         </div>
     </div>
     <div class="collections-container">
@@ -64,7 +63,7 @@ $this->setFrameMode(true);
                                                     stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                             <p class="collections-head__look">
-                                                Посмотреть товары
+                                                <?=GetMessage('YOUR_IMAGES_SLIDER_VIEW_PRODUCTS')?>
                                             </p>
                                         </a>
                                     </div>
@@ -73,7 +72,7 @@ $this->setFrameMode(true);
                                         <div class="collections-description">
                                             <p><?=$arItem['PREVIEW_TEXT']?></p>
                                         </div>
-                                        <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="collections-more">Продолжить читать</a>
+                                        <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="collections-more"><?=GetMessage('YOUR_IMAGES_SLIDER_READ_MORE')?></a>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +102,7 @@ $this->setFrameMode(true);
     <div class="container">
         <div class="bestseller-button">
             <div class="button-box">
-                <a href="<?=SITE_DIR?>your_images/" class="button">Смотреть все образы</a>
+                <a href="<?=SITE_DIR?>your_images/" class="button"><?=GetMessage('YOUR_IMAGES_SLIDER_VIEW_ALL')?></a>
                 <svg class="button-bg" width="238" height="68" viewBox="0 0 238 68" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <path

@@ -13,3 +13,5 @@ $MESS['BASKET_SUM'] = 'Итого';
 $MESS['BASKET_QUICK_ORDER'] = 'Оформить заказ';
 $MESS['BASKET_QUICK_CONTINUE_BUY'] = 'Продолжить покупки';
 $MESS['BASKET_QUICK_VIEW_FULL_BASKET'] = 'Просмотреть корзину';
+
+$MESS['BASKET_ARTICLE'] = 'Арт:';

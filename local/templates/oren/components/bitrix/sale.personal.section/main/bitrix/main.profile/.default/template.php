@@ -13,7 +13,7 @@ use Bitrix\Main\Localization\Loc;
 			<path d="M7 13L1 7L7 1" stroke="#877569" stroke-linecap="round" />
 			</svg>
 		</a>
-		<h2 class="account-page__title">Личные данные</h2>
+		<h2 class="account-page__title"><?=GetMessage('PERSONAL_DATA')?></h2>
 		<form method="post" name="form1" action="<?=POST_FORM_ACTION_URI?>" enctype="multipart/form-data"
 			  role="form" class="account-data" style="grid-auto-rows: max-content; ">
 			<?=$arResult["BX_SESSION_CHECK"]?>

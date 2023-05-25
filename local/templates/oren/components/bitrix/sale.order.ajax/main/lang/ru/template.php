@@ -163,4 +163,13 @@ $MESS['ORDER_TOTAL_BTN_OK'] = 'ОК';
 $MESS['ORDER_PAYMENT_ENTER_SUM'] = 'Введите сумму';
 $MESS['ORDER_MODAL_CLOSE'] = 'Закрыть';
 $MESS['ORDER_INVALID_PROMO'] = 'Промокод не найден или не действует. Проверьте, введён ли промокод без ошибок.';
+
+$MESS['ORDER_SUCCESS_TITLE'] = 'Успешное оформление заказа';
+$MESS['ORDER_SUCCESS_TEXT'] = 'Спасибо за ваш заказ. Подробности можно посмотреть в личном кабинете';
+$MESS['ORDER_PERSONAL_SECTION_TITLE'] = 'Личный кабинет';
+
+$MESS['ORDER_TITLE'] = 'Оформление заказа';
+$MESS['ORDER_AUTH_TEXT'] = '<a href="" data-action="showAuthForm">Войдите</a> в свой аккаунт и мы заполним форму за вас. Нет аккаунта? Мы создадим
+                    его автоматически
+                    в ходе оформления заказа.';
 ?>

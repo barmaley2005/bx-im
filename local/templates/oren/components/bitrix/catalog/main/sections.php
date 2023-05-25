@@ -49,7 +49,7 @@ $isAjax = $request->isPost() && $request->getPost('ajaxCatalog') == 'y';
         <div class="catalog-container">
             <div class="catalog-mob">
                 <div id="sidebarCatalog" class="catalog-mob__col">
-                    <p class="catalog-mob__text">Каталог</p>
+                    <p class="catalog-mob__text"><?=GetMessage('CATALOG_TITLE')?></p>
                     <div class="catalog-mob__arrow">
                         <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13 1L7 7L1 1" stroke="#877569" stroke-linecap="round" />
@@ -57,7 +57,7 @@ $isAjax = $request->isPost() && $request->getPost('ajaxCatalog') == 'y';
                     </div>
                 </div>
                 <div id="sidebarFilter" class="catalog-mob__col">
-                    <p class="catalog-mob__text">Фильтры</p>
+                    <p class="catalog-mob__text"><?=GetMessage('CATALOG_FILTER')?></p>
                     <div class="catalog-mob__arrow">
                         <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13 1L7 7L1 1" stroke="#877569" stroke-linecap="round" />
@@ -269,7 +269,7 @@ $arIblock = \CIBlock::GetByID($arParams['IBLOCK_ID'])->GetNext();
 <?if ($arIblock['DESCRIPTION']):?>
 <section class="section election">
     <div class="container">
-        <h3 class="election-title">Изделия из шерсти, кашемира и вискозы в интернет-магазине ORENSHAL</h3>
+        <h3 class="election-title"><?=GetMessage('CATALOG_DESCRIPTION_TITLE')?></h3>
 
         <div class="election-container">
             <div class="election-box">
@@ -277,7 +277,7 @@ $arIblock = \CIBlock::GetByID($arParams['IBLOCK_ID'])->GetNext();
             </div>
         </div>
 
-        <p class="election-more">Читать полностью</p>
+        <p class="election-more"><?=GetMessage('CATALOG_READ_MORE')?></p>
 
     </div>
 </section>

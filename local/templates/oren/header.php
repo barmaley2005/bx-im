@@ -151,7 +151,6 @@ $messages = \Local\Lib\Oren\Messages::getMessages();
                         </label>
                     </div>
 
-                    <!-- Для показа добавить класс  _show -->
                     <div class="search-container" data-entity="quick-search">
                     </div>
                 </div>

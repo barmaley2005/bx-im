@@ -172,7 +172,7 @@ function createVueGiftOrder(params) {
                             @change="onChange($event.target.value)"
                             ref="input"
                             >
-                        <span class="placement-inputs__info">Поле заполнено некорректно</span>
+                        <span class="placement-inputs__info">'+BX.message('GIFT_ORDER_INVALID_FIELD')+'</span>
                     </div>
         `
     });

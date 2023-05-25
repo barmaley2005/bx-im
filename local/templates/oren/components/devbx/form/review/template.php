@@ -13,7 +13,6 @@
 /** @var \CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<!-- Оставить отзыв -->
 <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
         <div class="modal-header">

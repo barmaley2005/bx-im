@@ -75,7 +75,7 @@ $settings = \Local\Lib\Settings::getInstance();
                               d="M20.4603 17.0395C20.2594 16.953 20.0257 16.9982 19.8708 17.1531L17.9768 19.0472C17.8487 19.1752 17.6312 19.163 17.3663 19.1065C16.7098 18.9659 15.8604 18.446 14.9462 17.5319C14.0321 16.6178 13.5123 15.7684 13.3717 15.1118C13.3152 14.847 13.3029 14.6294 13.431 14.5014L15.325 12.6074C15.48 12.4524 15.5251 12.2188 15.4386 12.0179C15.4386 12.0179 14.9417 10.8581 14.4125 9.6235C14.0622 8.80651 13.3297 8.21646 12.4572 8.04849C11.5843 7.88018 10.6849 8.15589 10.0565 8.78434C9.5269 9.31391 9.11248 9.72833 9.11248 9.72833C8.20182 10.639 7.85232 11.9972 8.05636 13.5664C8.33799 15.7353 9.68695 18.3335 11.9158 20.5624C14.1446 22.7912 16.7429 24.1402 18.9117 24.4218C20.481 24.6258 21.8392 24.2763 22.7498 23.3657C22.7498 23.3657 23.1642 22.9513 23.6938 22.4217C24.3223 21.7932 24.598 20.8939 24.4297 20.021C24.2617 19.1484 23.6716 18.416 22.8547 18.0657C21.6201 17.5364 20.4603 17.0395 20.4603 17.0395ZM20.3719 18.1671L22.4325 19.0504C22.9228 19.2604 23.2769 19.7001 23.3777 20.2236C23.4785 20.7471 23.3129 21.2869 22.936 21.6638L21.992 22.6078C21.2972 23.3026 20.2468 23.5151 19.0495 23.3595C17.0681 23.1025 14.7097 21.8411 12.6734 19.8048C10.6371 17.7684 9.37569 15.41 9.1187 13.4287C8.96305 12.2313 9.1756 11.1809 9.87034 10.4862L10.8143 9.54219C11.1912 9.16528 11.731 8.9997 12.2545 9.10048C12.7781 9.20126 13.2178 9.55535 13.4277 10.0456L14.311 12.1063L12.6735 13.7439C12.3325 14.0848 12.1733 14.6324 12.3238 15.336C12.494 16.1305 13.0827 17.1836 14.1886 18.2895C15.2946 19.3955 16.3477 19.9841 17.1421 20.1543C17.8457 20.3048 18.3933 20.1456 18.7343 19.8047L20.3719 18.1671Z" />
                     </svg>
                     <div class="soc-link__info">
-                        <span>Позвонить</span>
+                        <span><?=GetMessage('FOOTER_CALL')?></span>
                     </div>
                 </a>
                 <a href="mailto:<?=$settings->email?>" class="soc-link">
@@ -87,7 +87,7 @@ $settings = \Local\Lib\Settings::getInstance();
                         <path d="M8 20.5714H18.2857" stroke-linecap="round" />
                     </svg>
                     <div class="soc-link__info">
-                        <span>Написать</span>
+                        <span><?=GetMessage('FOOTER_WRITE')?></span>
                     </div>
                 </a>
                 <a href="<?=$settings->whatsapp?>" class="soc-link">
@@ -180,7 +180,7 @@ if ($iblockId)
 
                         <div class="banner-button">
                             <div class="button-box">
-                                <a class="button" href="<?=$arProperties['URL']['VALUE']?>">Подробнее</a>
+                                <a class="button" href="<?=$arProperties['URL']['VALUE']?>"><?=GetMessage('FOOTER_MORE')?></a>
                                 <svg class="button-bg" width="238" height="68" viewBox="0 0 238 68" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -212,7 +212,7 @@ if ($iblockId)
                     </svg>
                 </div>
                 <div class="menu-footer-item__text">
-                    <span>Поиск</span>
+                    <span><?=GetMessage('FOOTER_SEARCH')?></span>
                 </div>
             </div>
             <a href="<?=SITE_DIR?>personal/favorite/" class="menu-footer-item">
@@ -224,7 +224,7 @@ if ($iblockId)
                     </svg>
                 </div>
                 <div class="menu-footer-item__text">
-                    <span>Избранное</span>
+                    <span><?=GetMessage('FOOTER_FAVORITE')?></span>
                 </div>
             </a>
             <a href="<?=SITE_DIR?>catalog/" class="menu-footer-item">
@@ -236,7 +236,7 @@ if ($iblockId)
                     </svg>
                 </div>
                 <div class="menu-footer-item__text">
-                    <span>Каталог</span>
+                    <span><?=GetMessage('FOOTER_CATALOG')?></span>
                 </div>
             </a>
             <button class="menu-footer-item" data-action="showBasket">
@@ -250,7 +250,7 @@ if ($iblockId)
                     </svg>
                 </div>
                 <div class="menu-footer-item__text">
-                    <span>Корзина</span>
+                    <span><?=GetMessage('FOOTER_BASKET')?></span>
                 </div>
             </button>
             <a href="<?=SITE_DIR?>personal/" class="menu-footer-item">
@@ -262,7 +262,7 @@ if ($iblockId)
                     </svg>
                 </div>
                 <div class="menu-footer-item__text">
-                    <span>Профиль</span>
+                    <span><?=GetMessage('FOOTER_PROFILE')?></span>
                 </div>
             </a>
         </div>
