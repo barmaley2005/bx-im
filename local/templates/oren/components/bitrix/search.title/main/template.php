@@ -24,7 +24,7 @@ $CONTAINER_ID = CUtil::JSEscape($CONTAINER_ID);
 
 if($arParams["SHOW_INPUT"] !== "N"):?>
 	<div class="header-desctop__search" id="<?echo $CONTAINER_ID?>">
-		<input id="<?echo $INPUT_ID?>" class="header-desctop__input" type="text" placeholder="Поиск" name="q" value="">
+		<input id="<?echo $INPUT_ID?>" class="header-desctop__input" type="text" placeholder="<?=GetMessage('CT_BST_SEARCH_BUTTON')?>" name="q" value="">
 		<div class="header-desctop__btn">
 			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M11.7656 12.9412L16.4715 17.647" stroke-miterlimit="10" stroke-linecap="round"

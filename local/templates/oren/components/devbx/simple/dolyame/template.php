@@ -20,7 +20,7 @@ $this->setFrameMode(true);
                 <div class="modal-header__img">
                     <img src="/local/templates/oren/img/gallery/img-7.jpg" alt="">
                 </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?=GetMessage('DOLYAME_MODAL_CLOSE')?>">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.25 5.25L18.75 18.75" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M5.25 18.75L18.75 5.25" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />
@@ -30,10 +30,9 @@ $this->setFrameMode(true);
             <div class="modal-body">
                 <div class="shares-container">
                     <div class="shares-item">
-                        <h3 class="shares-title">Оплачивайте покупку по частям</h3>
+                        <h3 class="shares-title"><?=GetMessage('DOLYAME_TITLE')?></h3>
                         <div class="shares-content">
-                            <p>Долями позволяет разделить сумму покупки на 4 равных части без комиссий и переплат. Получайте
-                                заказы сразу, а платите за них постепенно.</p>
+                            <p><?=GetMessage('DOLYAME_SUB_TITLE')?></p>
                         </div>
 
                         <div class="shares-row">
@@ -52,10 +51,10 @@ $this->setFrameMode(true);
                                                     stroke="#877569" stroke-width="2.39928" stroke-linejoin="round" />
                                             </svg>
                                         </div>
-                                        <p class="shares-col__title">Покупайте сразу все</p>
+                                        <p class="shares-col__title"><?=GetMessage('DOLYAME_CONTENT_TITLE_1')?></p>
                                     </div>
                                     <p class="shares-col__content">
-                                        Можно не откладывать деньги на то, что давно хотели, и купить уже сейчас
+                                        <?=GetMessage('DOLYAME_CONTENT_1')?>
                                     </p>
                                 </div>
                                 <div class="shares-col__item">
@@ -72,10 +71,10 @@ $this->setFrameMode(true);
                                                     stroke="#877569" stroke-width="2.39928" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </div>
-                                        <p class="shares-col__title">Распределяйте расходы</p>
+                                        <p class="shares-col__title"><?=GetMessage('DOLYAME_CONTENT_TITLE_1')?></p>
                                     </div>
                                     <p class="shares-col__content">
-                                        Оплачивайте покупки частями — по 25% каждые две недели с зарплаты
+                                        <?=GetMessage('DOLYAME_CONTENT_2')?>
                                     </p>
                                 </div>
                             </div>
@@ -87,50 +86,43 @@ $this->setFrameMode(true);
                         </div>
                     </div>
                     <div class="shares-item">
-                        <h3 class="shares-title">Как работает оплата Долями в ORENSHAL</h3>
+                        <h3 class="shares-title"><?=GetMessage('DOLYAME_SHARES_TITLE')?></h3>
                         <div class="shares-list">
                             <div class="shares-list__item">
-                                <h4 class="shares-list__title">Добавляйте товары в корзину</h4>
+                                <h4 class="shares-list__title"><?=GetMessage('DOLYAME_SHARES_ITEM_1_TITLE')?></h4>
                                 <div class="shares-list__content">
-                                    <p>Выбирайте любые понравившиеся товары, сборка заказа начнётся сразу после оформления и оплаты
-                                        первых 25% стоимости.</p>
+                                    <p><?=GetMessage('DOLYAME_SHARES_ITEM_1_TEXT')?></p>
                                 </div>
                             </div>
                             <div class="shares-list__item">
-                                <h4 class="shares-list__title">4 небольших платежа</h4>
+                                <h4 class="shares-list__title"><?=GetMessage('DOLYAME_SHARES_ITEM_2_TITLE')?></h4>
                                 <div class="shares-list__content">
-                                    <p>Долями – просто ещё один способ оплаты: сервис автоматически будет списывать по 1/4 от
-                                        стоимости покупки каждые 2 недели.</p>
+                                    <p><?=GetMessage('DOLYAME_SHARES_ITEM_2_TEXT')?></p>
                                 </div>
                             </div>
                             <div class="shares-list__item">
-                                <h4 class="shares-list__title">Без переплат и скрытых условий</h4>
+                                <h4 class="shares-list__title"><?=GetMessage('DOLYAME_SHARES_ITEM_3_TITLE')?></h4>
                                 <div class="shares-list__content">
-                                    <p>Это не кредит и не рассрочка: вы заплатите ровно ту сумму, которая указана в корзине при
-                                        оформлении заказа.</p>
+                                    <p><?=GetMessage('DOLYAME_SHARES_ITEM_3_TEXT')?></p>
                                 </div>
                             </div>
                             <div class="shares-list__item">
-                                <h4 class="shares-list__title">Без анкет и ожидания</h4>
+                                <h4 class="shares-list__title"><?=GetMessage('DOLYAME_SHARES_ITEM_4_TITLE')?></h4>
                                 <div class="shares-list__content">
-                                    <p>Нужно просто ввести ФИО, дату рождения, номер телефона и данные банковской карты.</p>
-                                    <p>Отказаться от долями-заказа так же просто, как и от обычного. Все деньги вернутся вам на карту.
-                                    </p>
+                                    <?=GetMessage('DOLYAME_SHARES_ITEM_4_TEXT')?>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="shares-item">
-                        <h3 class="shares-title">Как оформить заказ</h3>
+                        <h3 class="shares-title"><?=GetMessage('DOLYAME_HOW_ORDER_TITLE')?></h3>
                         <div class="shares-content">
-                            <p>1. Соберите корзину на общую сумму от 1 000 ₽ до 70 000 ₽.</p>
-                            <p>2. При оформлении заказа выбирайте «оплата Долями».</p>
-                            <p>3. Спишем первый платёж и отправим вам заказ. Остальное — точно по графику.</p>
+                            <?=GetMessage('DOLYAME_HOW_ORDER_TEXT')?>
                         </div>
                     </div>
                 </div>
 
-                <a href="" class="shares-rules">Правила использования сервиса оплаты по частям «Долями»</a>
+                <a href="" class="shares-rules"><?=GetMessage('DOLYAME_RULES_TEXT')?></a>
             </div>
             <div class="modal-footer">
             </div>

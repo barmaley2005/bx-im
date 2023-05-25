@@ -430,7 +430,7 @@ function createVueOrderAjaxComponent(pContainer, pTemplate, parameters)
                     {
                         console.log('invalid coupon');
 
-                        this.modalTitle = 'Промокод не найден или не действует. Проверьте, введён ли промокод без ошибок.';
+                        this.modalTitle = BX.message('ORDER_INVALID_PROMO');
                         this.modalContent = '';
                         this.showModal = true;
                     }

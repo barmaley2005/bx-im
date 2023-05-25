@@ -11,3 +11,8 @@ $MESS['ORDER_PROPERTY_GIFT_FIELD_RECEIVER_EMAIL'] = 'E-mail получателя
 $MESS['ORDER_PROPERTY_GIFT_FIELD_RECEIVER_PHONE'] = 'Телефон получателя';
 $MESS['ORDER_PROPERTY_GIFT_FIELD_MESSAGE'] = 'Сообщение получателю';
 
+$MESS['OREN_ERR_ORDER_DELIVERY_CALC'] = 'Ошибка расчета';
+$MESS['OREN_ERR_ORDER_PAYMENT_NOT_ENOUGH_FUNDS'] = 'Недостаточно средств';
+$MESS['OREN_ERR_ORDER_GIFT_MIN_NOMINAL'] = 'Номинал должен быть не меньше 5000';
+$MESS['OREN_ERR_IBLOCK_NOT_FOUND'] = 'Инфоблок не найден';
+$MESS['OREN_ERR_CERT_PRODUCT_NOT_FOUND'] = 'Товар для сертификата не найден';

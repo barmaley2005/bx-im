@@ -140,7 +140,7 @@ class Oren extends Main\Engine\Controller
                 }
                 else
                 {
-                    $errMessages = 'Ошибка расчета';
+                    $errMessages = Loc::getMessage('OREN_ERR_ORDER_DELIVERY_CALC');
                 }
 
                 $shipment->setFields(array(
@@ -224,7 +224,7 @@ class Oren extends Main\Engine\Controller
                         {
                             $order->setFields(array(
                                 'MARKED' => 'Y',
-                                'REASON_MARKED' => 'Недостаточно средств'
+                                'REASON_MARKED' => Loc::getMessage('OREN_ERR_ORDER_PAYMENT_NOT_ENOUGH_FUNDS')
                             ));
                         }
                     }
@@ -261,14 +261,14 @@ class Oren extends Main\Engine\Controller
 
         if ($customNominal && $nominal<5000)
         {
-            $this->addError(new Main\Error('Номинал должен быть не меньше 5000'));
+            $this->addError(new Main\Error(Loc::getMessage('OREN_ERR_ORDER_GIFT_MIN_NOMINAL')));
             return false;
         }
 
         $iblockId = \Local\Lib\Utils::getIblockIdByCode('GIFTS');
         if (!$iblockId)
         {
-            $this->addError(new Main\Error('Инфоблок не найден'));
+            $this->addError(new Main\Error(Loc::getMessage('OREN_ERR_IBLOCK_NOT_FOUND')));
             return false;
         }
 
@@ -281,7 +281,7 @@ class Oren extends Main\Engine\Controller
         $obElement = \CIBlockElement::GetList([], $arFilter)->GetNextElement();
         if (!$obElement)
         {
-            $this->addError(new Main\Error('Товар для сертификата не найден'));
+            $this->addError(new Main\Error(Loc::getMessage('OREN_ERR_CERT_PRODUCT_NOT_FOUND')));
             return false;
         }
 
@@ -294,7 +294,7 @@ class Oren extends Main\Engine\Controller
 
         if (!array_key_exists($offerId, $arElement['OFFERS']))
         {
-            $this->addError(new Main\Error('Товар для сертификата не найден'));
+            $this->addError(new Main\Error(Loc::getMessage('OREN_ERR_CERT_PRODUCT_NOT_FOUND')));
             return false;
         }
 

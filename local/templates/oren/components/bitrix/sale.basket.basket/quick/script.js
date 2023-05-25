@@ -86,7 +86,7 @@ class DevBxQuickSaleBasket {
         modal.container.innerHTML = '<div class="modal-dialog modal-dialog-centered">\n' +
             '      <div class="modal-content">\n' +
             '        <div class="modal-header">\n' +
-            '          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">\n' +
+            '          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="'+BX.message('MODAL_CLOSE')+'">\n' +
             '            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
             '              <path d="M5.25 5.25L18.75 18.75" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />\n' +
             '              <path d="M5.25 18.75L18.75 5.25" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />\n' +
@@ -94,11 +94,11 @@ class DevBxQuickSaleBasket {
             '          </button>\n' +
             '        </div>\n' +
             '        <div class="modal-body">\n' +
-            '          <h5 class="modal-title" id="exampleModalLabel">Добавить в избранное, чтобы не потерять?</h5>\n' +
+            '          <h5 class="modal-title" id="exampleModalLabel">'+BX.message('MODAL_QUESTION_ADD_TO_FAVORITE')+'</h5>\n' +
             '        </div>\n' +
             '        <div class="modal-footer">\n' +
-            '          <button class="submit" data-bs-dismiss="modal" data-action="moveToFavorite" data-product-id="'+productId+'" data-item-id="'+itemId+'">Перенести в избранное</button>\n' +
-            '          <button class="view" data-bs-dismiss="modal" data-action="confirmDelete" data-item-id="'+itemId+'">Удалить</button>\n' +
+            '          <button class="submit" data-bs-dismiss="modal" data-action="moveToFavorite" data-product-id="'+productId+'" data-item-id="'+itemId+'">'+BX.message('MODAL_MOVE_TO_FAVORITE')+'</button>\n' +
+            '          <button class="view" data-bs-dismiss="modal" data-action="confirmDelete" data-item-id="'+itemId+'">'+BX.message('MODAL_DELETE')+'</button>\n' +
             '        </div>\n' +
             '      </div>\n' +
             '    </div>';

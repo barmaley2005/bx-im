@@ -12,21 +12,21 @@
 
 $arTemplateParameters['SLIDER_TITLE'] = array(
     'PARENT' => 'VISUAL',
-    'NAME' => 'Заголовок блока',
+    'NAME' => GetMessage('SLIDER_TITLE'),
     'TYPE' => 'STRING',
     'DEFAULT' => '',
 );
 
 $arTemplateParameters['SLIDER_LINK'] = array(
     'PARENT' => 'VISUAL',
-    'NAME' => 'Ссылка внизу блока',
+    'NAME' => GetMessage('SLIDER_LINK'),
     'TYPE' => 'STRING',
     'DEFAULT' => '',
 );
 
 $arTemplateParameters['SLIDER_LINK_TEXT'] = array(
     'PARENT' => 'VISUAL',
-    'NAME' => 'Тексты Ссылки внизу блока',
+    'NAME' => GetMessage('SLIDER_LINK_TEXT'),
     'TYPE' => 'STRING',
     'DEFAULT' => '',
 );

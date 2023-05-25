@@ -24,7 +24,7 @@ while($arRes = $db_iblock->Fetch())
 $arTemplateParameters = array(
     "IBLOCK_TYPE" => array(
         "PARENT" => "BASE",
-        "NAME" => "Тип инфоблока",
+        "NAME" => GetMessage('GIFT_ORDER_IBLOCK_TYPE'),
         "TYPE" => "LIST",
         "VALUES" => $arTypes,
         "DEFAULT" => "news",
@@ -32,7 +32,7 @@ $arTemplateParameters = array(
     ),
     "IBLOCK_ID" => array(
         "PARENT" => "BASE",
-        "NAME" => "Инфоблок",
+        "NAME" => GetMessage('GIFT_ORDER_IBLOCK_ID'),
         "TYPE" => "LIST",
         "VALUES" => $arIBlocks,
         "DEFAULT" => '',

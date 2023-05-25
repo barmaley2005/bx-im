@@ -42,20 +42,20 @@ if ($arResult['CANCELED'] == 'Y')
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 6L17 6M1 6L7.29333 1M1 6L7.29333 11" stroke="currentColor" stroke-width="0.75" />
                     </svg>
-                    <span>Назад</span>
+                    <span><?=GetMessage('BACK')?></span>
                 </a>
                 <h2 class="order-info__id">
-                    <span class="order-info__id-label">Заказ №</span>
+                    <span class="order-info__id-label"><?=GetMessage('ORDER_NUM')?></span>
                     <span><?=$arResult['ACCOUNT_NUMBER']?></span>
                 </h2>
-                <p class="order-info__date">от <?=$dateFormated?></p>
+                <p class="order-info__date"><?=GetMessage('ORDER_FROM')?> <?=$dateFormated?></p>
             </div>
             <div class="order-info">
                 <div class="order-info__block">
-                    <h3 class="order-info__title">Общая информация</h3>
+                    <h3 class="order-info__title"><?=GetMessage('GENERAL_INFO')?></h3>
                     <ul class="order-info__list">
                         <li class="order-info__row">
-                            <p class="order-info__name">Дата оформления:</p>
+                            <p class="order-info__name"><?=GetMessage('ORDER_DATE')?></p>
                             <p class="order-info__value"><?=$fullDateFormated?></p>
                         </li>
                         <?
@@ -76,22 +76,22 @@ if ($arResult['CANCELED'] == 'Y')
                             {
                                 $displayDeliveryPrice = $arShipment['PRICE_DELIVERY_FORMATTED'];
                             } else {
-                                $displayDeliveryPrice = 'Бесплатно';
+                                $displayDeliveryPrice = GetMessage('FREE_DELIVERY');
                             }
                             ?>
                             <li class="order-info__row">
-                                <p class="order-info__name">Доставка:</p>
+                                <p class="order-info__name"><?=GetMessage('DELIVERY')?></p>
                                 <p class="order-info__value"><?=$arShipment['DELIVERY_NAME']?></p>
                             </li>
                             <li class="order-info__row">
-                                <p class="order-info__name">Стоимость доставки:</p>
+                                <p class="order-info__name"><?=GetMessage('DELIVERY_COST')?></p>
                                 <p class="order-info__value"><?=$displayDeliveryPrice?></p>
                             </li>
                             <?
                         }
                         ?>
                         <li class="order-info__row">
-                            <p class="order-info__name">Статус заказа:</p>
+                            <p class="order-info__name"><?=GetMessage('ORDER_STATUS')?></p>
                             <p class="order-info__value order-status <?=$statusClass?>"><?=$statusName?></p>
                         </li>
                     </ul>
@@ -101,7 +101,7 @@ if ($arResult['CANCELED'] == 'Y')
                     foreach ($arResult['PAYMENT'] as $arPayment)
                     {
                         ?>
-                        <h3 class="order-info__title">Способ оплаты</h3>
+                        <h3 class="order-info__title"><?=GetMessage('PAY_SYSTEM_TYPE')?></h3>
                         <ul class="order-info__list _two-colunm">
                             <li class="order-info__row">
                                 <p class="order-info__name"><?=$arPayment['PAY_SYSTEM_NAME']?>:</p>
@@ -119,14 +119,14 @@ if ($arResult['CANCELED'] == 'Y')
                     ?>
                 </div>
                 <div class="order-info__block">
-                    <h3 class="order-info__title">Информация о товарах</h3>
+                    <h3 class="order-info__title"><?=GetMessage('PRODUCTS_INFO')?></h3>
                     <ul class="order-info__list _two-colunm">
                         <li class="order-info__row">
-                            <p class="order-info__name">Количество товаров:</p>
+                            <p class="order-info__name"><?=GetMessage('PRODUCTS_TOTAL_COUNT')?></p>
                             <p class="order-info__value"><?=count($arResult['BASKET'])?></p>
                         </li>
                         <li class="order-info__row">
-                            <p class="order-info__name">Общая сумма заказа:</p>
+                            <p class="order-info__name"><?=GetMessage('PRODUCTS_SUM')?></p>
                             <p class="order-info__value"><?=$arResult['PRICE_FORMATED']?></p>
                         </li>
                     </ul>
@@ -160,15 +160,15 @@ if ($arResult['CANCELED'] == 'Y')
                         }
                         ?>
                         <button type="button" class="order-info__product-feedback feedback"
-                                data-action="writeReview" data-product-id="<?=$arBasketItem['PRODUCT_ID']?>">Оставить отзыв</button>
+                                data-action="writeReview" data-product-id="<?=$arBasketItem['PRODUCT_ID']?>"><?=GetMessage('PRODUCT_WRITE_REVIEW')?></button>
                     </li>
                     <?
                 }
                 ?>
             </ul>
             <div class="order-info__buttons">
-                <a href="<?=$arResult['URL_TO_COPY']?>" class="order-info__button _repeat">Повторить заказ</a>
-                <button type="button" class="order-info__button _question" data-action="showQuestionForm">Задать вопрос</button>
+                <a href="<?=$arResult['URL_TO_COPY']?>" class="order-info__button _repeat"><?=GetMessage('ORDER_COPY')?></a>
+                <button type="button" class="order-info__button _question" data-action="showQuestionForm"><?=GetMessage('ASK_QUESTION')?></button>
             </div>
         </div>
     </div>

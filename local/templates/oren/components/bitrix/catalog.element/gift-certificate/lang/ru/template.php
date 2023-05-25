@@ -1,0 +1,5 @@
+<?php
+$MESS['GIFT_CERTIFICATE_CUSTOM_NOMINAL'] = 'Указать свою';
+$MESS['GIFT_CERTIFICATE_ORDER'] = 'Перейти к оформлению';
+$MESS['GIFT_CERTIFICATE_DESCRIPTION'] = 'Описание';
+$MESS['GIFT_CERTIFICATE_PRICE'] = 'Цена:';

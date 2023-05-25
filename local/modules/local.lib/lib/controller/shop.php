@@ -11,6 +11,7 @@ use Bitrix\Sale\BasketPropertyItemBase;
 use DevBx\Core\Assert;
 use Local\Lib\DB\FavoriteTable;
 use Local\Lib\DB\SMSCodeTable;
+use Bitrix\Main\Localization\Loc;
 
 class Shop extends Main\Engine\Controller
 {
@@ -213,7 +214,7 @@ class Shop extends Main\Engine\Controller
         $iblockId = \CIBlockElement::GetIBlockByID($productId);
 
         if (!$iblockId) {
-            throw new Main\SystemException('Товар не найден');
+            throw new Main\SystemException(Loc::getMessage('LOCAL_LIB_SHOP_PRODUCT_NOT_FOUND'));
         }
 
         $arProduct = array(
@@ -320,7 +321,7 @@ class Shop extends Main\Engine\Controller
         $result = self::__addBasket($productId, $quantity);
 
         if ($result->isSuccess()) {
-            return ['success' => true, 'message' => 'Добавлено в корзину'];
+            return ['success' => true, 'message' => Loc::getMessage('LOCAL_LIB_SHOP_SUCCESS_ADD_TO_BASKET')];
         } else {
             return ['error' => $result->getErrorMessages()];
         }
@@ -342,7 +343,7 @@ class Shop extends Main\Engine\Controller
         $basketItem = $basket->getItemById($basketId);
 
         if (!$basketItem) {
-            return ['error' => 'Товар не найден в корзине'];
+            return ['error' => Loc::getMessage('LOCAL_LIB_SHOP_PRODUCT_NOT_FOUND_IN_BASKET')];
         }
 
         $result = $basketItem->delete();
@@ -589,7 +590,7 @@ class Shop extends Main\Engine\Controller
         $IBLOCK_ID = \CIBlockElement::GetIBlockByID($productId);
 
         if (!$IBLOCK_ID) {
-            return ['error' => 'Товар не найден'];
+            return ['error' => Loc::getMessage('LOCAL_LIB_SHOP_PRODUCT_NOT_FOUND')];
         }
 
         if (!isset($_SESSION[self::SESSION_COMPARE_LIST][$IBLOCK_ID]["ITEMS"][$productId])) {
@@ -694,7 +695,7 @@ class Shop extends Main\Engine\Controller
                 );
                 unset($sectionsList, $arElement);
             } else {
-                $result["error"] = "Ошибка добавления товара";
+                $result["error"] = Loc::getMessage('LOCAL_LIB_SHOP_ERR_ADD_TO_BASKET');
             }
         } else {
             if ($mode == self::COMPARE_DELETE || $mode == self::COMPARE_TOGGLE) {
@@ -955,18 +956,6 @@ class Shop extends Main\Engine\Controller
                 "DISPLAY_COMPARE" => "N",
                 "ELEMENT_CODE" => "",
                 "ELEMENT_ID" => $productId,
-                "GIFTS_DETAIL_BLOCK_TITLE" => "Выберите один из подарков",
-                "GIFTS_DETAIL_HIDE_BLOCK_TITLE" => "N",
-                "GIFTS_DETAIL_PAGE_ELEMENT_COUNT" => "4",
-                "GIFTS_DETAIL_TEXT_LABEL_GIFT" => "Подарок",
-                "GIFTS_MAIN_PRODUCT_DETAIL_BLOCK_TITLE" => "Выберите один из товаров, чтобы получить подарок",
-                "GIFTS_MAIN_PRODUCT_DETAIL_HIDE_BLOCK_TITLE" => "N",
-                "GIFTS_MAIN_PRODUCT_DETAIL_PAGE_ELEMENT_COUNT" => "4",
-                "GIFTS_MESS_BTN_BUY" => "Выбрать",
-                "GIFTS_SHOW_DISCOUNT_PERCENT" => "Y",
-                "GIFTS_SHOW_IMAGE" => "Y",
-                "GIFTS_SHOW_NAME" => "Y",
-                "GIFTS_SHOW_OLD_PRICE" => "Y",
                 "HIDE_NOT_AVAILABLE_OFFERS" => "N",
                 "IBLOCK_ID" => "2",
                 "IBLOCK_TYPE" => "catalog",
@@ -1085,7 +1074,7 @@ class Shop extends Main\Engine\Controller
         }
 
         $fields = [
-            'NAME' => 'Комментарий',
+            'NAME' => Loc::getMessage('LOCAL_LIB_SHOP_BASKET_PROP_COMMENT'),
             'CODE' => 'COMMENT',
             'VALUE' => $comment,
             'SORT' => 1000,

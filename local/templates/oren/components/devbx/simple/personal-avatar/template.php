@@ -32,12 +32,12 @@ if ($USER->IsAuthorized())
 ?>
 <div class="account-block__profile profile">
     <label for="user-photo-input" class="profile__photo">
-        <img id="user-photo" src="<?=$photoSrc?>" alt="Фотография пользователя"
+        <img id="user-photo" src="<?=$photoSrc?>" alt="<?=GetMessage('PERSONAL_AVATAR_USER_PHOTO')?>"
              class="profile__img" />
         <input class="profile__input" type="file" id="user-photo-input" name="user-photo" accept="image/png,
               image/jpeg" value="null" />
     </label>
-    <a href="<?=SITE_DIR?>personal/private/" class="profile__link"><?=$userName ?: 'Заполните профиль'?></a>
+    <a href="<?=SITE_DIR?>personal/private/" class="profile__link"><?=$userName ?: GetMessage('PERSONAL_AVATAR_FILL_PROFILE')?></a>
 </div>
 
 <script>

@@ -34,32 +34,32 @@ use Bitrix\Main\Localization\Loc;
 			</div>
 
 			<div class="placement-inputs__col">
-				<label class="placement-inputs__label" for="">Имя</label>
-				<input name="NAME" type="text" class="input" placeholder="Имя" nonce="NAME" value="<?=$arResult["arUser"]["NAME"]?>">
+				<label class="placement-inputs__label" for=""><?=GetMessage('NAME')?></label>
+				<input name="NAME" type="text" class="input" placeholder="<?=GetMessage('NAME')?>" nonce="NAME" value="<?=$arResult["arUser"]["NAME"]?>">
 			</div>
 			<div class="placement-inputs__col">
-				<label class="placement-inputs__label" for="">Отчество</label>
-				<input name="SECOND_NAME" type="text" class="input" placeholder="Отчество" value="<?=$arResult["arUser"]["SECOND_NAME"]?>">
+				<label class="placement-inputs__label" for=""><?=GetMessage('SECOND_NAME')?></label>
+				<input name="SECOND_NAME" type="text" class="input" placeholder="<?=GetMessage('SECOND_NAME')?>" value="<?=$arResult["arUser"]["SECOND_NAME"]?>">
 			</div>
 			<div class="placement-inputs__col">
-				<label class="placement-inputs__label" for="">Фамилия</label>
-				<input name="LAST_NAME" type="text" class="input" placeholder="Фамилия" value="<?=$arResult["arUser"]["LAST_NAME"]?>">
+				<label class="placement-inputs__label" for=""><?=GetMessage('LAST_NAME')?></label>
+				<input name="LAST_NAME" type="text" class="input" placeholder="<?=GetMessage('LAST_NAME')?>" value="<?=$arResult["arUser"]["LAST_NAME"]?>">
 			</div>
 			<div class="placement-inputs__col">
-				<label class="placement-inputs__label" for="">Дата рождения</label>
-				<input name="PERSONAL_BIRTHDAY" type="text" class="input" placeholder="Дата рождения" value="<?=$arResult["arUser"]["PERSONAL_BIRTHDAY"]?>">
+				<label class="placement-inputs__label" for=""><?=GetMessage('BIRTHDAY')?></label>
+				<input name="PERSONAL_BIRTHDAY" type="text" class="input" placeholder="<?=GetMessage('BIRTHDAY')?>" value="<?=$arResult["arUser"]["PERSONAL_BIRTHDAY"]?>">
 			</div>
-			<label class="account-data__label">Пол:</label>
+			<label class="account-data__label"><?=GetMessage('SEX')?></label>
 			<div class="account-data__group">
 				<label class="account-data__radio">
 					<input id="man" name="PERSONAL_GENDER" type="radio" class="account-data__input-hidden" value="M"
 						<?if ($arResult['arUser']['PERSONAL_GENDER'] == 'M'):?> checked<?endif?>>
-					<span>Мужской</span>
+					<span><?=GetMessage('SEX_M')?></span>
 				</label>
 				<label class="account-data__radio">
 					<input id="woman" name="PERSONAL_GENDER" type="radio" class="account-data__input-hidden" value="F"
 						<?if ($arResult['arUser']['PERSONAL_GENDER'] == 'F'):?> checked<?endif?>>
-					<span>Женский</span>
+					<span><?=GetMessage('SEX_F')?></span>
 				</label>
 			</div>
 			<div class="placement-inputs__col">
@@ -67,10 +67,10 @@ use Bitrix\Main\Localization\Loc;
 				<input name="EMAIL" type="email" class="input" placeholder="E-mail" value="<?=$arResult["arUser"]["EMAIL"]?>">
 			</div>
 			<div class="placement-inputs__col">
-				<label class="placement-inputs__label" for="">Номер телефона</label>
-				<input name="PERSONAL_PHONE" type="tel" class="input phone" placeholder="Номер телефона" value="<?=$arResult["arUser"]["PERSONAL_PHONE"]?>">
+				<label class="placement-inputs__label" for=""><?=GetMessage('PHONE')?></label>
+				<input name="PERSONAL_PHONE" type="tel" class="input phone" placeholder="<?=GetMessage('PHONE')?>" value="<?=$arResult["arUser"]["PERSONAL_PHONE"]?>">
 			</div>
-			<button type="submit" class="account-data__submit submit">Сохранить изменения</button>
+			<button type="submit" class="account-data__submit submit"><?=GetMessage('SAVE')?></button>
 		</form>
 	</div>
 </div>

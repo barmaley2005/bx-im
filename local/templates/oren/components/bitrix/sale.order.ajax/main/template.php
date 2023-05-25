@@ -18,6 +18,8 @@ $this->addExternalJs(SITE_TEMPLATE_PATH.'/js/theia-sticky-sidebar.min.js');
 
 $documentRoot = Main\Application::getDocumentRoot();
 
+$messages = Loc::loadLanguageFile(__FILE__);
+
 $context = Main\Application::getInstance()->getContext();
 $request = $context->getRequest();
 
@@ -92,7 +94,6 @@ if ($request->get('ORDER_ID') <> '') {
     $signedParams = $signer->sign(base64_encode(serialize($arParams)), 'sale.order.ajax');
     $signedBasketTemplate = $signer->sign('main', 'sale.basket.basket');
     $signedBasketParamsString = $signer->sign(base64_encode(serialize(array())), 'sale.basket.basket');
-    $messages = Loc::loadLanguageFile(__FILE__);
 
     $arStoreList = \Bitrix\Catalog\StoreTable::getList([
         'filter' => [

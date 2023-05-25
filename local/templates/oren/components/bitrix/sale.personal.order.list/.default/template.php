@@ -20,13 +20,12 @@ $APPLICATION->SetPageProperty('PERSONAL_CONTENT_CLASS', 'account-block__content 
 <div class="account-block__pages">
     <div id="my-orders" class="account-block__page account-page">
         <a href="<?= SITE_DIR ?>personal/" class="account-page__back">
-            <svg class="account-block__back-icon width=" 8
-            " height="14" viewBox="0 0 8 14" fill="none"
+            <svg class="account-block__back-icon" width="8" height="14" viewBox="0 0 8 14" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M7 13L1 7L7 1" stroke="#877569" stroke-linecap="round"/>
             </svg>
         </a>
-        <h2 class="account-page__title">Мои заказы</h2>
+        <h2 class="account-page__title"><?=GetMessage('PERSONAL_ORDER_LIST_TITLE')?></h2>
         <div class="my-orders">
             <ul class="my-orders-list my-orders__list">
                 <?
@@ -57,16 +56,17 @@ $APPLICATION->SetPageProperty('PERSONAL_CONTENT_CLASS', 'account-block__content 
                             <div class="my-orders__row">
                                 <p class="order-status <?=$statusClass?>"><?=$statusName?></p>
                                 <p>
-                                    <span class="my-orders__label">Заказ №</span>
+                                    <span class="my-orders__label"><?=GetMessage('PERSONAL_ORDER_LIST_ORDER_NUM')?></span>
                                     <span class="my-orders__id"><?=$arOrder['ACCOUNT_NUMBER']?></span>
                                 </p>
                             </div>
                             <div class="my-orders__row">
                                 <p class="my-orders__info">
-                                    <span class="my-orders__number"><?=\DevBx\Core\Utils::numWord(count($ar['BASKET_ITEMS']),array('товар','товара','товаров'))?></span>
+                                    <span class="my-orders__number"><?=\DevBx\Core\Utils::numWord(count($ar['BASKET_ITEMS']),
+                                            array(GetMessage('PERSONAL_ORDER_LIST_PRODUCT_CNT_1'),GetMessage('PERSONAL_ORDER_LIST_PRODUCT_CNT_2_4'),GetMessage('PERSONAL_ORDER_LIST_PRODUCT_CNT_5')))?></span>
                                     <span class="my-orders__costing"><?=$arOrder['FORMATED_PRICE']?></span>
                                 </p>
-                                <p class="my-orders__date">от <?=$dateFormated?></p>
+                                <p class="my-orders__date"><?=GetMessage('PERSONAL_ORDER_LIST_ORDER_DATE_FROM', array('#DATE#'=>$dateFormated))?></p>
                             </div>
                         </a>
                     </li>
@@ -78,10 +78,8 @@ $APPLICATION->SetPageProperty('PERSONAL_CONTENT_CLASS', 'account-block__content 
             } else {
                 ?>
                 <div class="my-orders-empty">
-                    <p class="my-orders-empty__text">Вы еще не сделали ни одного заказа.</p>
-                    <p class="my-orders-empty__text">Соберите свой первый заказ, перейдя в
-                        <a class="my-orders-empty__link" href="<?= SITE_DIR ?>catalog/">каталог</a>.
-                    </p>
+                    <p class="my-orders-empty__text"><?=GetMessage('PERSONAL_ORDER_LIST_EMPTY_TEXT_1')?></p>
+                    <p class="my-orders-empty__text"><?=GetMessage('PERSONAL_ORDER_LIST_EMPTY_TEXT_2',array('#LINK#'=>SITE_DIR.'catalog/'))?></p>
                 </div>
                 <?
             }
@@ -94,20 +92,20 @@ if (!empty($arResult['ORDERS'])) {
     $this->SetViewTarget('PERSONAL_FOOTER_CONTENT');
     ?>
     <aside class="account-block__help">
-        <h3 class="account-block__title">Помощь</h3>
+        <h3 class="account-block__title"><?=GetMessage('PERSONAL_ORDER_LIST_HELP_TITLE')?></h3>
         <ul class="account-block__help-list">
             <li class="account-block__help-item">
-                <a href="" class="account-block__help-link">Как проверить статус заказа?</a>
+                <a href="" class="account-block__help-link"><?=GetMessage('PERSONAL_ORDER_LIST_HELP_LINK_TITLE_1')?></a>
             </li>
             <li class="account-block__help-item">
-                <a href="" class="account-block__help-link">Как изменить дату или место доставки?</a>
+                <a href="" class="account-block__help-link"><?=GetMessage('PERSONAL_ORDER_LIST_HELP_LINK_TITLE_2')?></a>
             </li>
             <li class="account-block__item">
-                <a href="" class="account-block__help-link">Как вернуть товар?</a>
+                <a href="" class="account-block__help-link"><?=GetMessage('PERSONAL_ORDER_LIST_HELP_LINK_TITLE_3')?></a>
             </li>
         </ul>
-        <p class="account-block__question">Не нашли ответа? Напишите нам</p>
-        <button class="account-block__ask subscribe" data-action="showQuestionForm">Задать вопрос</button>
+        <p class="account-block__question"><?=GetMessage('PERSONAL_ORDER_LIST_HELP_QUESTION_WRITE')?></p>
+        <button class="account-block__ask subscribe" data-action="showQuestionForm"><?=GetMessage('PERSONAL_ORDER_LIST_ASK_QUESTION')?></button>
     </aside>
     <?
     $this->EndViewTarget();

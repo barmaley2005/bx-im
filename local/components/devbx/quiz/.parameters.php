@@ -20,7 +20,7 @@ $arComponentParameters = array(
     "PARAMETERS" => array(
         "IBLOCK_TYPE" => array(
             "PARENT" => "BASE",
-            "NAME" => "Тип инфоблока",
+            "NAME" => GetMessage('QUIZ_IBLOCK_TYPE'),
             "TYPE" => "LIST",
             "VALUES" => $arTypes,
             "DEFAULT" => "news",
@@ -28,7 +28,7 @@ $arComponentParameters = array(
         ),
         "IBLOCK_ID" => array(
             "PARENT" => "BASE",
-            "NAME" => "Инфоблок",
+            "NAME" => GetMessage('QUIZ_IBLOCK_ID'),
             "TYPE" => "LIST",
             "VALUES" => $arIBlocks,
             "DEFAULT" => '',
@@ -55,7 +55,7 @@ if ($arCurrentValues['IBLOCK_ID']>0)
 
     $arComponentParameters['PARAMETERS']['PROPERTY_WRAP_TYPE'] = array(
         "PARENT" => "BASE",
-        "NAME" => "Свойство для отбора \"Тип платка\"",
+        "NAME" => GetMessage('QUIZ_PROPERTY_WRAP_TYPE'),
         "TYPE" => "LIST",
         "VALUES" => $arPropList,
         "DEFAULT" => '',
@@ -63,7 +63,7 @@ if ($arCurrentValues['IBLOCK_ID']>0)
 
     $arComponentParameters['PARAMETERS']['PROPERTY_WRAP_FORM'] = array(
         "PARENT" => "BASE",
-        "NAME" => "Свойство для отбора \"Форма платка\"",
+        "NAME" => GetMessage('QUIZ_PROPERTY_WRAP_FORM'),
         "TYPE" => "LIST",
         "VALUES" => $arPropList,
         "DEFAULT" => '',
@@ -71,7 +71,7 @@ if ($arCurrentValues['IBLOCK_ID']>0)
 
     $arComponentParameters['PARAMETERS']['PROPERTY_WRAP_SIZE'] = array(
         "PARENT" => "BASE",
-        "NAME" => "Свойство для отбора \"Размер платка\"",
+        "NAME" => GetMessage('QUIZ_PROPERTY_WRAP_SIZE'),
         "TYPE" => "LIST",
         "VALUES" => $arPropList,
         "DEFAULT" => '',
@@ -79,7 +79,7 @@ if ($arCurrentValues['IBLOCK_ID']>0)
 
     $arComponentParameters['PARAMETERS']['PROPERTY_WRAP_COLOR'] = array(
         "PARENT" => "BASE",
-        "NAME" => "Свойство для отбора \"Цвет платка\"",
+        "NAME" => GetMessage('QUIZ_PROPERTY_WRAP_COLOR'),
         "TYPE" => "LIST",
         "VALUES" => $arPropList,
         "DEFAULT" => '',

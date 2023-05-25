@@ -253,10 +253,10 @@ class OrenShop {
 
         let elNotify = document.createElement('DIV');
         elNotify.classList.add('product-added');
-        elNotify.innerHTML = '<p>Товар добавлен в корзину</p>';
+        elNotify.innerHTML = '<p>'+BX.message('PUBLIC_PRODUCT_ADDED_TO_BASKET')+'</p>';
 
         if (e.target.dataset.followBasket !== 'false') {
-            e.target.textContent = `Перейти в корзину`;
+            e.target.textContent = BX.message('PUBLIC_GO_TO_BASKET');
             e.target.dataset.inBasket = true;
         }
 

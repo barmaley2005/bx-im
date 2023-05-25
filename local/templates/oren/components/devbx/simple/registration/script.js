@@ -49,7 +49,7 @@ function createVueRegisterForm(pContainer)
         computed: {
             countDownLabel()
             {
-                return this.countDown+' секунд';
+                return this.countDown+' '+BX.message('REGISTRATION_SECONDS');
             },
         },
         methods: {

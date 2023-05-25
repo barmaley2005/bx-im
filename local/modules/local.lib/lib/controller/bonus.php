@@ -4,8 +4,12 @@ namespace Local\Lib\Controller;
 
 use Bitrix\Main;
 use Bitrix\Main\Engine\ActionFilter;
+use Bitrix\Main\Localization\Loc;
 
-class Bonus extends Main\Engine\Controller {
+Loc::loadMessages(__FILE__);
+
+class Bonus extends Main\Engine\Controller
+{
     protected function getDefaultPreFilters()
     {
         return [
@@ -21,7 +25,7 @@ class Bonus extends Main\Engine\Controller {
     {
         $data = array(
             'productId' => $productId,
-            'value' => '+'.\Local\Lib\Bonus::getProductBonus($productId).' бонусов'
+            'value' => Loc::getMessage('LOCAL_LIB_BONUS_PRODUCT_BONUS', array('#NUM#' => \Local\Lib\Bonus::getProductBonus($productId)))
         );
 
         return $data;

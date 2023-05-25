@@ -16,8 +16,8 @@ $this->setFrameMode(true);
 <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Задать вопрос</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+            <h5 class="modal-title" id="exampleModalLabel"><?=GetMessage('POPUP_QUESTION_TITLE')?></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?=GetMessage('POPUP_QUESTION_MODAL_CLOSE')?>">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.25 5.25L18.75 18.75" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M5.25 18.75L18.75 5.25" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />
@@ -27,7 +27,7 @@ $this->setFrameMode(true);
         <div class="modal-body">
             <?if ($arResult['SUCCESS']):?>
             <div class="comment-modal__container">
-                <h2 class="title">Форма отправлена</h2>
+                <h2 class="title"><?=GetMessage('POPUP_QUESTION_SUCCESS_TEXT')?></h2>
             </div>
             <?else:?>
             <form action="<?=POST_FORM_ACTION_URI?>" method="post">
@@ -47,23 +47,23 @@ $this->setFrameMode(true);
                 <div class="comment-modal__container">
                     <div class="comment-modal__item">
                         <div class="placement-inputs__col">
-                            <label class="placement-inputs__label" for="">Ваше имя</label>
-                            <input required type="text" class="input" placeholder="Ваше имя" name="UF_NAME" value="<?=$arResult['FIELDS']['UF_NAME']['VALUE']?>">
-                            <span class="placement-inputs__info">Поле заполнено некорректно</span>
+                            <label class="placement-inputs__label" for=""><?=GetMessage('POPUP_QUESTION_NAME')?></label>
+                            <input required type="text" class="input" placeholder="<?=GetMessage('POPUP_QUESTION_NAME')?>" name="UF_NAME" value="<?=$arResult['FIELDS']['UF_NAME']['VALUE']?>">
+                            <span class="placement-inputs__info"><?=GetMessage('POPUP_QUESTION_INVALID_FIELD')?></span>
                         </div>
                     </div>
                     <div class="comment-modal__item">
                         <div class="placement-inputs__col">
-                            <label class="placement-inputs__label" for="">Номер телефона*</label>
-                            <input required type="text" class="input phone" placeholder="Номер телефона*" name="UF_PHONE" value="<?=$arResult['FIELDS']['UF_PHONE']['VALUE']?>">
-                            <span class="placement-inputs__info">Поле заполнено некорректно</span>
+                            <label class="placement-inputs__label" for=""><?=GetMessage('POPUP_QUESTION_PHONE')?>*</label>
+                            <input required type="text" class="input phone" placeholder="<?=GetMessage('POPUP_QUESTION_PHONE')?>*" name="UF_PHONE" value="<?=$arResult['FIELDS']['UF_PHONE']['VALUE']?>">
+                            <span class="placement-inputs__info"><?=GetMessage('POPUP_QUESTION_INVALID_FIELD')?></span>
                         </div>
                     </div>
 
                     <div class="comment-modal__item order-1">
                         <div class="placement-textarea">
-                            <label class="placement-textarea__label" for="">Комментарий</label>
-                            <textarea required placeholder="Комментарий" name="UF_QUESTION"><?=$arResult['FIELDS']['UF_QUESTION']['VALUE']?></textarea>
+                            <label class="placement-textarea__label" for=""><?=GetMessage('POPUP_QUESTION_COMMENT')?></label>
+                            <textarea required placeholder="<?=GetMessage('POPUP_QUESTION_COMMENT')?>" name="UF_QUESTION"><?=$arResult['FIELDS']['UF_QUESTION']['VALUE']?></textarea>
                         </div>
                     </div>
                 </div>
@@ -72,15 +72,12 @@ $this->setFrameMode(true);
                     <label class="check">
                         <input class="check__input" type="checkbox" checked required>
                         <span class="check__box"></span>
-                        <p>
-                            Я даю своё согласие на <a href="<?=SITE_DIR?>/customers/privacy/">обработку персональных данных</a> и согласен с
-                            <a href="<?=SITE_DIR?>/customers/privacy/">условиями политики конфиденциальности</a>
-                        </p>
+                        <p><?=GetMessage('POPUP_QUESTION_POLICY')?></p>
                     </label>
                 </div>
 
                 <div class="comment-modal__button">
-                    <button class="submit" type="submit">Задать вопрос</button>
+                    <button class="submit" type="submit"><?=GetMessage('POPUP_QUESTION_SUBMIT')?></button>
                 </div>
             </form>
             <?endif?>

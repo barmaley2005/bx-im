@@ -85,7 +85,7 @@ class DevBxDeliveryCalc extends CBitrixComponent {
         $cityName = $this->request->getCookie('user_city');
         if (empty($cityName))
         {
-            $cityName = 'Москва';
+            $cityName = Loc::getMessage('DEVBX_DELIVERY_DEFAULT_CITY_NAME');
         }
 
         $arLocation = \Bitrix\Sale\Location\LocationTable::getList(array(

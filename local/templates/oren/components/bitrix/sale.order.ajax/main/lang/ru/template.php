@@ -137,4 +137,30 @@ $MESS["EMPTY_BASKET_HINT"] = "#A1#Нажмите здесь#A2#, чтобы пр
 $MESS["SOA_BAD_EXTENSION"] = "Неверный тип файла";
 $MESS["SOA_MAX_SIZE"] = "Превышен максимальный размер файла";
 $MESS["PAY_SYSTEM_PAYABLE_ERROR_DEFAULT"] = "Вы сможете оплатить заказ после того, как менеджер проверит наличие полного комплекта товаров на складе. Сразу после проверки вы получите письмо с инструкциями по оплате. Оплатить заказ можно будет в персональном разделе сайта.";
+
+
+$MESS['ORDER_COMMENT'] = 'Комментарий к заказу';
+$MESS['ORDER_DELIVERY_TYPE'] = 'Способ получения';
+$MESS['ORDER_PAY_SYSTEM_TYPE'] = 'Способ оплаты';
+$MESS['ORDER_BOBUS_TITLE'] = 'Использовать бонусы ORENSHAL CLUB';
+$MESS['ORDER_BONUS_AVAILABLE'] = 'Доступно бонусов:';
+$MESS['ORDER_BONUS_BALLS'] = 'баллов';
+$MESS['ORDER_BONUS_CAN_BE_WRITTEN_OFF'] = 'Списать можно до #NUM# бонусов для этого заказа';
+$MESS['ORDER_BONUS_WRITE_OFF'] = 'Списать';
+$MESS['ORDER_TOTAL_TITLE'] = 'Ваш заказ';
+$MESS['ORDER_TOTAL_PRODUCTS'] = 'Товары (#NUM#)';
+$MESS['ORDER_TOTAL_DISCOUNT'] = 'Скидка';
+$MESS['ORDER_TOTAL_DELIVERY'] = 'Доставка';
+$MESS['ORDER_TOTAL_CASHBACK'] = 'Кэшбэк';
+$MESS['ORDER_TOTAL_PAY_BONUS'] = 'Оплата бонусами';
+$MESS['ORDER_TOTAL_TOTAL'] = 'Итого';
+$MESS["ORDER_TOTAL_SUBMIT"] = 'Оформить заказ';
+$MESS['ORDER_TOTAL_INFO'] = 'Доступные способы доставки и оплаты можно выбрать при оформлении заказа';
+$MESS['ORDER_TOTAL_PROMO_OR_CERT'] = 'Промокод или подарочный сертификат';
+$MESS['ORDER_TOTAL_INPUT_PROMO'] = 'Введите код или номер';
+$MESS['ORDER_TOTAL_BTN_OK'] = 'ОК';
+
+$MESS['ORDER_PAYMENT_ENTER_SUM'] = 'Введите сумму';
+$MESS['ORDER_MODAL_CLOSE'] = 'Закрыть';
+$MESS['ORDER_INVALID_PROMO'] = 'Промокод не найден или не действует. Проверьте, введён ли промокод без ошибок.';
 ?>

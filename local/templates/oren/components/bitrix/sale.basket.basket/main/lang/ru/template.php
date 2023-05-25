@@ -1,0 +1,19 @@
+<?
+$MESS['MODAL_CLOSE'] = 'Закрыть';
+$MESS['MODAL_QUESTION_ADD_TO_FAVORITE'] = 'Добавить в избранное, чтобы не потерять?';
+$MESS['MODAL_MOVE_TO_FAVORITE'] = 'Перенести в избранное';
+$MESS['MODAL_DELETE'] = 'Удалить';
+$MESS['BASKET_GIFT_COMMENT'] = 'Напишите поздравление, и мы добавим его в открытку';
+$MESS['BASKET_YOUR_ORDER'] = 'Ваз заказ';
+$MESS['BASKET_TOTAL_PRODUCTS'] = 'Товары (#NUM#)';
+$MESS['BASKET_DISCOUNT'] = 'Скидка';
+$MESS['BASKET_GIFT'] = 'Открытка (#NUM#)';
+$MESS['BASKET_CASHBACK'] = 'Кэшбэк';
+$MESS['BASKET_SUM'] = 'Итого';
+$MESS['BASKET_ORDER'] = 'Перейти к оформлению';
+$MESS['BASKET_INFO'] = 'Доступные способы доставки и оплаты можно выбрать при оформлении заказа';
+$MESS['BASKET_TITLE'] = 'Козина';
+$MESS['BASKET_ARTICLE'] = 'Арт:';
+$MESS['BASKET_PRESENT_TITLE'] = 'Покупаете подарок?';
+$MESS['BASKET_PRESENT_SUB_TITLE'] = 'Добавьте в заказ подарочную открытку и мы подпишем поздравление за вас!';
+$MESS['BASKET_ADD_TITLE'] = 'Добавить';

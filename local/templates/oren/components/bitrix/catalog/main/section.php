@@ -67,17 +67,17 @@ global $arCatalogAvailableSort;
 
 $arCatalogAvailableSort = array(
     'new' => array(
-        'NAME' => 'Новинки',
+        'NAME' => GetMessage('CATALOG_SORT_NEW'),
         'ELEMENT_SORT_FIELD' => 'ID',
         'ELEMENT_SORT_ORDER' => 'desc',
     ),
     'popular' => array(
-        'NAME' => 'Популярные',
+        'NAME' => GetMessage('CATALOG_SORT_POPULAR'),
         'ELEMENT_SORT_FIELD' => 'shows',
         'ELEMENT_SORT_ORDER' => 'desc',
     ),
     'price_asc' => array(
-        'NAME' => 'Цена',
+        'NAME' => GetMessage('CATALOG_SORT_PRICE'),
         'ELEMENT_SORT_FIELD' => 'PROPERTY_MINIMUM_PRICE',
         'ELEMENT_SORT_ORDER' => 'asc',
         'ICON' => '<svg class="radio-icon" width="8" height="10" viewBox="0 0 8 10" fill="none"
@@ -88,7 +88,7 @@ $arCatalogAvailableSort = array(
                           </svg>'
     ),
     'price_desc' => array(
-        'NAME' => 'Цена',
+        'NAME' => GetMessage('CATALOG_SORT_PRICE'),
         'ELEMENT_SORT_FIELD' => 'PROPERTY_MINIMUM_PRICE',
         'ELEMENT_SORT_ORDER' => 'desc',
         'ICON' => '<svg class="radio-icon" width="8" height="10" viewBox="0 0 8 10" fill="none"

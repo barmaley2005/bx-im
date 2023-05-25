@@ -47,7 +47,7 @@ function createVueAuthForm(pContainer)
         computed: {
             countDownLabel()
             {
-                return this.countDown+' секунд';
+                return this.countDown+' '+BX.message('AUTH_SECOND');
             },
         },
         methods: {

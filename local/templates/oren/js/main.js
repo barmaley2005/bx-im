@@ -700,14 +700,14 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
       more.addEventListener('click', () => {
         if (!more.classList.contains('_show')) {
           more.classList.add('_show');
-          more.textContent = 'Скрыть';
+          more.textContent = BX.message('PUBLIC_OREN_HIDE');
           container.classList.add('_show');
           container.style.cssText = `
             height: ${box.clientHeight}px
           `
         } else {
           more.classList.remove('_show');
-          more.textContent = 'Читать полностью';
+          more.textContent = BX.message('PUBLIC_OREN_READ_FULL');
           container.classList.remove('_show');
           container.removeAttribute('style')
         }

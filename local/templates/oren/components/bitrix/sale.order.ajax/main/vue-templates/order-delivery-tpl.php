@@ -1,6 +1,6 @@
 <script id="order-delivery-tpl" type="text/html">
     <div class="placement-item delivery-items">
-        <h2 class="title text-left">Способ получения</h2>
+        <h2 class="title text-left"><?=GetMessage('ORDER_DELIVERY_TYPE')?></h2>
 
         <div class="placement-radio">
             <div class="placement-radio__row" v-for="delivery in result.DELIVERY" :key="delivery.ID">

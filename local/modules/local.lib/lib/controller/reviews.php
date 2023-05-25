@@ -57,7 +57,6 @@ class Reviews extends Main\Engine\Controller
                 "PAGER_SHOW_ALL" => "N",
                 "PAGER_SHOW_ALWAYS" => "N",
                 "PAGER_TEMPLATE" => ".default",
-                "PAGER_TITLE" => "Результаты",
                 "RESULTS_COUNT" => "3",
                 "SORT_BY1" => "CREATED_DATE",
                 "SORT_BY2" => "ID",

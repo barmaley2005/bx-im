@@ -153,7 +153,7 @@ $containerId = $this->GetEditAreaId($arResult['ID']);
                 <div class="product-info__col">
                     <div class="product-box _giftCerf">
                         <div class="product-box__item">
-                            <p class="product-box__title">Цена:</p>
+                            <p class="product-box__title"><?=GetMessage('GIFT_CERTIFICATE_PRICE')?></p>
 
                             <div class="calculation-size">
 
@@ -173,7 +173,7 @@ $containerId = $this->GetEditAreaId($arResult['ID']);
                                 }
                                 ?>
                                 <div class="product-own d-lg-none">
-                                    <input type="text" placeholder="Указать свою" name="custom_nominal">
+                                    <input type="text" placeholder="<?=GetMessage('GIFT_CERTIFICATE_CUSTOM_NOMINAL')?>" name="custom_nominal">
                                 </div>
                             </div>
                         </div>
@@ -181,7 +181,7 @@ $containerId = $this->GetEditAreaId($arResult['ID']);
 
                     <div id="product-button" class="product-button _giftCerf">
                         <div class="product-own d-none d-lg-block">
-                            <input type="text" placeholder="Указать свою" data-entity="custom-nominal">
+                            <input type="text" placeholder="<?=GetMessage('GIFT_CERTIFICATE_CUSTOM_NOMINAL')?>" data-entity="custom-nominal">
                         </div>
 
                         <?
@@ -189,7 +189,7 @@ $containerId = $this->GetEditAreaId($arResult['ID']);
                         ?>
 
                         <button class="product-button__add" data-entity="gift-order" data-product-id="<?= $basketProductId ?>">
-                            Перейти к оформлению
+                            <?=GetMessage('GIFT_CERTIFICATE_ORDER')?>
                         </button>
 
                     </div>
@@ -199,7 +199,7 @@ $containerId = $this->GetEditAreaId($arResult['ID']);
         </div>
 
         <div class="giftCerf-description">
-            <h2 class="giftCerf-description__title">Описание</h2>
+            <h2 class="giftCerf-description__title"><?=GetMessage('GIFT_CERTIFICATE_DESCRIPTION')?></h2>
             <div class="giftCerf-description__content">
                 <?=$arResult['DETAIL_TEXT']?>
             </div>

@@ -18,24 +18,24 @@ $request = \Bitrix\Main\Context::getCurrent()->getRequest();
 switch ($arResult['VARIABLES']['PRESET'])
 {
     case 'saleleader':
-        $APPLICATION->SetTitle('Бестселлеры');
+        $APPLICATION->SetTitle(GetMessage('BESTSELLER_TITLE'));
 
         $GLOBALS['arrCatalogPreFilter'] = array(
-            "PROPERTY_SALELEADER_VALUE" => "Да"
+            "PROPERTY_SALELEADER_VALUE" => GetMessage('PROPERTY_SALELEADER_VALUE')
         );
         break;
     case 'new':
-        $APPLICATION->SetTitle('Новинки');
+        $APPLICATION->SetTitle(GetMessage('NEW_TITLE'));
 
         $GLOBALS['arrCatalogPreFilter'] = array(
-            "PROPERTY_NEWPRODUCT_VALUE" => "Да"
+            "PROPERTY_NEWPRODUCT_VALUE" => GetMessage('PROPERTY_NEWPRODUCT_VALUE')
         );
         break;
     case 'specialoffer':
         $APPLICATION->SetTitle('Sale');
 
         $GLOBALS['arrCatalogPreFilter'] = array(
-            "PROPERTY_SPECIALOFFER_VALUE" => "Да"
+            "PROPERTY_SPECIALOFFER_VALUE" => GetMessage('PROPERTY_SPECIALOFFER_VALUE')
         );
         break;
 }

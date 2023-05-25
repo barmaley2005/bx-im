@@ -4,6 +4,7 @@ namespace Local\Lib\Controller;
 
 use Bitrix\Main;
 use Bitrix\Main\Engine\ActionFilter;
+use Bitrix\Main\Localization\Loc;
 
 class User extends Main\Engine\Controller
 {
@@ -24,7 +25,7 @@ class User extends Main\Engine\Controller
 
         if (!$USER->IsAuthorized())
         {
-            $this->addError(new Main\Error('Вы не авторизованы'));
+            $this->addError(new Main\Error(Loc::getMessage('USER_ERR_NOT_AUTHORIZED')));
             return false;
         }
 
@@ -39,7 +40,7 @@ class User extends Main\Engine\Controller
 
         if (!$USER->IsAuthorized())
         {
-            $this->addError(new Main\Error('Вы не авторизованы'));
+            $this->addError(new Main\Error(Loc::getMessage('USER_ERR_NOT_AUTHORIZED')));
             return false;
         }
 
@@ -47,7 +48,7 @@ class User extends Main\Engine\Controller
 
         $arFile = $request->getFile('file');
         if (!is_array($arFile) || $arFile['error'] || $arFile['size'] <= 0) {
-            $this->addError(new Main\Error('Ошибка загрузки файла'));
+            $this->addError(new Main\Error(Loc::getMessage('USER_ERR_UPLOAD_FILE')));
             return false;
         }
 

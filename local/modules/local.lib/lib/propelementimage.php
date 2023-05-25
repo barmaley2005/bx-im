@@ -3,6 +3,7 @@
 namespace Local\Lib;
 
 use Bitrix\Main\Loader;
+use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\Web\Json;
 
 class PropElementImage {
@@ -10,7 +11,7 @@ class PropElementImage {
         return array(
             'PROPERTY_TYPE' => 'S',
             'USER_TYPE' => 'DEVBX_PROPERTY_ELEMENT_IMAGE',
-            'DESCRIPTION' => 'Привязка товара с точками на изображение',
+            'DESCRIPTION' => Loc::getMessage('LOCAL_LIB_PROP_ELEMENT_IMAGE_DESCRIPTION'),
             "GetPublicViewHTML" => array(__CLASS__, "GetPublicViewHTML"),
             "GetPublicEditHTML" => array(__CLASS__, "GetPublicEditHTML"),
             "GetAdminListViewHTML" => array(__CLASS__, "GetAdminListViewHTML"),
@@ -160,7 +161,7 @@ class PropElementImage {
                         </tr>
                         <tr>
                             <td>
-                                <input type="button" value="Добавить..." @click.stop.prevent="addValue">
+                                <input type="button" value="<?=Loc::getMessage('LOCAL_LIB_PROP_ADD_BTN')?>" @click.stop.prevent="addValue">
                             </td>
                         </tr>
                     </table>

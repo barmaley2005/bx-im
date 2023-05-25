@@ -13,13 +13,13 @@
 $arTemplateParameters = array(
     "BLOCK_TITLE" => Array(
         "PARENT" => "BASE",
-        "NAME" => "Заголовок блока",
+        "NAME" => GetMessage('BLOCK_TITLE'),
         "TYPE" => "STRING",
         "DEFAULT" => "",
     ),
     "SHOW_LINK" => array(
         "PARENT" => "BASE",
-        "NAME" => "Показывать ссылку \"Смотреть все образы\"",
+        "NAME" => GetMessage('SHOW_LINK'),
         "TYPE" => "CHECKBOX",
         "DEFAULT" => "N",
     ),

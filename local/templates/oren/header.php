@@ -20,6 +20,8 @@ $settings = \Local\Lib\Settings::getInstance();
 
 $curPage = $APPLICATION->GetCurPage(false);
 $isHome = $curPage == SITE_DIR;
+
+$messages = \Local\Lib\Oren\Messages::getMessages();
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID?>">
@@ -35,6 +37,11 @@ $isHome = $curPage == SITE_DIR;
 
 <body>
 <?$APPLICATION->ShowPanel();?>
+
+<script>
+    BX.message(<?= CUtil::PhpToJSObject($messages) ?>);
+</script>
+
 <header class="header">
     <div class="header-desctop<?if (!$isHome):?> _bg<?endif?>">
         <div class="container">

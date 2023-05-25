@@ -7,3 +7,6 @@ $MESS['CATALOG_REKOMENDACII_PO_UHODU'] = 'Рекомендации по уход
 $MESS['CATALOG_STYLIST_ADVICE'] = 'Советы стилиста';
 $MESS['CATALOG_REVIEWS'] = 'Отзывы';
 $MESS['CATALOG_ADD_TO_BASKET'] = 'Добавить в корзину';
+$MESS['CATALOG_QUICK_VIEW_TITLE'] = 'Быстрый просмотр';
+$MESS['CATALOG_DESCRIPTION_TITLE'] = 'Описание';
+$MESS['MODAL_CLOSE'] = 'Закрыть';

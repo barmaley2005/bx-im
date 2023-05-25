@@ -60,18 +60,6 @@ ob_start();
         "DISPLAY_PREVIEW_TEXT_MODE" => "E",
         "ELEMENT_CODE" => "scarf",
         "ELEMENT_ID" => "",
-        "GIFTS_DETAIL_BLOCK_TITLE" => "Выберите один из подарков",
-        "GIFTS_DETAIL_HIDE_BLOCK_TITLE" => "N",
-        "GIFTS_DETAIL_PAGE_ELEMENT_COUNT" => "4",
-        "GIFTS_DETAIL_TEXT_LABEL_GIFT" => "Подарок",
-        "GIFTS_MAIN_PRODUCT_DETAIL_BLOCK_TITLE" => "Выберите один из товаров, чтобы получить подарок",
-        "GIFTS_MAIN_PRODUCT_DETAIL_HIDE_BLOCK_TITLE" => "N",
-        "GIFTS_MAIN_PRODUCT_DETAIL_PAGE_ELEMENT_COUNT" => "4",
-        "GIFTS_MESS_BTN_BUY" => "Выбрать",
-        "GIFTS_SHOW_DISCOUNT_PERCENT" => "Y",
-        "GIFTS_SHOW_IMAGE" => "Y",
-        "GIFTS_SHOW_NAME" => "Y",
-        "GIFTS_SHOW_OLD_PRICE" => "Y",
         "HIDE_NOT_AVAILABLE_OFFERS" => "N",
         "IBLOCK_ID" => "22",
         "IBLOCK_TYPE" => "catalog",
@@ -84,15 +72,6 @@ ob_start();
         "MAIN_BLOCK_OFFERS_PROPERTY_CODE" => array(),
         "MAIN_BLOCK_PROPERTY_CODE" => array(),
         "MESSAGE_404" => "",
-        "MESS_BTN_ADD_TO_BASKET" => "В корзину",
-        "MESS_BTN_BUY" => "Купить",
-        "MESS_BTN_SUBSCRIBE" => "Подписаться",
-        "MESS_COMMENTS_TAB" => "Комментарии",
-        "MESS_DESCRIPTION_TAB" => "Описание",
-        "MESS_NOT_AVAILABLE" => "Нет в наличии",
-        "MESS_NOT_AVAILABLE_SERVICE" => "Недоступно",
-        "MESS_PRICE_RANGES_TITLE" => "Цены",
-        "MESS_PROPERTIES_TAB" => "Характеристики",
         "META_DESCRIPTION" => "-",
         "META_KEYWORDS" => "-",
         "OFFERS_FIELD_CODE" => array("", ""),
@@ -175,19 +154,19 @@ $arJSParams = array(
 <script id="vue-scarf-tpl" type="text/html">
     <div class="container">
         <div class="cost-title d-none d-lg-block">
-            <h2 class="title">Рассчитайте стоимость уникального платка и закажите прямо сейчас</h2>
+            <h2 class="title"><?=GetMessage('SCARF_TITLE')?></h2>
         </div>
 
         <div class="cost-container" v-if="!finished">
             <div class="calculation">
                 <div class="calculation-item">
                     <div class="cost-title d-lg-none">
-                        <h2 class="title">Рассчитайте стоимость уникального платка и закажите прямо сейчас</h2>
+                        <h2 class="title"><?=GetMessage('SCARF_TITLE2')?></h2>
                     </div>
-                    <h4 class="calculation-title">Выберите размер</h4>
+                    <h4 class="calculation-title"><?=GetMessage('SCARF_SELECT_SIZE')?></h4>
                     <div class="calculation-size">
                         <label class="radio" v-for="item in skuByCode['SIZE'].VALUES" :key="item.ID" :style="{'display': item.NA ? 'none' : ''}">
-                            <input class="radio__input" type="radio" value="100х100"
+                            <input class="radio__input" type="radio" value="item.ID"
                                    :checked="item.ID == selectedSku.SIZE"
                                    name="calculation-size" @click="selectSkuProp(skuByCode['SIZE'].ID, item.ID)">
                             <div class="radio__box">
@@ -197,7 +176,7 @@ $arJSParams = array(
                     </div>
                 </div>
                 <div class="calculation-item">
-                    <h4 class="calculation-title">Выберите цвет</h4>
+                    <h4 class="calculation-title"><?=GetMessage('SCARF_SELECT_COLOR')?></h4>
                     <div class="calculation-color">
                         <label class="radio" v-for="item in skuByCode['COLOR'].VALUES" :key="item.ID" :style="{'display': item.NA ? 'none' : ''}">
                             <input class="radio__input" type="radio" :value="item.ID"
@@ -210,20 +189,20 @@ $arJSParams = array(
                     </div>
 
                     <p class="calculation-color__text">
-                        Цвет: <span class="calculation-color__name" v-if="selectedSkuValues.COLOR">{{selectedSkuValues.COLOR.NAME}}</span>
+                        <?=GetMessage('SCARF_COLOR')?> <span class="calculation-color__name" v-if="selectedSkuValues.COLOR">{{selectedSkuValues.COLOR.NAME}}</span>
                     </p>
                 </div>
                 <div class="calculation-item">
-                    <h4 class="calculation-title">Количество</h4>
+                    <h4 class="calculation-title"><?=GetMessage('SCARF_QUANTITY')?></h4>
                     <div class="calculation-number">
-                        <input type="text" placeholder="Укажите в шт" v-model.trim="quantity" ref="quantity" required>
+                        <input type="text" placeholder="<?=GetMessage('SCARF_QUANTITY_PLACEHOLDER')?>" v-model.trim="quantity" ref="quantity" required>
                     </div>
                 </div>
                 <div class="calculation-button">
-                    <button class="submit" @click.stop.prevent="calculate()">Рассчитать стоимость</button>
+                    <button class="submit" @click.stop.prevent="calculate()"><?=GetMessage('SCARF_CALC_SUM')?></button>
                     <div class="calculation-price">
                         <div class="calculation-total">
-                            <p class="calculation-total__text">Цена:</p>
+                            <p class="calculation-total__text"><?=GetMessage('SCARF_PRICE')?></p>
                             <span v-html="calculatedPrice" class="calculation-total__count"></span>
                         </div>
                         <div class="calculation-description">
@@ -243,8 +222,7 @@ $arJSParams = array(
                                 </svg>
                             </div>
                             <div class="calculation-description__text" :class="{'_show': showTip}">
-                                <p>Цена включает в себя разработку индивидуального дизайна командой художников-дессинаторов и
-                                    создание уникального изделия</p>
+                                <p><?=GetMessage('SCARF_INFO')?></p>
                             </div>
                         </div>
                     </div>
@@ -252,22 +230,22 @@ $arJSParams = array(
             </div>
             <div class="request">
                 <form action="" ref="form" @submit.stop.prevent="submit()">
-                    <h2 class="request-title">Оформление заказа</h2>
+                    <h2 class="request-title"><?=GetMessage('SCARF_ORDER_TITLE')?></h2>
                     <div class="request-inputs">
                         <div class="placement-inputs__col">
-                            <label class="placement-inputs__label" for="">Ваше имя</label>
-                            <input type="text" class="input" placeholder="Ваше имя" v-model="form.name" ref="name">
-                            <span class="placement-inputs__info">Поле заполнено некорректно</span>
+                            <label class="placement-inputs__label" for=""><?=GetMessage('SCARF_ORDER_NAME')?></label>
+                            <input type="text" class="input" placeholder="<?=GetMessage('SCARF_ORDER_NAME')?>" v-model="form.name" ref="name">
+                            <span class="placement-inputs__info"><?=GetMessage('SCARF_INVALID_FIELD')?></span>
                         </div>
                         <div class="placement-inputs__col">
-                            <label class="placement-inputs__label" for="">Ваш номер телефона</label>
-                            <input type="text" class="input phone" placeholder="Ваш номер телефона" v-model="form.phone" required ref="phone">
-                            <span class="placement-inputs__info">Поле заполнено некорректно</span>
+                            <label class="placement-inputs__label" for=""><?=GetMessage('SCARF_ORDER_PHONE')?></label>
+                            <input type="text" class="input phone" placeholder="<?=GetMessage('SCARF_ORDER_PHONE')?>" v-model="form.phone" required ref="phone">
+                            <span class="placement-inputs__info"><?=GetMessage('SCARF_INVALID_FIELD')?></span>
                         </div>
                         <div class="placement-inputs__col">
-                            <label class="placement-inputs__label" for="">Ваш E-mail</label>
-                            <input type="email" class="input" placeholder="Ваш E-mail" v-model="form.email" required ref="email">
-                            <span class="placement-inputs__info">Поле заполнено некорректно</span>
+                            <label class="placement-inputs__label" for=""><?=GetMessage('SCARF_ORDER_EMAIL')?></label>
+                            <input type="email" class="input" placeholder="<?=GetMessage('SCARF_ORDER_EMAIL')?>" v-model="form.email" required ref="email">
+                            <span class="placement-inputs__info"><?=GetMessage('SCARF_INVALID_FIELD')?></span>
                         </div>
                     </div>
 
@@ -285,12 +263,12 @@ $arJSParams = array(
                                 </defs>
                             </svg>
                             <input type="file" name="file" ref="file">
-                            <span class="input-file__text">Прикрепить изображение с дизайном</span>
+                            <span class="input-file__text"><?=GetMessage('SCARF_ATTACH_IMAGE')?></span>
                         </label>
                     </div>
 
                     <div class="request-button">
-                        <button class="submit" @click.stop.prevent="submit()">Отправить заявку</button>
+                        <button class="submit" @click.stop.prevent="submit()"><?=GetMessage('SCARF_SEND_REQUEST')?></button>
                     </div>
 
                     <div class="request-check">
@@ -299,8 +277,7 @@ $arJSParams = array(
                             <span class="check__box"></span>
                             <div class="check-text">
                                 <p>
-                                    Я даю своё согласие на <a href="<?=SITE_DIR?>customers/policy/">обработку персональных данных</a> и согласен с
-                                    <a href="<?=SITE_DIR?>customers/policy/">условиями политики конфиденциальности</a>
+                                    <?=GetMessage('SCARF_POLICY')?>
                                 </p>
                             </div>
                         </label>
@@ -309,7 +286,7 @@ $arJSParams = array(
             </div>
         </div>
         <div class="cost-container" v-else>
-            <h2 class="title">Форма отправлена</h2>
+            <h2 class="title"><?=GetMessage('SCARF_SUCCESS_MESSAGE')?></h2>
         </div>
     </div>
 </script>

@@ -41,7 +41,7 @@ $arResult['SITE_ID'] = $component->getSiteId();
         <div class="product-city__box" :class="{'_show': showLocationSearch}">
             <div class="product-city__container">
                 <div class="product-city__search">
-                    <input type="text" placeholder="Найти свой город" v-model="searchCity">
+                    <input type="text" placeholder="<?=GetMessage('DELIVERY_CALC_FIND_YOUR_CITY')?>" v-model="searchCity">
                     <button class="product-city__icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.7646 12.9412L16.4705 17.647" stroke="#877569" stroke-miterlimit="10"
@@ -76,8 +76,8 @@ $arResult['SITE_ID'] = $component->getSiteId();
                 </svg>
             </div>
             <div class="information-col">
-                <p class="information-text" v-if="item.delivery.DELIVERY_PRICE>>0">Доставка {{item.name}} - <span v-html="item.delivery.DELIVERY_PRICE_FORMATTED"></span></p>
-                <p class="information-text" v-else>Доставка {{item.name}} - Бесплатно</p>
+                <p class="information-text" v-if="item.delivery.DELIVERY_PRICE>>0"><?=GetMessage('DELIVERY_CALC_DELIVERY')?> {{item.name}} - <span v-html="item.delivery.DELIVERY_PRICE_FORMATTED"></span></p>
+                <p class="information-text" v-else><?=GetMessage('DELIVERY_CALC_DELIVERY')?> {{item.name}} - <?=GetMessage('DELIVERY_CALC_FREE_DELIVERY')?></p>
                 <?/*
                 <a href="" class="information-link">Посмотреть пункты выдачи</a>
                 */?>
@@ -116,20 +116,13 @@ $arResult['SITE_ID'] = $component->getSiteId();
                 </svg>
             </div>
             <div class="information-col">
-                <p class="information-text">Бесплатный обмен и удобный возврат</p>
-                <a href="" class="information-link">Условия обмена и возврата</a>
+                <p class="information-text"><?=GetMessage('DELIVERY_CALC_FREE_EXCHANGE_TITLE')?></p>
+                <a href="" class="information-link"><?=GetMessage('DELIVERY_CALC_FREE_EXCHANGE_LINK_TITLE')?></a>
             </div>
 
             <div class="information-description">
                 <div class="information-description__content">
-                    <p>Бесплатная доставка по всей России в Пункты Выдачи:</p>
-                    <p> - Бесплатно для заказа любой суммы;</p>
-                    <p> - 486 городов;</p>
-                    <p> - 1650 пунктов выдачи;</p>
-                    <p> - 7 дней в неделю, легко выбрать ближайший Пункт Выдачи и забрать заказ в удобное для вас время;
-                    </p>
-                    <p> - Вы получите уведомления об отправлении заказа и прибытии его в Пункт Выдачи.</p>
-                    <p>Просто сделайте заказ, выберите способ доставки и оплатите онлайн.</p>
+                    <?=GetMessage('DELIVERY_CALC_FREE_EXCHANGE_TEXT')?>
                 </div>
                 <div class="information-description__icon">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

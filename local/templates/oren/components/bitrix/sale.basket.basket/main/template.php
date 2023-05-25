@@ -32,7 +32,7 @@ $containerId = $this->GetEditAreaId('basket');
 
 <script id="devBxSaleBasket" type="text/html">
     <div class="container">
-        <h1 class="title text-left">Корзина</h1>
+        <h1 class="title text-left"><?=GetMessage('BASKET_TITLE')?></h1>
 
         <div class="basket-container">
             <div class="goods">
@@ -59,7 +59,7 @@ $containerId = $this->GetEditAreaId('basket');
 
                             <div class="goods-item__content">
                                 <a :href="item.DETAIL_PAGE_URL" class="goods-item__article" v-if="item.PROPS_ALL.ARTNUMBER">
-                                    Арт: {{item.PROPS_ALL.ARTNUMBER.VALUE}}
+                                    <?=GetMessage('BASKET_ARTICLE')?> {{item.PROPS_ALL.ARTNUMBER.VALUE}}
                                 </a>
                                 <a :href="item.DETAIL_PAGE_URL" class="goods-item__title">{{item.NAME}}</a>
 
@@ -130,8 +130,8 @@ $containerId = $this->GetEditAreaId('basket');
                 </div>
 
                 <div class="present" v-if="postCardItems.length">
-                    <h2 class="present-title">Покупаете подарок?</h2>
-                    <h3 class="present-subtitle">Добавьте в заказ подарочную открытку и мы подпишем поздравление за вас!</h3>
+                    <h2 class="present-title"><?=GetMessage('BASKET_PRESENT_TITLE')?></h2>
+                    <h3 class="present-subtitle"><?=GetMessage('BASKET_PRESENT_SUB_TITLE')?></h3>
 
                     <div v-for="item in postCardItems" :key="item.card.ID">
                         <div class="goods-item">
@@ -213,7 +213,7 @@ $containerId = $this->GetEditAreaId('basket');
                                     <div class="present-button" :style="getOpacityStyle(!item.basket)">
                                         <button class="submit" data-action="add2basket"
                                                 data-follow-basket="false"
-                                                :data-product-id="item.card.ID">Добавить</button>
+                                                :data-product-id="item.card.ID"><?=GetMessage('BASKET_ADD_TITLE')?></button>
                                     </div>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@ $containerId = $this->GetEditAreaId('basket');
 
                         <div class="present-box" v-if="item.basket" style="height:auto;">
                             <div class="present-textarea">
-                                <textarea placeholder="Напишите поздравление, и мы добавим его в открытку"
+                                <textarea placeholder="<?=GetMessage('BASKET_GIFT_COMMENT')?>"
                                           :value="getBasketItemComment(item.basket)"
                                           @change="basketItemComment(item.basket, $event.target.value)"
                                 ></textarea>
@@ -239,38 +239,38 @@ $containerId = $this->GetEditAreaId('basket');
             </div>
             <div class="design">
                 <div class="design-container">
-                    <h2 class="design-title">Ваш заказ</h2>
+                    <h2 class="design-title"><?=GetMessage('BASKET_YOUR_ORDER')?></h2>
 
                     <div class="design-list">
                         <div class="design-list__container">
                             <div class="design-list__row">
-                                <p class="design-list__name">Товары ({{basketItems.length}})</p>
+                                <p class="design-list__name">{{$Bitrix.Loc.getMessage('BASKET_TOTAL_PRODUCTS',{'#NUM#': basketItems.length})}}</p>
                                 <p class="design-list__count" v-html="result.PRICE_WITHOUT_DISCOUNT"></p>
                             </div>
                             <div class="design-list__row _discount" v-if="result.DISCOUNT_PRICE_ALL>0">
-                                <p class="design-list__name">Скидка</p>
+                                <p class="design-list__name"><?=GetMessage('BASKET_DISCOUNT')?></p>
                                 <p class="design-list__count"> - <span v-html="result.DISCOUNT_PRICE_ALL_FORMATED"></span></p>
                             </div>
                             <div class="design-list__row" v-if="basketPostCardItems.length">
-                                <p class="design-list__name">Открытка ({{postCardItems.length}})</p>
+                                <p class="design-list__name">{{$Bitrix.Loc.getMessage('BASKET_GIFT',{'#NUM#': postCardItems.length})}}</p>
                                 <p class="design-list__count" v-html="basketPostCardItemsPrice"></p>
                             </div>
                             <div class="design-list__row _cashback">
-                                <p class="design-list__name">Кэшбэк</p>
+                                <p class="design-list__name"><?=GetMessage('BASKET_CASHBACK')?></p>
                                 <p class="design-list__count" v-html="result.TOTAL_BONUS_FORMATED"></p>
                             </div>
                         </div>
                         <div class="design-list__footer">
-                            <p class="design-list__text">Итого</p>
+                            <p class="design-list__text"><?=GetMessage('BASKET_SUM')?></p>
                             <p class="design-list__total" v-html="result.allSum_FORMATED"></p>
                         </div>
                     </div>
 
                     <div id="design-button" class="design-button">
-                        <a :href="params.PATH_TO_ORDER" class="submit">Перейти к оформлению</a>
+                        <a :href="params.PATH_TO_ORDER" class="submit"><?=GetMessage('BASKET_ORDER')?></a>
                     </div>
 
-                    <p class="design-info">Доступные способы доставки и оплаты можно выбрать при оформлении заказа</p>
+                    <p class="design-info"><?=GetMessage('BASKET_INFO')?></p>
                 </div>
             </div>
         </div>
@@ -327,7 +327,6 @@ $containerId = $this->GetEditAreaId('basket');
         "PAGER_SHOW_ALL" => "N",
         "PAGER_SHOW_ALWAYS" => "N",
         "PAGER_TEMPLATE" => ".default",
-        "PAGER_TITLE" => "Товары",
         "PAGE_ELEMENT_COUNT" => "18",
         "PARTIAL_PRODUCT_PROPERTIES" => "N",
         "PRICE_CODE" => array("BASE"),

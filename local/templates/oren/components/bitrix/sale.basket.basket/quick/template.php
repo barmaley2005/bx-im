@@ -26,9 +26,9 @@ $containerId = $this->GetEditAreaId('quickBasket');
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-header__title">
-                    Корзина <span class="modal-header__count" data-entity="buy-count"><?=$arResult['BUY_COUNT']?></span>
+                    <?=GetMessage('BASKET_TITLE')?> <span class="modal-header__count" data-entity="buy-count"><?=$arResult['BUY_COUNT']?></span>
                 </h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="<?=GetMessage('MODAL_CLOSE')?>">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.25 5.25L18.75 18.75" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M5.25 18.75L18.75 5.25" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />
@@ -164,33 +164,33 @@ $containerId = $this->GetEditAreaId('quickBasket');
             <div class="modal-footer">
                 <div class="design-list__container">
                     <div class="design-list__row" data-entity="total">
-                        <p class="design-list__name">Товары (<span data-entity="total-buy-count"><?=$arResult['BUY_COUNT']?></span>)</p>
+                        <p class="design-list__name"><?=GetMessage('BASKET_QUICK_TOTAL_PRODUCTS')?> (<span data-entity="total-buy-count"><?=$arResult['BUY_COUNT']?></span>)</p>
                         <p class="design-list__count" data-entity="total-sum"><?=$arResult['PRICE_WITHOUT_DISCOUNT']?></p>
                     </div>
                     <div class="design-list__row _discount" data-entity="total-discount"<?if (!$arResult['DISCOUNT_PRICE_ALL']):?> style="display:none;"<?endif?>>
-                        <p class="design-list__name">Скидка</p>
+                        <p class="design-list__name"><?=GetMessage('BASKET_DISCOUNT')?></p>
                         <p class="design-list__count" data-entity="total-discount-sum"> - <?=$arResult['DISCOUNT_PRICE_ALL_FORMATED']?> </p>
                     </div>
                     <div class="design-list__row _cashback" data-entity="bonus">
-                        <p class="design-list__name">Кэшбэк</p>
+                        <p class="design-list__name"><?=GetMessage('BASKET_CASHBACK')?></p>
                         <p class="design-list__count" data-entity="bonus-sum"><?=$arResult['TOTAL_BONUS_FORMATED']?></p>
                     </div>
                     <div class="design-list__row" data-entity="full-total">
-                        <p class="design-list__name">Итого</p>
+                        <p class="design-list__name"><?=GetMessage('BASKET_SUM')?></p>
                         <p class="design-list__total" data-entity="full-total-sum"><?=$arResult['allSum_FORMATED']?></p>
                     </div>
                 </div>
 
                 <div class="modal-footer__button">
                     <?if ($USER->IsAuthorized()):?>
-                        <button class="submit" data-bs-dismiss="modal" data-action="submitOrder">Оформить заказ</button>
+                        <button class="submit" data-bs-dismiss="modal" data-action="submitOrder"><?=GetMessage('BASKET_QUICK_ORDER')?></button>
                     <?else:?>
-                        <button class="submit" data-bs-dismiss="modal" data-action="showAuthQuestionForm">Оформить заказ</button>
+                        <button class="submit" data-bs-dismiss="modal" data-action="showAuthQuestionForm"><?=GetMessage('BASKET_QUICK_ORDER')?></button>
                     <?endif?>
-                    <button class="view" data-bs-dismiss="modal">Продолжить покупки</button>
+                    <button class="view" data-bs-dismiss="modal"><?=GetMessage('BASKET_QUICK_CONTINUE_BUY')?></button>
                 </div>
 
-                <a href="<?=SITE_DIR?>personal/cart/" class="modal-footer__link">Просмотреть корзину</a>
+                <a href="<?=SITE_DIR?>personal/cart/" class="modal-footer__link"><?=GetMessage('BASKET_QUICK_VIEW_FULL_BASKET')?></a>
             </div>
         </div>
     </div>

@@ -91,33 +91,33 @@ if ($request['nominal']>=5000)
 
 <script type="text/html" id="gift-order-tpl">
     <div class="container">
-        <h1 class="title text-left">Оформление сертификата</h1>
+        <h1 class="title text-left"><?=GetMessage('GIFT_ORDER_TITLE')?></h1>
 
         <form action="" class="certificate-form" @submit.stop.prevent>
             <div class="certificate-form__item">
-                <h2 class="title">Ваши данные</h2>
+                <h2 class="title"><?=GetMessage('GIFT_ORDER_YOUR_DATA')?></h2>
                 <div class="certificate-form__box">
-                    <field-input v-model.trim="form.senderName" input-type="text" label="Имя" v-model:error="formErrors.senderName"></field-input>
-                    <field-input v-model.trim="form.senderSecondName" input-type="text" label="Отчество" v-model:error="formErrors.senderSecondName"></field-input>
-                    <field-input v-model.trim="form.senderLastName" input-type="text" label="Фамилия" v-model:error="formErrors.senderLastName"></field-input>
-                    <field-input v-model.trim="form.senderEmail" input-type="email" label="E-mail" v-model:error="formErrors.senderEmail"></field-input>
-                    <field-input v-model.trim="form.senderPhone" input-type="tel" label="Номер телефона" v-model:error="formErrors.senderPhone"></field-input>
+                    <field-input v-model.trim="form.senderName" input-type="text" label="<?=GetMessage('GIFT_ORDER_NAME')?>" v-model:error="formErrors.senderName"></field-input>
+                    <field-input v-model.trim="form.senderSecondName" input-type="text" label="<?=GetMessage('GIFT_ORDER_SECOND_NAME')?>" v-model:error="formErrors.senderSecondName"></field-input>
+                    <field-input v-model.trim="form.senderLastName" input-type="text" label="<?=GetMessage('GIFT_ORDER_LAST_NAME')?>" v-model:error="formErrors.senderLastName"></field-input>
+                    <field-input v-model.trim="form.senderEmail" input-type="email" label="<?=GetMessage('GIFT_ORDER_EMAIL')?>" v-model:error="formErrors.senderEmail"></field-input>
+                    <field-input v-model.trim="form.senderPhone" input-type="tel" label="<?=GetMessage('GIFT_ORDER_PHONE')?>" v-model:error="formErrors.senderPhone"></field-input>
                 </div>
             </div>
             <div class="certificate-form__item">
-                <h2 class="title">Данные получателя</h2>
+                <h2 class="title"><?=GetMessage('GIFT_ORDER_RECIPIENT_DATA')?></h2>
                 <div class="certificate-form__box">
-                    <field-input v-model.trim="form.receiverName" input-type="text" label="Имя" v-model:error="formErrors.receiverName"></field-input>
-                    <field-input v-model.trim="form.receiverSecondName" input-type="text" label="Отчество" v-model:error="formErrors.receiverSecondName"></field-input>
-                    <field-input v-model.trim="form.receiverLastName" input-type="text" label="Фамилия" v-model:error="formErrors.receiverLastName"></field-input>
-                    <field-input v-model.trim="form.receiverEmail" input-type="email" label="E-mail" v-model:error="formErrors.receiverEmail"></field-input>
-                    <field-input v-model.trim="form.receiverPhone" input-type="tel" label="Номер телефона" v-model:error="formErrors.receiverPhone"></field-input>
+                    <field-input v-model.trim="form.receiverName" input-type="text" label="<?=GetMessage('GIFT_ORDER_NAME')?>" v-model:error="formErrors.receiverName"></field-input>
+                    <field-input v-model.trim="form.receiverSecondName" input-type="text" label="<?=GetMessage('GIFT_ORDER_SECOND_NAME')?>" v-model:error="formErrors.receiverSecondName"></field-input>
+                    <field-input v-model.trim="form.receiverLastName" input-type="text" label="<?=GetMessage('GIFT_ORDER_LAST_NAME')?>" v-model:error="formErrors.receiverLastName"></field-input>
+                    <field-input v-model.trim="form.receiverEmail" input-type="email" label="<?=GetMessage('GIFT_ORDER_EMAIL')?>" v-model:error="formErrors.receiverEmail"></field-input>
+                    <field-input v-model.trim="form.receiverPhone" input-type="tel" label="<?=GetMessage('GIFT_ORDER_PHONE')?>" v-model:error="formErrors.receiverPhone"></field-input>
                 </div>
             </div>
             <div class="certificate-form__item">
-                <h2 class="title">Сообщение получателю</h2>
+                <h2 class="title"><?=GetMessage('GIFT_ORDER_RECIPIENT_MESSAGE')?></h2>
                 <div class="placement-item__comment">
-                    <textarea placeholder="Ваше сообщение" v-model="form.message"></textarea>
+                    <textarea placeholder="<?=GetMessage('GIFT_ORDER_YOUR_MESSAGE')?>" v-model="form.message"></textarea>
                 </div>
             </div>
 
@@ -128,16 +128,13 @@ if ($request['nominal']>=5000)
 
                 <div class="certificate-form__pay">
                     <div class="certificate-form__button">
-                        <button class="submit" @click.stop.prevent="submitOrder">Оплатить</button>
+                        <button class="submit" @click.stop.prevent="submitOrder"><?=GetMessage('GIFT_ORDER_PAY')?></button>
                     </div>
                     <div class="certificate-form__check">
                         <label class="check">
                             <input class="check__input" type="checkbox" checked ref="policy">
                             <span class="check__box"></span>
-                            <p>
-                                Я даю своё согласие на <a href="<?=SITE_DIR?>customers/policy/">обработку персональных данных</a> и согласен с
-                                <a href="<?=SITE_DIR?>customers/policy/">условиями политики конфиденциальности</a>
-                            </p>
+                            <p><?=GetMessage('GIFT_ORDER_POLICY',array('#SITE_DIR#'=>SITE_DIR))?></p>
                         </label>
                     </div>
                 </div>
