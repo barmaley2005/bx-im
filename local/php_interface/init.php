@@ -1,4 +1,10 @@
 <?
+define('VUEJS_DEBUG', true);
+define('SMS_AUTH_TEST', true);
+define('SMS_AUTH_TEST_CODE', '7777');
+
+include_once __DIR__.'/logger.php';
+
 AddEventHandler("iblock", "OnAfterIBlockElementUpdate", "DoIBlockAfterSave");
 AddEventHandler("iblock", "OnAfterIBlockElementAdd", "DoIBlockAfterSave");
 AddEventHandler("catalog", "OnPriceAdd", "DoIBlockAfterSave");

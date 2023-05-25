@@ -1,4 +1,4 @@
-<button class="product-payment" data-bs-toggle="modal" data-bs-target="#shares">
+<button class="product-payment" data-action="showDolyameForm">
     <div class="product-payment__part">
         <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.13116 0H7.95312V6.64151H9.13116V0Z" fill="white" />

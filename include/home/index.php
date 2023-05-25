@@ -254,7 +254,7 @@ $GLOBALS['arrNewProductFilter'] = array(
         "USE_PRODUCT_QUANTITY" => "N",
 
         "SLIDER_TITLE" => "Новинки",
-        "SLIDER_LINK" => "#",
+        "SLIDER_LINK" => SITE_DIR."catalog/new/",
     )
 );?>
 
@@ -366,7 +366,7 @@ $GLOBALS['arrSpecialOfferFilter'] = array(
         "USE_PRODUCT_QUANTITY" => "N",
 
         "SLIDER_TITLE" => "Sale",
-        "SLIDER_LINK" => "#",
+        "SLIDER_LINK" => SITE_DIR."catalog/specialoffer/",
     )
 );?>
 

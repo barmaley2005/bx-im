@@ -4,84 +4,68 @@
         <h2 class="bonus-title">ORENSHAL CLUB</h2>
         <h3 class="bonus-subtitle">Выгодный шопинг с бонусной программой</h3>
 
-        <div class="bonus-row">
-            <a href="" class="bonus-col order-1">
-                <div class="bonus-icon">
-                    <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M16.1983 19.8554C19.3253 19.3525 23.9409 13.3703 23.9409 10.2466C23.9409 7.83785 22.2534 6.11719 19.9704 6.11719C18.0348 6.11719 16.4463 7.67888 15.9998 8.89667C15.5532 7.67888 13.9647 6.11719 12.0292 6.11719C9.74609 6.11719 8.05859 7.83785 8.05859 10.2466C8.05859 13.3703 12.6745 19.3525 15.8012 19.8554C15.8667 19.8695 15.9331 19.8784 15.9998 19.8819C16.0646 19.8642 16.1313 19.8553 16.1983 19.8554V19.8554Z"
-                            stroke="#E6E2D9" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M11.2415 19.379C15.0634 18.7644 20.7047 11.4528 20.7047 7.63495C20.7047 4.69092 18.6422 2.58789 15.8518 2.58789C13.4861 2.58789 11.5446 4.49663 10.9989 5.98504C10.4531 4.49663 8.51156 2.58789 6.14591 2.58789C3.35547 2.58789 1.29297 4.69092 1.29297 7.63495C1.29297 11.4528 6.93467 18.7644 10.7562 19.379C10.8362 19.3962 10.9173 19.4071 10.9989 19.4114C11.0781 19.3898 11.1597 19.3789 11.2415 19.379V19.379Z"
-                            stroke="#877569" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-                <div class="bonus-name">
-                    <p>Кэшбэк 5%</p>
-                </div>
-                <div class="bonus-description">
-                    <p>Начислим 5% кэшбэк, который вы сможете использовать через 14 дней после получения заказа</p>
-                </div>
-            </a>
-            <a href="" class="bonus-col order-3 order-xl-2">
-                <div class="bonus-icon">
-                    <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M16.1983 19.8554C19.3253 19.3525 23.9409 13.3703 23.9409 10.2466C23.9409 7.83785 22.2534 6.11719 19.9704 6.11719C18.0348 6.11719 16.4463 7.67888 15.9998 8.89667C15.5532 7.67888 13.9647 6.11719 12.0292 6.11719C9.74609 6.11719 8.05859 7.83785 8.05859 10.2466C8.05859 13.3703 12.6745 19.3525 15.8012 19.8554C15.8667 19.8695 15.9331 19.8784 15.9998 19.8819C16.0646 19.8642 16.1313 19.8553 16.1983 19.8554V19.8554Z"
-                            stroke="#E6E2D9" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M11.2415 19.379C15.0634 18.7644 20.7047 11.4528 20.7047 7.63495C20.7047 4.69092 18.6422 2.58789 15.8518 2.58789C13.4861 2.58789 11.5446 4.49663 10.9989 5.98504C10.4531 4.49663 8.51156 2.58789 6.14591 2.58789C3.35547 2.58789 1.29297 4.69092 1.29297 7.63495C1.29297 11.4528 6.93467 18.7644 10.7562 19.379C10.8362 19.3962 10.9173 19.4071 10.9989 19.4114C11.0781 19.3898 11.1597 19.3789 11.2415 19.379V19.379Z"
-                            stroke="#877569" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-                <div class="bonus-name">
-                    <p>Подарок в День Рождения</p>
-                </div>
-                <div class="bonus-description">
-                    <p>Поздравим с Днем рождения и порадуем приятным бонусом от Orenshal</p>
-                </div>
-            </a>
-            <a href="" class="bonus-col order-2 order-xl-3">
-                <div class="bonus-icon">
-                    <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M16.1983 19.8554C19.3253 19.3525 23.9409 13.3703 23.9409 10.2466C23.9409 7.83785 22.2534 6.11719 19.9704 6.11719C18.0348 6.11719 16.4463 7.67888 15.9998 8.89667C15.5532 7.67888 13.9647 6.11719 12.0292 6.11719C9.74609 6.11719 8.05859 7.83785 8.05859 10.2466C8.05859 13.3703 12.6745 19.3525 15.8012 19.8554C15.8667 19.8695 15.9331 19.8784 15.9998 19.8819C16.0646 19.8642 16.1313 19.8553 16.1983 19.8554V19.8554Z"
-                            stroke="#E6E2D9" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M11.2415 19.379C15.0634 18.7644 20.7047 11.4528 20.7047 7.63495C20.7047 4.69092 18.6422 2.58789 15.8518 2.58789C13.4861 2.58789 11.5446 4.49663 10.9989 5.98504C10.4531 4.49663 8.51156 2.58789 6.14591 2.58789C3.35547 2.58789 1.29297 4.69092 1.29297 7.63495C1.29297 11.4528 6.93467 18.7644 10.7562 19.379C10.8362 19.3962 10.9173 19.4071 10.9989 19.4114C11.0781 19.3898 11.1597 19.3789 11.2415 19.379V19.379Z"
-                            stroke="#877569" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-                <div class="bonus-name">
-                    <p>Советы стилиста</p>
-                </div>
-                <div class="bonus-description">
-                    <p>Пришлем полезные советы от стилиста про тренды сезона</p>
-                </div>
-            </a>
-            <a href="" class="bonus-col order-4">
-                <div class="bonus-icon">
-                    <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M16.1983 19.8554C19.3253 19.3525 23.9409 13.3703 23.9409 10.2466C23.9409 7.83785 22.2534 6.11719 19.9704 6.11719C18.0348 6.11719 16.4463 7.67888 15.9998 8.89667C15.5532 7.67888 13.9647 6.11719 12.0292 6.11719C9.74609 6.11719 8.05859 7.83785 8.05859 10.2466C8.05859 13.3703 12.6745 19.3525 15.8012 19.8554C15.8667 19.8695 15.9331 19.8784 15.9998 19.8819C16.0646 19.8642 16.1313 19.8553 16.1983 19.8554V19.8554Z"
-                            stroke="#E6E2D9" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M11.2415 19.379C15.0634 18.7644 20.7047 11.4528 20.7047 7.63495C20.7047 4.69092 18.6422 2.58789 15.8518 2.58789C13.4861 2.58789 11.5446 4.49663 10.9989 5.98504C10.4531 4.49663 8.51156 2.58789 6.14591 2.58789C3.35547 2.58789 1.29297 4.69092 1.29297 7.63495C1.29297 11.4528 6.93467 18.7644 10.7562 19.379C10.8362 19.3962 10.9173 19.4071 10.9989 19.4114C11.0781 19.3898 11.1597 19.3789 11.2415 19.379V19.379Z"
-                            stroke="#877569" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-                <div class="bonus-name">
-                    <p>Закрытые распродажи</p>
-                </div>
-                <div class="bonus-description">
-                    <p>Пригласим на закрытую распродажу и предложим персональную скидку</p>
-                </div>
-            </a>
-        </div>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:news.list",
+            "bonus-program",
+            Array(
+                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                "ADD_SECTIONS_CHAIN" => "N",
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "AJAX_OPTION_HISTORY" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "CHECK_DATES" => "Y",
+                "DETAIL_URL" => "",
+                "DISPLAY_BOTTOM_PAGER" => "Y",
+                "DISPLAY_DATE" => "Y",
+                "DISPLAY_NAME" => "Y",
+                "DISPLAY_PICTURE" => "Y",
+                "DISPLAY_PREVIEW_TEXT" => "Y",
+                "DISPLAY_TOP_PAGER" => "N",
+                "FIELD_CODE" => array("", ""),
+                "FILTER_NAME" => "",
+                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                "IBLOCK_ID" => "ABOUT_BONUS_PROGRAM",
+                "IBLOCK_TYPE" => "-",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                "INCLUDE_SUBSECTIONS" => "Y",
+                "MESSAGE_404" => "",
+                "NEWS_COUNT" => "2000",
+                "PAGER_BASE_LINK_ENABLE" => "N",
+                "PAGER_DESC_NUMBERING" => "N",
+                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                "PAGER_SHOW_ALL" => "N",
+                "PAGER_SHOW_ALWAYS" => "N",
+                "PAGER_TEMPLATE" => ".default",
+                "PAGER_TITLE" => "Новости",
+                "PARENT_SECTION" => "",
+                "PARENT_SECTION_CODE" => "",
+                "PREVIEW_TRUNCATE_LEN" => "",
+                "PROPERTY_CODE" => array("BUTTON_TEXT", "BUTTON_LINK"),
+                "SET_BROWSER_TITLE" => "N",
+                "SET_LAST_MODIFIED" => "N",
+                "SET_META_DESCRIPTION" => "N",
+                "SET_META_KEYWORDS" => "N",
+                "SET_STATUS_404" => "N",
+                "SET_TITLE" => "N",
+                "SHOW_404" => "N",
+                "SORT_BY1" => "ACTIVE_FROM",
+                "SORT_BY2" => "SORT",
+                "SORT_ORDER1" => "DESC",
+                "SORT_ORDER2" => "ASC",
+                "STRICT_SECTION_CHECK" => "N"
+            )
+        );?>
 
+        <?if (!$USER->IsAuthorized()):?>
         <div class="bonus-button">
             <div class="button-box">
-                <a href="" class="button">Зарегистрироваться</a>
+                <a href="" class="button" data-action="showRegistrationForm">Зарегистрироваться</a>
                 <svg class="button-bg" width="238" height="68" viewBox="0 0 238 68" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -90,5 +74,6 @@
                 </svg>
             </div>
         </div>
+        <?endif?>
     </div>
 </section>

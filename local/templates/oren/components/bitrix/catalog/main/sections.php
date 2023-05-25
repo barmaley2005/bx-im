@@ -15,6 +15,31 @@ $this->setFrameMode(true);
 
 $request = \Bitrix\Main\Context::getCurrent()->getRequest();
 
+switch ($arResult['VARIABLES']['PRESET'])
+{
+    case 'saleleader':
+        $APPLICATION->SetTitle('Бестселлеры');
+
+        $GLOBALS['arrCatalogPreFilter'] = array(
+            "PROPERTY_SALELEADER_VALUE" => "Да"
+        );
+        break;
+    case 'new':
+        $APPLICATION->SetTitle('Новинки');
+
+        $GLOBALS['arrCatalogPreFilter'] = array(
+            "PROPERTY_NEWPRODUCT_VALUE" => "Да"
+        );
+        break;
+    case 'specialoffer':
+        $APPLICATION->SetTitle('Sale');
+
+        $GLOBALS['arrCatalogPreFilter'] = array(
+            "PROPERTY_SPECIALOFFER_VALUE" => "Да"
+        );
+        break;
+}
+
 $isAjax = $request->isPost() && $request->getPost('ajaxCatalog') == 'y';
 ?>
 <section class="section catalog">
@@ -74,6 +99,16 @@ $isAjax = $request->isPost() && $request->getPost('ajaxCatalog') == 'y';
             <?
             if ($isAjax)
                 $APPLICATION->RestartBuffer();
+
+            if (is_array($GLOBALS['arrCatalogPreFilter']))
+            {
+                if (!is_array($GLOBALS[$arParams["FILTER_NAME"]]))
+                {
+                    $GLOBALS[$arParams["FILTER_NAME"]] = array();
+                }
+
+                $GLOBALS[$arParams["FILTER_NAME"]] = array_merge($GLOBALS[$arParams["FILTER_NAME"]], $GLOBALS['arrCatalogPreFilter']);
+            }
             ?>
             <div class="catalog-content" data-ajax-container="true">
                 <?

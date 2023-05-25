@@ -10,21 +10,26 @@ use Bitrix\Sale\BasketPropertyItem;
 use Bitrix\Sale\BasketPropertyItemBase;
 use DevBx\Core\Assert;
 use Local\Lib\DB\FavoriteTable;
+use Local\Lib\DB\SMSCodeTable;
 
 class Shop extends Main\Engine\Controller
 {
+    const EVENT_SEND_SMS_AUTH_CODE = 'SEND_SMS_AUTH_CODE';
+    const EVENT_SEND_SMS_REGISTER_CODE = 'SEND_SMS_REGISTER_CODE';
 
-    /*public function configureActions()
+    const NEW_USER_GROUP = array(2);
+
+
+    protected function getDefaultPreFilters()
     {
         return [
-            'getBasketCount' => [
-                '-prefilters' => [
-                    ActionFilter\Authentication::class,
-                    ActionFilter\Csrf::class,
-                ]
-            ],
+            //new ActionFilter\Authentication(),
+            new ActionFilter\HttpMethod(
+                [ActionFilter\HttpMethod::METHOD_GET, ActionFilter\HttpMethod::METHOD_POST]
+            ),
+            new ActionFilter\Csrf(),
         ];
-    }*/
+    }
 
     public static function getBasketCountAction()
     {
@@ -1104,6 +1109,276 @@ class Shop extends Main\Engine\Controller
         }
 
         $basket->save();
+
+        return array('success'=>true);
+    }
+
+    public function showAuthFormAction()
+    {
+        global $APPLICATION;
+
+        ob_start();
+
+        $APPLICATION->IncludeComponent("devbx:simple", "auth", array(),
+            false, array('HIDE_ICONS'=>'Y')
+        );
+
+        return array(
+            'content' => ob_get_clean(),
+            'js' => Main\Page\Asset::getInstance()->getJs(),
+            'css' => Main\Page\Asset::getInstance()->getCss(),
+        );
+    }
+
+    public function showRegistrationFormAction()
+    {
+        global $APPLICATION;
+
+        ob_start();
+
+        $APPLICATION->IncludeComponent("devbx:simple", "registration", array(),
+            false, array('HIDE_ICONS'=>'Y')
+        );
+
+        return array(
+            'content' => ob_get_clean(),
+            'js' => Main\Page\Asset::getInstance()->getJs(),
+            'css' => Main\Page\Asset::getInstance()->getCss(),
+        );
+    }
+
+    public function sendAuthSMSAction($phone, $siteId)
+    {
+        global $USER;
+
+        if ($USER->IsAuthorized())
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_YOU_ALREADY_LOGGED')));
+            return false;
+        }
+
+        $phone = Main\UserPhoneAuthTable::normalizePhoneNumber($phone);
+
+        if (empty($phone))
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_PHONE_IS_EMPTY')));
+            return false;
+        }
+
+        $arRow = Main\UserPhoneAuthTable::getList(array(
+            'filter' => [
+                '=PHONE_NUMBER' => $phone,
+            ],
+            'select' => array(
+                'USER_ACTIVE' => 'USER.ACTIVE'
+            ),
+        ))->fetch();
+
+        if (!$arRow)
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_USER_NOT_FOUND_BY_PHONE')));
+            return false;
+        }
+
+        if ($arRow['USER_ACTIVE'] != 'Y')
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_USER_BLOCKED')));
+            return false;
+        }
+
+        $remoteResult = SMSCodeTable::sendPhoneCode($phone, static::EVENT_SEND_SMS_AUTH_CODE, $siteId);
+        if (!$remoteResult->isSuccess())
+        {
+            $this->addErrors($remoteResult->getErrors());
+            return false;
+        }
+
+        return array('success'=>true,'countdown'=>SMSCodeTable::TIME_LIMIT);
+    }
+
+    public function sendRegistrationSMSAction($phone, $email, $siteId)
+    {
+        global $USER;
+
+        if ($USER->IsAuthorized())
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_YOU_ALREADY_LOGGED')));
+            return false;
+        }
+
+        $phone = Main\UserPhoneAuthTable::normalizePhoneNumber($phone);
+
+        if (empty($phone))
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_PHONE_IS_EMPTY'), 'PHONE'));
+            return false;
+        }
+
+        $arRow = Main\UserPhoneAuthTable::getList(array(
+            'filter' => [
+                '=PHONE_NUMBER' => $phone,
+            ],
+            'select' => array(
+                'USER_ACTIVE' => 'USER.ACTIVE'
+            ),
+        ))->fetch();
+
+        if ($arRow)
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_PHONE_ALREADY_REGISTERED'), 'PHONE'));
+            return false;
+        }
+
+        if (!check_email($email))
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_USER_INVALID_EMAIL'), 'EMAIL'));
+            return false;
+        }
+
+        $remoteResult = SMSCodeTable::sendPhoneCode($phone, static::EVENT_SEND_SMS_REGISTER_CODE, $siteId);
+        if (!$remoteResult->isSuccess())
+        {
+            $this->addErrors($remoteResult->getErrors());
+            return false;
+        }
+
+        return array('success'=>true,'countdown'=>SMSCodeTable::TIME_LIMIT);
+    }
+
+    public function verifyRegistrationCodeAction($phone, $email, $code, $siteId)
+    {
+        global $USER;
+
+        if ($USER->IsAuthorized())
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_YOU_ALREADY_LOGGED')));
+            return false;
+        }
+
+        $phone = Main\UserPhoneAuthTable::normalizePhoneNumber($phone);
+
+        if (empty($phone))
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_PHONE_IS_EMPTY'), 'PHONE'));
+            return false;
+        }
+
+        $arRow = Main\UserPhoneAuthTable::getList(array(
+            'filter' => [
+                '=PHONE_NUMBER' => $phone,
+            ],
+            'select' => array(
+                'USER_ACTIVE' => 'USER.ACTIVE'
+            ),
+        ))->fetch();
+
+        if ($arRow)
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_PHONE_ALREADY_REGISTERED'), 'PHONE'));
+            return false;
+        }
+
+        if (!check_email($email))
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_USER_INVALID_EMAIL'), 'EMAIL'));
+            return false;
+        }
+
+        if (!SMSCodeTable::checkCode($phone, $code))
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_INVALID_SMS_CODE'), 'CODE'));
+            return false;
+        }
+
+        $newUser = new \CUser();
+
+        $USER_PASSWORD = $USER_CONFIRM_PASSWORD = \CAllUser::GeneratePasswordByPolicy(static::NEW_USER_GROUP);
+
+        $arFields = array(
+            'LOGIN' => $phone,
+            'NAME' => '',
+            "PASSWORD" => $USER_PASSWORD,
+            "CONFIRM_PASSWORD" => $USER_CONFIRM_PASSWORD,
+            'EMAIL' => $email,
+            'PHONE_NUMBER' => $phone,
+            'ACTIVE' => 'Y',
+            'SITE_ID' => SITE_ID,
+            'LANGUAGE_ID' => LANGUAGE_ID,
+            "USER_IP" => $_SERVER["REMOTE_ADDR"],
+            "USER_HOST" => @gethostbyaddr($_SERVER["REMOTE_ADDR"]),
+            'GROUP_ID' => static::NEW_USER_GROUP,
+        );
+
+        $ID = $newUser->Add($arFields);
+        if (!$ID) {
+            $this->addError(new Main\Error($newUser->LAST_ERROR));
+            return false;
+        }
+
+        $USER->Authorize($ID, true);
+
+        return array('success'=>true);
+    }
+
+    public function verifyAuthCodeAction($phone, $code)
+    {
+        global $USER;
+
+        if ($USER->IsAuthorized())
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_YOU_ALREADY_LOGGED')));
+            return false;
+        }
+
+        $phone = Main\UserPhoneAuthTable::normalizePhoneNumber($phone);
+
+        if (empty($phone))
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_PHONE_IS_EMPTY'), 'PHONE'));
+            return false;
+        }
+
+        $arRow = Main\UserPhoneAuthTable::getList(array(
+            'filter' => [
+                '=PHONE_NUMBER' => $phone,
+            ],
+            'select' => array(
+                'USER_ID',
+                'USER_ACTIVE' => 'USER.ACTIVE'
+            ),
+        ))->fetch();
+
+        if (!$arRow)
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_USER_NOT_FOUND_BY_PHONE')));
+            return false;
+        }
+
+        if ($arRow['USER_ACTIVE'] != 'Y')
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_USER_BLOCKED')));
+            return false;
+        }
+
+        if (!SMSCodeTable::checkCode($phone, $code))
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_INVALID_SMS_CODE'), 'CODE'));
+            return false;
+        }
+
+        $arGroup = Main\UserGroupTable::getList([
+            'filter' => [
+                '=USER_ID' => $arRow['USER_ID'],
+                '=GROUP_ID' => 1,
+            ],
+        ])->fetch();
+        if ($arGroup)
+        {
+            $this->addError(new Main\Error(Main\Localization\Loc::getMessage('LOCAL_LIB_SHOP_ADMIN_NOW_ALLOWED_SMS_AUTHORIZATION')));
+            return false;
+        }
+
+        $USER->Authorize($arRow['USER_ID']);
 
         return array('success'=>true);
     }

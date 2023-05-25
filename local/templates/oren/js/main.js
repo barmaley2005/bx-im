@@ -23,11 +23,15 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
         const blockID = anchor.getAttribute('href').substr(1);
 
-        document.getElementById(blockID).scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+        let elBlock = document.getElementById(blockID);
 
+        if (elBlock)
+        {
+          elBlock.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
       });
     }
   };
@@ -126,6 +130,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   scrollWindow();
 
   // search
+  /*
   const search = () => {
     let
       input = document.querySelector('.header-desctop__input'),
@@ -156,6 +161,8 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     })
   }
   search();
+
+   */
 
   // burger
   const burger = () => {
@@ -350,6 +357,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   like();
    */
 
+  /*
   // 2 Ползунка
   const rangeSlide = () => {
     const rangeSlider = document.getElementById('range-slider');
@@ -515,6 +523,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     }
   };
   quiz();
+   */
 
   // Обрезание текста
   const textLong = (classSelector, lengthy) => {
@@ -817,6 +826,8 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
 
    */
 
+  /*
+
   // Выбор города в продукте
   const city = () => {
     let productCityAll = document.querySelectorAll('.product-city');
@@ -875,6 +886,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     })
   }
   city();
+   */
 
   // Аккордион
   const accordeon = () => {
@@ -1301,6 +1313,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   fileLoad()
 
   // Появление label
+  /*
   const labelShow = () => {
     let inputsBlockAll = document.querySelectorAll('.placement-inputs__col, .placement-textarea');
 
@@ -1348,6 +1361,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   }
   labelShow()
 
+
   // Использовать бонусы ORENSHAL CLUB 
   const useBonuses = () => {
     const bonusContainer = document.querySelector('.placement-bonus__container');
@@ -1367,6 +1381,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     }
   }
   useBonuses()
+   */
 
   // Год в истории
   const yearsHistory = () => {
@@ -1540,6 +1555,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
   }
   collectionsSlider()
 
+  /*
   // Quiz final
   const quizSwiper = () => {
     const swiper = new Swiper('.quiz-final__swiper', {
@@ -1561,6 +1577,7 @@ window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки
     });
   }
   quizSwiper()
+   */
 
   // Слайдер в карточке товара
   /*

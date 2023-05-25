@@ -14,7 +14,7 @@ class DevBxQuickSaleBasket {
 
         this.container = document.getElementById(params.containerId);
 
-        $(this.container).on('click', '[data-action]', $.proxy(this.action, this));
+        this.bindActions(this.container);
 
         this.entity = {
             buyCount: false,
@@ -58,6 +58,11 @@ class DevBxQuickSaleBasket {
         BX.addCustomEvent("onBasketResult", BX.delegate(this.onBasketResult, this));
     }
 
+    bindActions(el)
+    {
+        $(el).on('click', '[data-action]', $.proxy(this.action, this));
+    }
+
     action(e) {
         let el = e.currentTarget || e.target;
 
@@ -73,10 +78,63 @@ class DevBxQuickSaleBasket {
             return;
 
         let el = e.currentTarget || e.target,
+            itemId = el.dataset.itemId,
+            productId = el.dataset.productId;
+
+        let modal = new OrenShopModal('question', 'modalMy2 fade addFavorites');
+
+        modal.container.innerHTML = '<div class="modal-dialog modal-dialog-centered">\n' +
+            '      <div class="modal-content">\n' +
+            '        <div class="modal-header">\n' +
+            '          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">\n' +
+            '            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+            '              <path d="M5.25 5.25L18.75 18.75" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />\n' +
+            '              <path d="M5.25 18.75L18.75 5.25" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />\n' +
+            '            </svg>\n' +
+            '          </button>\n' +
+            '        </div>\n' +
+            '        <div class="modal-body">\n' +
+            '          <h5 class="modal-title" id="exampleModalLabel">Добавить в избранное, чтобы не потерять?</h5>\n' +
+            '        </div>\n' +
+            '        <div class="modal-footer">\n' +
+            '          <button class="submit" data-bs-dismiss="modal" data-action="moveToFavorite" data-product-id="'+productId+'" data-item-id="'+itemId+'">Перенести в избранное</button>\n' +
+            '          <button class="view" data-bs-dismiss="modal" data-action="confirmDelete" data-item-id="'+itemId+'">Удалить</button>\n' +
+            '        </div>\n' +
+            '      </div>\n' +
+            '    </div>';
+
+        this.bindActions(modal.container);
+
+        modal.showModal();
+    }
+
+    moveToFavoriteAction(e)
+    {
+        let el = e.currentTarget || e.target,
+            itemId = el.dataset.itemId,
+            productId = el.dataset.productId;
+
+        BX.ajax.runAction('local:lib.api.shop.addFavorite', {
+            data: {
+                id: productId,
+                siteId: BX.message['SITE_ID'],
+            }
+        }).then(
+            BX.delegate(function () {
+                orenShop.updateFavoriteCounter();
+            }, this),
+        );
+
+        this.poolData['DELETE_' + itemId] = 'Y';
+        this.sendRequest();
+    }
+
+    confirmDeleteAction(e)
+    {
+        let el = e.currentTarget || e.target,
             itemId = el.dataset.itemId;
 
         this.poolData['DELETE_' + itemId] = 'Y';
-
         this.sendRequest();
     }
 

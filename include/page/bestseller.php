@@ -106,6 +106,6 @@ $GLOBALS['arrBestSellerFilter'] = array(
         "USE_PRODUCT_QUANTITY" => "N",
 
         "SLIDER_TITLE" => "Бестселлеры",
-        //"SLIDER_LINK" => "#",
+        "SLIDER_LINK" => "/catalog/saleleader/",
     )
 );?>

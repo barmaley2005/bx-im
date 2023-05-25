@@ -5,6 +5,7 @@ function createVueSaleBasket(params) {
                 poolData: {},
                 ajaxWork: false,
                 timer: false,
+                questionItem: false,
             });
         },
         mounted() {
@@ -20,10 +21,68 @@ function createVueSaleBasket(params) {
                 this.sendRequest();
             },
 
+            action(e) {
+                let el = e.currentTarget || e.target;
+
+                if (typeof this[el.dataset.action + 'Action'] === 'function') {
+                    this[el.dataset.action + 'Action'](e);
+                }
+            },
+
             removeItem(item) {
-                this.poolData['DELETE_'+item.ID] = 'Y';
+
+                this.questionItem = item;
+
+                let modal = new OrenShopModal('question', 'modalMy2 fade addFavorites');
+
+                modal.container.innerHTML = '<div class="modal-dialog modal-dialog-centered">\n' +
+                    '      <div class="modal-content">\n' +
+                    '        <div class="modal-header">\n' +
+                    '          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">\n' +
+                    '            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                    '              <path d="M5.25 5.25L18.75 18.75" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />\n' +
+                    '              <path d="M5.25 18.75L18.75 5.25" stroke="#877569" stroke-linecap="round" stroke-linejoin="round" />\n' +
+                    '            </svg>\n' +
+                    '          </button>\n' +
+                    '        </div>\n' +
+                    '        <div class="modal-body">\n' +
+                    '          <h5 class="modal-title" id="exampleModalLabel">Добавить в избранное, чтобы не потерять?</h5>\n' +
+                    '        </div>\n' +
+                    '        <div class="modal-footer">\n' +
+                    '          <button class="submit" data-bs-dismiss="modal" data-action="moveToFavorite">Перенести в избранное</button>\n' +
+                    '          <button class="view" data-bs-dismiss="modal" data-action="confirmDelete">Удалить</button>\n' +
+                    '        </div>\n' +
+                    '      </div>\n' +
+                    '    </div>';
+
+                $(modal.container).on('click', '[data-action]', $.proxy(this.action, this));
+
+                modal.showModal();
+            },
+
+            moveToFavoriteAction(e)
+            {
+                BX.ajax.runAction('local:lib.api.shop.addFavorite', {
+                    data: {
+                        id: this.questionItem.PARENT_PRODUCT_ID>0 ? this.questionItem.PARENT_PRODUCT_ID : this.questionItem.PRODUCT_ID,
+                        siteId: BX.message['SITE_ID'],
+                    }
+                }).then(
+                    BX.delegate(function () {
+                        orenShop.updateFavoriteCounter();
+                    }, this),
+                );
+
+                this.poolData['DELETE_' + this.questionItem.ID] = 'Y';
                 this.sendRequest();
             },
+
+            confirmDeleteAction(e)
+            {
+                this.poolData['DELETE_' + this.questionItem.ID] = 'Y';
+                this.sendRequest();
+            },
+
 
             incrementQuantity(item, value)
             {

@@ -48,7 +48,7 @@ $containerId = $this->GetEditAreaId('quickBasket');
 
                         ?>
                         <div class="goods-item" data-entity="basket-item" data-item-id="<?=$row['ID']?>">
-                            <button class="goods-item__close" data-action="removeBasketItem" data-item-id="<?=$row['ID']?>">
+                            <button class="goods-item__close" data-action="removeBasketItem" data-item-id="<?=$row['ID']?>" data-product-id="<?=$row['PARENT_PRODUCT_ID'] ?: $row['PRODUCT_ID']?>">
                                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M3.71875 3.71875L13.2812 13.2812" stroke="#C5A994" stroke-linecap="round"
                                           stroke-linejoin="round" />
@@ -182,7 +182,11 @@ $containerId = $this->GetEditAreaId('quickBasket');
                 </div>
 
                 <div class="modal-footer__button">
-                    <button class="submit" data-action="submitOrder">Оформить заказ</button>
+                    <?if ($USER->IsAuthorized()):?>
+                        <button class="submit" data-bs-dismiss="modal" data-action="submitOrder">Оформить заказ</button>
+                    <?else:?>
+                        <button class="submit" data-bs-dismiss="modal" data-action="showAuthQuestionForm">Оформить заказ</button>
+                    <?endif?>
                     <button class="view" data-bs-dismiss="modal">Продолжить покупки</button>
                 </div>
 

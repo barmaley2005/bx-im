@@ -10,7 +10,7 @@
 
         <div class="gift-button">
             <div class="button-box">
-                <a href="" class="button">Подробнее</a>
+                <a href="<?=SITE_DIR?>product-gift/" class="button">Подробнее</a>
                 <svg class="button-bg" width="117" height="44" viewBox="0 0 117 44" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <path

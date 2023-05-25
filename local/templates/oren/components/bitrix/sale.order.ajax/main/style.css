@@ -1,0 +1,4 @@
+.delivery-items .placement-radio__row .radio {
+    flex-direction: column;
+    align-items: baseline;
+}

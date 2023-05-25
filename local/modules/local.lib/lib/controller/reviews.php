@@ -3,9 +3,20 @@
 namespace Local\Lib\Controller;
 
 use Bitrix\Main;
+use Bitrix\Main\Engine\ActionFilter;
 
 class Reviews extends Main\Engine\Controller
 {
+    protected function getDefaultPreFilters()
+    {
+        return [
+            //new ActionFilter\Authentication(),
+            new ActionFilter\HttpMethod(
+                [ActionFilter\HttpMethod::METHOD_GET, ActionFilter\HttpMethod::METHOD_POST]
+            ),
+            new ActionFilter\Csrf(),
+        ];
+    }
 
     public function getProductReviewsAction($productId)
     {

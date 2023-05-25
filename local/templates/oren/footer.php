@@ -10,6 +10,7 @@ $settings = \Local\Lib\Settings::getInstance();
 \Local\Lib\Utils::includePageFile('footer.php');
 ?>
 </div>
+<?$APPLICATION->ShowViewContent('BEFORE_FOOTER');?>
 <footer class="footer">
     <div class="container">
         <div class="footer-container">
@@ -153,7 +154,7 @@ $settings = \Local\Lib\Settings::getInstance();
 $iblockId = \Local\Lib\Utils::getIblockIdByCode('ADV_BLOCK');
 if ($iblockId)
 {
-    $obElement = \CIBlockElement::GetList(array('RAND'=>'ASC'),array('IBLOCK_ID'=>$iblockId), false,array('nTopCount'=>1))->GetNextElement();
+    $obElement = \CIBlockElement::GetList(array('RAND'=>'ASC'),array('IBLOCK_ID'=>$iblockId,'=ACTIVE'=>'Y'), false,array('nTopCount'=>1))->GetNextElement();
     if ($obElement)
     {
         $arElement = $obElement->GetFields();

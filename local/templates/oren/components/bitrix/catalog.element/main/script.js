@@ -99,8 +99,17 @@ class DevBxCatalogElement {
             let value = offer.TREE['PROP_'+skuProp.ID];
 
             let input = skuProp.el.querySelector('input[value="'+value+'"]');
-            if (input)
+            if (input) {
+                if (skuProp.USER_TYPE === 'directory')
+                {
+                    let elText = skuProp.el.querySelector('.product-box__name');
+                    if (elText)
+                    {
+                        elText.innerHTML = skuProp.VALUES[value].NAME;
+                    }
+                }
                 input.checked = true;
+            }
         });
 
         this.updateBonus();

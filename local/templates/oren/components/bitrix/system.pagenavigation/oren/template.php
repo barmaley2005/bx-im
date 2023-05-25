@@ -28,16 +28,15 @@ $strNavQueryStringFull = ($arResult["NavQueryString"] != "" ? "?".$arResult["Nav
     <?
     if ($arResult["NavPageNomer"] > 1)
     {
-        if($arResult["bSavePage"]) {
+        if ($arResult["bSavePage"]) {
             $firstPage = $arResult["sUrlPath"] . '?' . $strNavQueryString . 'PAGEN_' . $arResult["NavNum"] . '=1';
-            $prevPage = $arResult["sUrlPath"] . '?' . $strNavQueryString . 'PAGEN_' . $arResult["NavNum"] . '='.($arResult["NavPageNomer"]-1);
+            $prevPage = $arResult["sUrlPath"] . '?' . $strNavQueryString . 'PAGEN_' . $arResult["NavNum"] . '=' . ($arResult["NavPageNomer"] - 1);
         } else {
-            $firstPage = $strNavQueryStringFull;
-            if ($arResult["NavPageNomer"] > 2)
-            {
-                $prevPage = $arResult["sUrlPath"] . '?' . $strNavQueryString . 'PAGEN_' . $arResult["NavNum"] . '='.($arResult["NavPageNomer"]-1);
+            $firstPage = $arResult["sUrlPath"].$strNavQueryStringFull;
+            if ($arResult["NavPageNomer"] > 2) {
+                $prevPage = $arResult["sUrlPath"] . '?' . $strNavQueryString . 'PAGEN_' . $arResult["NavNum"] . '=' . ($arResult["NavPageNomer"] - 1);
             } else {
-                $prevPage = $strNavQueryStringFull;
+                $prevPage = $arResult["sUrlPath"].$strNavQueryStringFull;
             }
         }
 

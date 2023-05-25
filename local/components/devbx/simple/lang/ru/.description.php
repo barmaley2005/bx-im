@@ -1,0 +1,3 @@
+<?
+$MESS['DEVBX_OBJECTS_COMPONENT_SIMPLE_NAME'] = 'Простой компонент';
+$MESS['DEVBX_OBJECTS_COMPONENT_SIMPLE_DESCRIPTION'] = 'Простой компонент';

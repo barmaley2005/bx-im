@@ -118,11 +118,12 @@ $obName = 'reviews_'.$arParams['PRODUCT_ID'];
     <div class="accordeon-recall__button">
         <button class="view d-sm-none"><?=GetMessage('REVIEWS_MOBILE_VIEW_MORE')?></button>
         <button class="view d-none d-sm-flex"><?=GetMessage('REVIEWS_VIEW_MORE')?></button>
-        <button class="submit" data-action="writeReview"><?=GetMessage('REVIEWS_WRITE_REVIEW')?></button>
+        <button class="submit" data-action="writeReview" data-product-id="<?=$arParams['PRODUCT_ID']?>"><?=GetMessage('REVIEWS_WRITE_REVIEW')?></button>
     </div>
 </div>
 
 <?
+/*
 $arJSParams = array(
     'CONTAINER_ID' => $containerId,
     'PRODUCT_ID' => $arParams['PRODUCT_ID'],
@@ -134,3 +135,5 @@ $arJSParams = array(
 <script>
     <?echo $obName?> = new ProductReviews(<?=\Bitrix\Main\Web\Json::encode($arJSParams)?>);
 </script>
+*/
+?>

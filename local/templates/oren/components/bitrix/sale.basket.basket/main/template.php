@@ -17,7 +17,11 @@ use Bitrix\Main\Localization\Loc;
 $this->setFrameMode(true);
 
 \Bitrix\Main\Loader::includeModule('devbx.core');
-CJSCore::Init('devbx_core_utils');
+\Bitrix\Main\Loader::includeModule('currency');
+
+CJSCore::Init(['currency','devbx_core_utils']);
+
+\Bitrix\Main\UI\Extension::load("ui.vue3");
 
 $this->addExternalJs(SITE_TEMPLATE_PATH.'/js/theia-sticky-sidebar.min.js');
 
@@ -369,11 +373,6 @@ $arJSParams = array(
     'templateFolder' => $templateFolder,
     'vueTemplate' => '#devBxSaleBasket'
 );
-
-\Bitrix\Main\Loader::includeModule('currency');
-CJSCore::Init('currency');
-
-\Bitrix\Main\UI\Extension::load("ui.vue3");
 
 ?>
 
