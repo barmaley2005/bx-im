@@ -1,10 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("FAQ");
-$APPLICATION->SetPageProperty("SHOW_FEEDBACK", "Y");
+$APPLICATION->SetTitle("Платок с индивидуальным дизайном");
+$APPLICATION->SetPageProperty("BREADCRUMB_CLASS", "breadcrumbs-section _other _other-center");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
-	"faq", 
+	"scarf-slider", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -31,12 +31,12 @@ $APPLICATION->SetPageProperty("SHOW_FEEDBACK", "Y");
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "FAQ",
-		"IBLOCK_TYPE" => "-",
+		"IBLOCK_ID" => "SCARF_INDIVIDUAL_DESIGN",
+		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "2000",
+		"NEWS_COUNT" => "20",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -63,7 +63,33 @@ $APPLICATION->SetPageProperty("SHOW_FEEDBACK", "Y");
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "faq"
+		"COMPONENT_TEMPLATE" => "scarf-slider"
+	),
+	false
+);?>
+<?$APPLICATION->IncludeComponent(
+	"devbx:form", 
+	"scarf", 
+	array(
+		"ACTION_VARIABLE" => "form-action",
+		"AJAX_LOAD_FORM" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CHECK_AJAX_SESSID" => "N",
+		"DEFAULT_FIELDS" => array(
+			0 => "",
+			1 => "",
+		),
+		"FORM_ID" => "4",
+		"READ_ONLY_FIELDS" => array(
+			0 => "",
+			1 => "",
+		),
+		"USE_BOOTSTRAP" => "N",
+		"COMPONENT_TEMPLATE" => "scarf"
 	),
 	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

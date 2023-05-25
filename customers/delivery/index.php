@@ -1,6 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Доставка");
+$APPLICATION->SetPageProperty("SHOW_FEEDBACK", "Y");
 ?><div class="buyers-info">
               <div class="buyers-info__item">
                 <h4 class="buyers-info__title">Три способа получить заказ в городах России:</h4>

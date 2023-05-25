@@ -12,7 +12,7 @@ $APPLICATION->SetTitle("Бонусная программа");
                         <div class="level-container">
                             <div class="level-head">
                                 <div class="level-head__img">
-                                    <img src="/local/templates/oren/img/svg/icon-level.svg" alt="">
+                                    <img src="img/svg/icon-level.svg" alt="">
                                 </div>
                                 <div class="level-head__content">
                                     <p class="level-head__title">Регистрация</p>

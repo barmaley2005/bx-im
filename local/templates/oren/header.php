@@ -60,23 +60,34 @@ $isHome = $curPage == SITE_DIR;
                 </a>
                 <div class="header-desctop__right">
                     <?$APPLICATION->IncludeComponent(
-                        "bitrix:search.title",
-                        "main",
-                        Array(
-                            "CATEGORY_0" => array(),
-                            "CATEGORY_0_TITLE" => "",
-                            "CHECK_DATES" => "N",
-                            "CONTAINER_ID" => "title-search",
-                            "INPUT_ID" => "title-search-input",
-                            "NUM_CATEGORIES" => "1",
-                            "ORDER" => "date",
-                            "PAGE" => "#SITE_DIR#search/index.php",
-                            "SHOW_INPUT" => "Y",
-                            "SHOW_OTHERS" => "N",
-                            "TOP_COUNT" => "5",
-                            "USE_LANGUAGE_GUESS" => "Y"
-                        )
-                    );?>
+	"bitrix:search.title", 
+	"main", 
+	array(
+		"CATEGORY_0" => array(
+			0 => "iblock_catalog",
+			1 => "iblock_offers",
+		),
+		"CATEGORY_0_TITLE" => "",
+		"CHECK_DATES" => "N",
+		"CONTAINER_ID" => "title-search",
+		"INPUT_ID" => "title-search-input",
+		"NUM_CATEGORIES" => "1",
+		"ORDER" => "date",
+		"PAGE" => "#SITE_DIR#search/index.php",
+		"SHOW_INPUT" => "Y",
+		"SHOW_OTHERS" => "N",
+		"TOP_COUNT" => "5",
+		"USE_LANGUAGE_GUESS" => "Y",
+		"COMPONENT_TEMPLATE" => "main",
+		"CATEGORY_0_iblock_catalog" => array(
+			0 => "2",
+		),
+		"CATEGORY_0_iblock_offers" => array(
+			0 => "3",
+		)
+	),
+	false
+);?>
                     <div class="header-desctop__link">
                         <a href="<?=SITE_DIR?>personal/favorite/" class="header-desctop__item">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

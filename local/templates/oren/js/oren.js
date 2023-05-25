@@ -81,7 +81,7 @@ class OrenShopModal {
     }
 
     ajaxError(response) {
-        console.error('failed load modal window, ajax method ' + this.ajaxMethod);
+        console.log('failed load modal window, ajax method ' + this.ajaxMethod);
         this.destroy();
     }
 
