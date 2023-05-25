@@ -122,9 +122,12 @@ class CDevBxQuiz extends CBitrixComponent
     {
         global $APPLICATION;
 
+        \Bitrix\Main\Loader::includeModule('catalog');
+
         $arParams = $this->arParams;
         $values = $this->request->get('values');
 
+        /*
         $this->arResult['FILTER'] = array(
             'IBLOCK_ID' => $this->arParams['IBLOCK_ID'],
             'ACTIVE' => 'Y',
@@ -134,6 +137,19 @@ class CDevBxQuiz extends CBitrixComponent
             '=PROPERTY_' . $arParams['PROPERTY_WRAP_COLOR'] => $values['wrapColor'],
             '>=PROPERTY_MINIMUM_PRICE' => $values['minimumPrice'],
             '<=PROPERTY_MAXIMUM_PRICE' => $values['maximumPrice'],
+        );
+        */
+
+        $arBasePrice = \Bitrix\Catalog\GroupTable::getBasePriceType();
+
+        $this->arResult['FILTER'] = array(
+            'IBLOCK_ID' => $this->arParams['IBLOCK_ID'],
+            'ACTIVE' => 'Y',
+            '=PROPERTY_' . $arParams['PROPERTY_WRAP_TYPE'] => $values['wrapType'],
+            '=PROPERTY_' . $arParams['PROPERTY_WRAP_FORM'] => $values['wrapForm'],
+            '=PROPERTY_' . $arParams['PROPERTY_WRAP_SIZE'] => $values['wrapSize'],
+            '=PROPERTY_' . $arParams['PROPERTY_WRAP_COLOR'] => $values['wrapColor'],
+            '><CATALOG_PRICE_'.$arBasePrice['ID'] => array($values['minimumPrice'], $values['maximumPrice'])
         );
 
         $APPLICATION->RestartBuffer();
