@@ -19,8 +19,8 @@ $this->setFrameMode(true);
     ?>
     <h3 class="newsletter-title"><?=GetMessage('subscribe_footer_title')?></h3>
 
-    <div class="newsletter-box">
-        <form action="<?= $arResult["FORM_ACTION"] ?>">
+    <div>
+        <form action="<?= $arResult["FORM_ACTION"] ?>" class="newsletter-box">
             <input type="hidden" name="OK" value="Y">
             <input type="text" class="newsletter-input" placeholder="<?=GetMessage('subscribe_email_placeholder')?>" name="sf_EMAIL" value="<?=$arResult["EMAIL"]?>">
             <div class="newsletter-button">

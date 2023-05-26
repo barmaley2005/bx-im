@@ -135,4 +135,38 @@ $MESS["SUCCESS_PRELOAD_TEXT_DEFAULT"] = "You previously shopped with us and we r
 If the information is correct, click \"#ORDER_BUTTON#\".
 ";
 $MESS["USE_COUPON_DEFAULT"] = "Apply coupon";
+
+$MESS['ORDER_COMMENT'] = 'Комментарий к заказу';
+$MESS['ORDER_DELIVERY_TYPE'] = 'Способ получения';
+$MESS['ORDER_PAY_SYSTEM_TYPE'] = 'Способ оплаты';
+$MESS['ORDER_BOBUS_TITLE'] = 'Использовать бонусы ORENSHAL CLUB';
+$MESS['ORDER_BONUS_AVAILABLE'] = 'Доступно бонусов:';
+$MESS['ORDER_BONUS_BALLS'] = 'баллов';
+$MESS['ORDER_BONUS_CAN_BE_WRITTEN_OFF'] = 'Списать можно до #NUM# бонусов для этого заказа';
+$MESS['ORDER_BONUS_WRITE_OFF'] = 'Списать';
+$MESS['ORDER_TOTAL_TITLE'] = 'Ваш заказ';
+$MESS['ORDER_TOTAL_PRODUCTS'] = 'Товары (#NUM#)';
+$MESS['ORDER_TOTAL_DISCOUNT'] = 'Скидка';
+$MESS['ORDER_TOTAL_DELIVERY'] = 'Доставка';
+$MESS['ORDER_TOTAL_CASHBACK'] = 'Кэшбэк';
+$MESS['ORDER_TOTAL_PAY_BONUS'] = 'Оплата бонусами';
+$MESS['ORDER_TOTAL_TOTAL'] = 'Итого';
+$MESS["ORDER_TOTAL_SUBMIT"] = 'Оформить заказ';
+$MESS['ORDER_TOTAL_INFO'] = 'Доступные способы доставки и оплаты можно выбрать при оформлении заказа';
+$MESS['ORDER_TOTAL_PROMO_OR_CERT'] = 'Промокод или подарочный сертификат';
+$MESS['ORDER_TOTAL_INPUT_PROMO'] = 'Введите код или номер';
+$MESS['ORDER_TOTAL_BTN_OK'] = 'ОК';
+
+$MESS['ORDER_PAYMENT_ENTER_SUM'] = 'Введите сумму';
+$MESS['ORDER_MODAL_CLOSE'] = 'Закрыть';
+$MESS['ORDER_INVALID_PROMO'] = 'Промокод не найден или не действует. Проверьте, введён ли промокод без ошибок.';
+
+$MESS['ORDER_SUCCESS_TITLE'] = 'Успешное оформление заказа';
+$MESS['ORDER_SUCCESS_TEXT'] = 'Спасибо за ваш заказ. Подробности можно посмотреть в личном кабинете';
+$MESS['ORDER_PERSONAL_SECTION_TITLE'] = 'Личный кабинет';
+
+$MESS['ORDER_TITLE'] = 'Оформление заказа';
+$MESS['ORDER_AUTH_TEXT'] = '<a href="" data-action="showAuthForm">Войдите</a> в свой аккаунт и мы заполним форму за вас. Нет аккаунта? Мы создадим
+                    его автоматически
+                    в ходе оформления заказа.';
 ?>

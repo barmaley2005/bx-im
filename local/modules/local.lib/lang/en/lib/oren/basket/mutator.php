@@ -1,0 +1,3 @@
+<?php
+$MESS['OREN_BASKET_BONUS'] = '+ #NUM# балов';
+$MESS['OREN_BASKET_TOTAL_BONUS'] = '#NUM# б';

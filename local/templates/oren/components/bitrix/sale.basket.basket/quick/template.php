@@ -36,7 +36,7 @@ $containerId = $this->GetEditAreaId('quickBasket');
                 </button>
             </div>
             <div class="modal-body">
-                <div class="cart-container">
+                <div class="cart-container" <?if (empty($arResult['BASKET_ITEM_RENDER_DATA'])):?> style="display:none;" <?endif?> data-entity="basket-items">
                     <?
                     //echo '<pre>'; print_r($arResult['BASKET_ITEM_RENDER_DATA']); echo '</pre>';
                     ?>
@@ -160,9 +160,29 @@ $containerId = $this->GetEditAreaId('quickBasket');
                     ?>
                 </div>
 
+                <div class="cart-container empty_basket" <?if (!empty($arResult['BASKET_ITEM_RENDER_DATA'])):?> style="display:none;" <?endif?> data-entity="basket-empty">
+                    <div class="elected-content__icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1104_18511)">
+                                <path d="M33.2362 36.544H6.76562L7.86857 12.2793H32.1333L33.2362 36.544Z" stroke="#877569" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.4844 16.6904V8.96978C14.4844 7.50719 15.0654 6.10451 16.0996 5.0703C17.1338 4.03609 18.5365 3.45508 19.9991 3.45508C20.7233 3.45508 21.4404 3.59772 22.1095 3.87486C22.7785 4.152 23.3865 4.55821 23.8986 5.0703C24.4107 5.58239 24.8169 6.19032 25.094 6.8594C25.3711 7.52847 25.5138 8.24558 25.5138 8.96978V16.6904" stroke="#877569" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1104_18511">
+                                    <rect width="40" height="40" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </div>
+
+                    <p class="elected-content__text"><?=GetMessage('BASKET_QUICK_EMPTY_TEXT')?></p>
+                </div>
+
+
             </div>
             <div class="modal-footer">
-                <div class="design-list__container">
+                <div class="design-list__container" data-entity="total-block">
                     <div class="design-list__row" data-entity="total">
                         <p class="design-list__name"><?=GetMessage('BASKET_QUICK_TOTAL_PRODUCTS')?> (<span data-entity="total-buy-count"><?=$arResult['BUY_COUNT']?></span>)</p>
                         <p class="design-list__count" data-entity="total-sum"><?=$arResult['PRICE_WITHOUT_DISCOUNT']?></p>
@@ -183,14 +203,14 @@ $containerId = $this->GetEditAreaId('quickBasket');
 
                 <div class="modal-footer__button">
                     <?if ($USER->IsAuthorized()):?>
-                        <button class="submit" data-bs-dismiss="modal" data-action="submitOrder"><?=GetMessage('BASKET_QUICK_ORDER')?></button>
+                        <button class="submit" data-bs-dismiss="modal" data-action="submitOrder" data-entity="submitButton"><?=GetMessage('BASKET_QUICK_ORDER')?></button>
                     <?else:?>
-                        <button class="submit" data-bs-dismiss="modal" data-action="showAuthQuestionForm"><?=GetMessage('BASKET_QUICK_ORDER')?></button>
+                        <button class="submit" data-bs-dismiss="modal" data-action="showAuthQuestionForm" data-entity="submitButton"><?=GetMessage('BASKET_QUICK_ORDER')?></button>
                     <?endif?>
                     <button class="view" data-bs-dismiss="modal"><?=GetMessage('BASKET_QUICK_CONTINUE_BUY')?></button>
                 </div>
 
-                <a href="<?=SITE_DIR?>personal/cart/" class="modal-footer__link"><?=GetMessage('BASKET_QUICK_VIEW_FULL_BASKET')?></a>
+                <a href="<?=SITE_DIR?>personal/cart/" class="modal-footer__link" data-entity="viewFullBasket"><?=GetMessage('BASKET_QUICK_VIEW_FULL_BASKET')?></a>
             </div>
         </div>
     </div>

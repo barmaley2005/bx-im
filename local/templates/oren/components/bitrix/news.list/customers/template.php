@@ -20,7 +20,7 @@ $this->setFrameMode(true);
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
-        <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="buyers-main__col" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+        <a href="<?=$arItem['PROPERTIES']['URL']['VALUE']?>" class="buyers-main__col" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
             <?=$arItem['PROPERTIES']['ICON']['~VALUE']?>
             <?=$arItem['NAME']?>
         </a>
@@ -35,7 +35,7 @@ $this->setFrameMode(true);
         {
             ?>
             <li class="buyers-submenu__link">
-                <a href="<?=$arItem['DETAIL_PAGE_URL']?>"><?=$arItem['NAME']?></a>
+                <a href="<?=$arItem['PROPERTIES']['URL']['VALUE']?>"><?=$arItem['NAME']?></a>
             </li>
             <?
         }

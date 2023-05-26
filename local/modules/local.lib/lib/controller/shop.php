@@ -12,6 +12,7 @@ use DevBx\Core\Assert;
 use Local\Lib\DB\FavoriteTable;
 use Local\Lib\DB\SMSCodeTable;
 use Bitrix\Main\Localization\Loc;
+use Local\Lib\Utils;
 
 class Shop extends Main\Engine\Controller
 {
@@ -933,6 +934,9 @@ class Shop extends Main\Engine\Controller
 
         ob_start();
 
+        $iblockId = Utils::getCatalogIblockId();
+        $arIblock = \CIBlock::GetByID($iblockId)->Fetch();
+
         $APPLICATION->IncludeComponent(
             "bitrix:catalog.element",
             "main",
@@ -957,8 +961,8 @@ class Shop extends Main\Engine\Controller
                 "ELEMENT_CODE" => "",
                 "ELEMENT_ID" => $productId,
                 "HIDE_NOT_AVAILABLE_OFFERS" => "N",
-                "IBLOCK_ID" => "2",
-                "IBLOCK_TYPE" => "catalog",
+                "IBLOCK_ID" => $iblockId,
+                "IBLOCK_TYPE" => $arIblock['IBLOCK_TYPE_ID'],
                 "LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
                 "LINK_IBLOCK_ID" => "",
                 "LINK_IBLOCK_TYPE" => "",

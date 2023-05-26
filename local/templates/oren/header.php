@@ -67,8 +67,8 @@ $messages = \Local\Lib\Oren\Messages::getMessages();
                 </a>
                 <div class="header-desctop__right">
                     <?$APPLICATION->IncludeComponent(
-	"bitrix:search.title", 
-	"main", 
+	"bitrix:search.title",
+	"main",
 	array(
 		"CATEGORY_0" => array(
 			0 => "iblock_catalog",
@@ -139,7 +139,7 @@ $messages = \Local\Lib\Oren\Messages::getMessages();
 
                     <div class="header-desctop__locale">
                         <label class="check">
-                            <input class="check__input" type="checkbox">
+                            <input class="check__input" type="checkbox"<?if (SITE_ID == 's2'):?> checked<?endif?> data-action="switchLang">
                             <span class="check__box">
                   <div class="check-item">
                     <span>Ru</span>

@@ -170,7 +170,7 @@ $arResult['SITE_ID'] = $component->getSiteId();
             computed: {
                 cityName()
                 {
-                    if (!this.locationPath.length)
+                    if (!this.locationPath || !this.locationPath.length)
                         return '';
 
                     return this.locationPath[this.locationPath.length-1]['LANG_NAME'];
@@ -179,6 +179,9 @@ $arResult['SITE_ID'] = $component->getSiteId();
                 allDelivery()
                 {
                     let result = [];
+
+                    if (!this.deliveryItems)
+                        return result;
 
                     Object.values(this.deliveryItems).forEach(item => {
 

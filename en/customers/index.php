@@ -32,7 +32,7 @@ $APPLICATION->SetTitle("Покупателям");
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "CUSTOMERS",
-		"IBLOCK_TYPE" => "content",
+		"IBLOCK_TYPE" => "content_en",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",

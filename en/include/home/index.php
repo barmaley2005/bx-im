@@ -148,7 +148,7 @@ include($_SERVER['DOCUMENT_ROOT'].SITE_DIR.'include/page/bestseller.php');
 ?>
 <?
 $GLOBALS['arrNewProductFilter'] = array(
-    "PROPERTY_NEWPRODUCT_VALUE" => "Да"
+    "PROPERTY_NEWPRODUCT_VALUE" => "yes"
 );
 ?>
 <?$APPLICATION->IncludeComponent(
@@ -187,7 +187,7 @@ $GLOBALS['arrNewProductFilter'] = array(
         "HIDE_NOT_AVAILABLE" => "N",
         "HIDE_NOT_AVAILABLE_OFFERS" => "N",
         "IBLOCK_ID" => \Local\Lib\Utils::getCatalogIblockId(),
-        "IBLOCK_TYPE" => "catalog",
+        "IBLOCK_TYPE" => "catalog_en",
         "INCLUDE_SUBSECTIONS" => "Y",
         "LAZY_LOAD" => "N",
         "LINE_ELEMENT_COUNT" => "3",
@@ -260,7 +260,7 @@ $GLOBALS['arrNewProductFilter'] = array(
 
 <?
 $GLOBALS['arrSpecialOfferFilter'] = array(
-    "PROPERTY_SPECIALOFFER_VALUE" => "Да"
+    "PROPERTY_SPECIALOFFER_VALUE" => "yes"
 );
 ?>
 <?$APPLICATION->IncludeComponent(
@@ -299,7 +299,7 @@ $GLOBALS['arrSpecialOfferFilter'] = array(
         "HIDE_NOT_AVAILABLE" => "N",
         "HIDE_NOT_AVAILABLE_OFFERS" => "N",
         "IBLOCK_ID" => \Local\Lib\Utils::getCatalogIblockId(),
-        "IBLOCK_TYPE" => "catalog",
+        "IBLOCK_TYPE" => "catalog_en",
         "INCLUDE_SUBSECTIONS" => "Y",
         "LAZY_LOAD" => "N",
         "LINE_ELEMENT_COUNT" => "3",

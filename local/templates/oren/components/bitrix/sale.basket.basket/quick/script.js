@@ -17,6 +17,8 @@ class DevBxQuickSaleBasket {
         this.bindActions(this.container);
 
         this.entity = {
+            basketItems: false,
+            basketEmpty: false,
             buyCount: false,
             totalBuyCount: false,
             total: false,
@@ -27,6 +29,9 @@ class DevBxQuickSaleBasket {
             bonusSum: false,
             fullTotal: false,
             fullTotalSum: false,
+            submitButton: false,
+            viewFullBasket: false,
+            totalBlock: false,
         };
 
         DevBX.Utils.getNodeEntities(this.container, this.entity);
@@ -56,6 +61,8 @@ class DevBxQuickSaleBasket {
 
         BX.addCustomEvent("onBasketAdd", BX.delegate(this.onBasketAdd, this));
         BX.addCustomEvent("onBasketResult", BX.delegate(this.onBasketResult, this));
+
+        this.updateBasketVisible();
     }
 
     bindActions(el)
@@ -68,6 +75,24 @@ class DevBxQuickSaleBasket {
 
         if (typeof this[el.dataset.action + 'Action'] === 'function') {
             this[el.dataset.action + 'Action'](e);
+        }
+    }
+
+    updateBasketVisible()
+    {
+        if (Object.values(this.elRows).length)
+        {
+            this.entity.basketItems.style.display = '';
+            this.entity.basketEmpty.style.display = 'none';
+            this.entity.submitButton.style.display = '';
+            this.entity.viewFullBasket.style.display = '';
+            this.entity.totalBlock.style.display = '';
+        } else {
+            this.entity.basketItems.style.display = 'none';
+            this.entity.basketEmpty.style.display = '';
+            this.entity.submitButton.style.display = 'none';
+            this.entity.viewFullBasket.style.display = 'none';
+            this.entity.totalBlock.style.display = 'none';
         }
     }
 
@@ -276,6 +301,8 @@ class DevBxQuickSaleBasket {
         if (updateCounter) {
             orenShop.updateBasketCounter();
         }
+
+        this.updateBasketVisible();
     }
 
     ajaxComplete()

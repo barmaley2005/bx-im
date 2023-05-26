@@ -1,1 +1,1 @@
-© 2009-2022. ORENSHAL Все права защищены
+© 2009-2022. ORENSHAL All rights reserved

@@ -36,7 +36,7 @@ $GLOBALS['arrFavFilter'] = array('=ID'=>$ar);
 		"HIDE_NOT_AVAILABLE" => "N",
 		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
 		"IBLOCK_ID" => \Local\Lib\Utils::getCatalogIblockId(),
-		"IBLOCK_TYPE" => "catalog",
+		"IBLOCK_TYPE" => "catalog_en",
 		"LABEL_PROP" => array(),
 		"LINE_ELEMENT_COUNT" => "3",
 		"MESS_BTN_ADD_TO_BASKET" => "В корзину",

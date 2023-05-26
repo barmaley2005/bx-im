@@ -136,7 +136,9 @@ function createVueGiftOrder(params) {
             showLabel()
             {
                 return this.focused || this.modelValue.length>0;
-            }
+            },
+
+
         },
         mounted()
         {
@@ -172,7 +174,7 @@ function createVueGiftOrder(params) {
                             @change="onChange($event.target.value)"
                             ref="input"
                             >
-                        <span class="placement-inputs__info">'+BX.message('GIFT_ORDER_INVALID_FIELD')+'</span>
+                        <span class="placement-inputs__info">`+BX.message('GIFT_ORDER_INVALID_FIELD')+`</span>
                     </div>
         `
     });

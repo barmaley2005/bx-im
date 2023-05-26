@@ -34,7 +34,7 @@ $containerId = $this->GetEditAreaId('basket');
     <div class="container">
         <h1 class="title text-left"><?=GetMessage('BASKET_TITLE')?></h1>
 
-        <div class="basket-container">
+        <div class="basket-container" v-if="basketItems.length>0">
             <div class="goods">
                 <div class="goods-container">
                     <div class="goods-item" v-for="item in basketItems" :key="ID">
@@ -274,7 +274,35 @@ $containerId = $this->GetEditAreaId('basket');
                 </div>
             </div>
         </div>
+        <div class="elected-container _empty" v-else>
+            <div class="elected-content">
+                <div class="elected-content__icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1104_18511)">
+                            <path d="M33.2362 36.544H6.76562L7.86857 12.2793H32.1333L33.2362 36.544Z" stroke="#877569" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.4844 16.6904V8.96978C14.4844 7.50719 15.0654 6.10451 16.0996 5.0703C17.1338 4.03609 18.5365 3.45508 19.9991 3.45508C20.7233 3.45508 21.4404 3.59772 22.1095 3.87486C22.7785 4.152 23.3865 4.55821 23.8986 5.0703C24.4107 5.58239 24.8169 6.19032 25.094 6.8594C25.3711 7.52847 25.5138 8.24558 25.5138 8.96978V16.6904" stroke="#877569" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1104_18511">
+                                <rect width="40" height="40" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
 
+                </div>
+
+                <p class="elected-content__text"><?=GetMessage('BASEKT_EMPTY_MESSAGE')?></p>
+
+                <div class="elected-content__button">
+                    <div class="button-box">
+                        <a href="<?=SITE_DIR?>catalog/" class="button"><?=GetMessage('BASKET_OPEN_CATALOG')?></a>
+                        <svg class="button-bg" width="238" height="68" viewBox="0 0 238 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M63.8598 11.0954C63.8598 11.0954 87.0187 6.81025 136.7 6.81025C166.972 6.81025 237 14.3733 237 37.169C237 61.644 171.494 67 117.487 67C65.1837 67 0.999788 62.4177 1 37.169C1.00032 -0.818731 136.7 1.0142 136.7 1.0142" stroke-linecap="round" class="button-bg__elem"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </script>
@@ -313,7 +341,7 @@ $containerId = $this->GetEditAreaId('basket');
         "FILTER_NAME" => "arrFilter",
         "HIDE_NOT_AVAILABLE" => "N",
         "HIDE_NOT_AVAILABLE_OFFERS" => "N",
-        "IBLOCK_ID" => "18",
+        "IBLOCK_ID" => \Local\Lib\Utils::getIblockIdByCode('postcard'),
         "IBLOCK_TYPE" => "catalog",
         "INCLUDE_SUBSECTIONS" => "Y",
         "LINE_ELEMENT_COUNT" => "3",

@@ -13,6 +13,8 @@
 /** @var \CBitrixComponent $component */
 $this->setFrameMode(true);
 
+\Bitrix\Main\Loader::includeModule('local.lib');
+
 $request = \Bitrix\Main\Context::getCurrent()->getRequest();
 
 if ($request->isPost() && $request->get('json') == 'y')
@@ -61,7 +63,7 @@ ob_start();
         "ELEMENT_CODE" => "scarf",
         "ELEMENT_ID" => "",
         "HIDE_NOT_AVAILABLE_OFFERS" => "N",
-        "IBLOCK_ID" => "22",
+        "IBLOCK_ID" => \Local\Lib\Utils::getIblockIdByCode('GIFTS'),
         "IBLOCK_TYPE" => "catalog",
         "IMAGE_RESOLUTION" => "16by9",
         "LABEL_PROP" => array(),

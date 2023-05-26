@@ -32,7 +32,7 @@ $APPLICATION->SetPageProperty("SHOW_FEEDBACK", "Y");
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "FAQ",
-		"IBLOCK_TYPE" => "-",
+		"IBLOCK_TYPE" => "content_en",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",

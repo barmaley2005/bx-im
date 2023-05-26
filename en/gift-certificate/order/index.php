@@ -11,8 +11,8 @@ $APPLICATION->SetTitle("Оформление сертификата");
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
 		"COMPONENT_TEMPLATE" => "gift-order",
-		"IBLOCK_TYPE" => "catalog",
-		"IBLOCK_ID" => "22"
+		"IBLOCK_TYPE" => "catalog_en",
+		"IBLOCK_ID" => "40"
 	),
 	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

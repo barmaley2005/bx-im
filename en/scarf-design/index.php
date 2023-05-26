@@ -32,7 +32,7 @@ $APPLICATION->SetPageProperty("BREADCRUMB_CLASS", "breadcrumbs-section _other _o
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "SCARF_INDIVIDUAL_DESIGN",
-		"IBLOCK_TYPE" => "content",
+		"IBLOCK_TYPE" => "content_en",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",

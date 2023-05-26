@@ -1,0 +1,13 @@
+<?php
+$MESS['LOCAL_LIB_TAB_SETTINGS'] = 'Настройки';
+$MESS['LOCAL_LIB_TAB_SETTINGS_TITLE'] = 'Настройки';
+$MESS['LOCAL_LIB_OPTIONS_BTN_HINT_RESTORE_DEFAULT_WARNING'] = 'Буду установлены настройки по умолчанию';
+$MESS['LOCAL_LIB_OPTIONS_BTN_SAVE'] = 'Сохранить';
+$MESS['LOCAL_LIB_OPTIONS_BTN_HINT_RESTORE_DEFAULT'] = 'Сбросить настройки';
+$MESS['LOCAL_LIB_OPTIONS_BTN_RESTORE_DEFAULT'] = 'Сбросить';
+
+
+$MESS['LOCAL_LIB_YANDEX_CLOUD_TITLE'] = 'Yandex Cloud';
+$MESS['LOCAL_LIB_YANDEX_CLOUD_TOKEN_TITLE'] = 'IAM Токен';
+$MESS['LOCAL_LIB_YANDEX_CLOUD_FOLDER_ID_TITLE'] = 'Идентификатор каталога (folderId)';
+

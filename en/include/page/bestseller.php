@@ -1,6 +1,6 @@
 <?
 $GLOBALS['arrBestSellerFilter'] = array(
-    "PROPERTY_SALELEADER_VALUE" => "Да"
+    "PROPERTY_SALELEADER_VALUE" => "yes"
 );
 ?>
 <?$APPLICATION->IncludeComponent(
@@ -39,7 +39,7 @@ $GLOBALS['arrBestSellerFilter'] = array(
         "HIDE_NOT_AVAILABLE" => "N",
         "HIDE_NOT_AVAILABLE_OFFERS" => "N",
         "IBLOCK_ID" => \Local\Lib\Utils::getCatalogIblockId(),
-        "IBLOCK_TYPE" => "catalog",
+        "IBLOCK_TYPE" => "catalog_en",
         "INCLUDE_SUBSECTIONS" => "Y",
         "LAZY_LOAD" => "N",
         "LINE_ELEMENT_COUNT" => "3",

@@ -219,7 +219,7 @@ class OrenShop {
         e.preventDefault();
 
         if (e.target.dataset.inBasket) {
-            window.location.href = '/personal/cart/';
+            window.location.href = BX.message('SITE_DIR')+'personal/cart/';
             return;
         }
 
@@ -552,6 +552,15 @@ class OrenShop {
             .ajaxRunAction('local:lib.api.oren.showQuestionForm', {siteId: BX.message['SITE_ID']});
     }
 
+    switchLang()
+    {
+        if (BX.message('SITE_ID') == 's1')
+        {
+            window.location.href = '/en/';
+        } else {
+            window.location.href = '/';
+        }
+    }
 }
 
 window.orenShop = new OrenShop();

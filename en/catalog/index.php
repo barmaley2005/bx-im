@@ -1,14 +1,14 @@
 <?
 define("HIDE_SIDEBAR", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Каталог");
+$APPLICATION->SetTitle("Catalog");
 ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"main", 
 	array(
-		"IBLOCK_TYPE" => "catalog",
-		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "catalog_en",
+		"IBLOCK_ID" => "38",
 		"TEMPLATE_THEME" => "site",
 		"HIDE_NOT_AVAILABLE" => "N",
 		"BASKET_URL" => "/personal/cart/",
@@ -71,9 +71,9 @@ $APPLICATION->SetTitle("Каталог");
 			3 => "",
 		),
 		"INCLUDE_SUBSECTIONS" => "Y",
-		"LIST_META_KEYWORDS" => "UF_KEYWORDS",
-		"LIST_META_DESCRIPTION" => "UF_META_DESCRIPTION",
-		"LIST_BROWSER_TITLE" => "UF_BROWSER_TITLE",
+		"LIST_META_KEYWORDS" => "-",
+		"LIST_META_DESCRIPTION" => "-",
+		"LIST_BROWSER_TITLE" => "-",
 		"LIST_OFFERS_FIELD_CODE" => array(
 			0 => "NAME",
 			1 => "PREVIEW_PICTURE",
@@ -89,7 +89,7 @@ $APPLICATION->SetTitle("Каталог");
 			5 => "",
 		),
 		"LIST_OFFERS_LIMIT" => "0",
-		"SECTION_BACKGROUND_IMAGE" => "UF_BACKGROUND_IMAGE",
+		"SECTION_BACKGROUND_IMAGE" => "-",
 		"DETAIL_PROPERTY_CODE" => array(
 			0 => "NEWPRODUCT",
 			1 => "MANUFACTURER",

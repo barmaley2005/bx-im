@@ -17,6 +17,7 @@ $this->setFrameMode(true);
 
 $messages = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__);
 
+
 ?>
 <div class="modal-dialog modal-dialog-centered" id="vue-registration">
 </div>

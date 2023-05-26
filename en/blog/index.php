@@ -31,6 +31,7 @@ $APPLICATION->SetTitle("Блог");
 		"DETAIL_PROPERTY_CODE" => array(
 			0 => "",
 			1 => "HASH_TAG",
+			2 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
