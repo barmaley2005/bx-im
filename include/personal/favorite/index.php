@@ -35,7 +35,7 @@ $GLOBALS['arrFavFilter'] = array('=ID'=>$ar);
 		"FILTER_NAME" => "arrFavFilter",
 		"HIDE_NOT_AVAILABLE" => "N",
 		"HIDE_NOT_AVAILABLE_OFFERS" => "N",
-		"IBLOCK_ID" => "2",
+		"IBLOCK_ID" => \Local\Lib\Utils::getCatalogIblockId(),
 		"IBLOCK_TYPE" => "catalog",
 		"LABEL_PROP" => array(),
 		"LINE_ELEMENT_COUNT" => "3",
@@ -79,5 +79,5 @@ $GLOBALS['arrFavFilter'] = array('=ID'=>$ar);
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
 		"VIEW_MODE" => "SECTION"
-	)
+	), false, array('HIDE_ICONS'=>'Y')
 );?>

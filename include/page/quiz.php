@@ -6,7 +6,7 @@ $APPLICATION->IncludeComponent(
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "catalog",
-		"IBLOCK_ID" => "2",
+		"IBLOCK_ID" => \Local\Lib\Utils::getCatalogIblockId(),
 		"PROPERTY_WRAP_TYPE" => "QUIZ_WRAP_TYPE",
 		"PROPERTY_WRAP_FORM" => "QUIZ_WRAP_FORM",
 		"PROPERTY_WRAP_SIZE" => "QUIZ_WRAP_SIZE",
