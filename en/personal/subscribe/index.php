@@ -4,7 +4,7 @@ $APPLICATION->SetTitle("Подписка на новости");
 ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:subscribe.edit",
-	"",
+	"main",
 	Array(
 		"AJAX_MODE" => "N",
 		"SHOW_HIDDEN" => "N",

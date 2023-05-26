@@ -50,6 +50,7 @@ $APPLICATION->SetTitle("Покупателям");
 		"PROPERTY_CODE" => array(
 			0 => "",
 			1 => "ICON",
+			2 => "",
 		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
