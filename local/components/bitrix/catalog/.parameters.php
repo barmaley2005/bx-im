@@ -823,6 +823,16 @@ if($arCurrentValues["SEF_MODE"]=="Y")
 			"SMART_FILTER_PATH",
 		),
 	);
+	$arComponentParameters["PARAMETERS"]["SEF_MODE"]["sections_smart_filter"] = array(
+		"NAME" => GetMessage("CP_BC_SEF_MODE_SMART_FILTER"),
+		"DEFAULT" => $smartBase."filter/#SMART_FILTER_PATH#/apply/",
+		"VARIABLES" => array(
+			"SECTION_ID",
+			"SECTION_CODE",
+			"SECTION_CODE_PATH",
+			"SMART_FILTER_PATH",
+		),
+	);
 }
 
 if($arCurrentValues["USE_COMPARE"]=="Y")

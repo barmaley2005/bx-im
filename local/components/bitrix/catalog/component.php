@@ -136,7 +136,8 @@ $arDefaultUrlTemplates404 = array(
 	"section" => "#SECTION_ID#/",
 	"element" => "#SECTION_ID#/#ELEMENT_ID#/",
 	"compare" => "compare.php?action=COMPARE",
-	"smart_filter" => $smartBase."filter/#SMART_FILTER_PATH#/apply/"
+	"smart_filter" => $smartBase."filter/#SMART_FILTER_PATH#/apply/",
+    "sections_smart_filter" => $smartBase."filter/#SMART_FILTER_PATH#/apply/",
 );
 
 $arDefaultVariableAliases404 = array();
@@ -173,6 +174,10 @@ if($arParams["SEF_MODE"] == "Y")
 
 	if ($componentPage === "smart_filter")
 		$componentPage = "section";
+
+    if ($componentPage === "sections_smart_filter")
+        $componentPage = "sections";
+
 
 	if(!$componentPage && isset($_REQUEST["q"]))
 		$componentPage = "search";
