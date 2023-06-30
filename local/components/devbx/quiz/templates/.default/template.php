@@ -13,13 +13,11 @@
 /** @var \CBitrixComponent $component */
 $this->setFrameMode(true);
 
-//echo '<pre>';print_r($arResult);echo '</pre>';
-
 $containerId = $this->GetEditAreaId('quiz');
 
 $arJSParams = $arResult;
-
 ?>
+
 <section class="section quiz" id="<?=$containerId?>">
 </section>
 
@@ -139,7 +137,7 @@ $arJSParams = $arResult;
         </div>
 
         <div class="quiz-choice">
-            <p><?=GetMessage('QUIZ_SELECT_STEP_3')?></p>
+            <p><?=GetMessage('QUIZ_STEP_3')?></p>
         </div>
 
         <div class="quiz-check">

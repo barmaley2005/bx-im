@@ -18,8 +18,8 @@ $this->setFrameMode(true);
     foreach ($arResult['SECTIONS'] as $arSection)
     {
         ?>
-        <div class="accordeon-item">
-            <div class="accordeon-header">
+        <div class="accordion-item" id="<?=$this->GetEditAreaId($arSection['ID']);?>">
+            <div class="accordion-header collapsed" data-bs-toggle="collapse" aria-expanded="false">
                 <div class="accordeon-header__content">
                     <h3 class="accordeon-header__title">
                         <?=$arSection['NAME']?>
@@ -32,8 +32,8 @@ $this->setFrameMode(true);
                     </svg>
                 </div>
             </div>
-            <div class="accordeon-body">
-                <div class="accordeon-content">
+            <div class="accordion-collapse collapse">
+                <div class="accordгon-content">
                     <div class="accordion">
                         <?
                         $n=0;
@@ -45,7 +45,7 @@ $this->setFrameMode(true);
                             $show = $n==0;
                             ?>
                             <div class="accordion-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-                                <div class="accordion-header" data-bs-toggle="collapse" aria-expanded="<?=$show ? 'true' : 'false'?>">
+                                <div class="accordion-header collapsed" data-bs-toggle="collapse" aria-expanded="false">
                                     <h3 class="accordion-header__title"><?=$arItem['NAME']?></h3>
                                     <div class="accordion-header__arrow">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -56,7 +56,7 @@ $this->setFrameMode(true);
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="accordion-collapse collapse<?if ($show):?> show<?endif?>">
+                                <div class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         <?=$arItem['PREVIEW_TEXT']?>
                                     </div>

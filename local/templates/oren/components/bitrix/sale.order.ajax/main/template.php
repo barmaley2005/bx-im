@@ -141,6 +141,7 @@ if ($request->get('ORDER_ID') <> '') {
 
         BX.Sale.OrderAjaxComponent = createVueOrderAjaxComponent('#vue-order', '#order-tpl',<?= json_encode($arJSParams) ?>);
     </script>
+    
     <script>
         <?
         // spike: for children of cities we place this prompt

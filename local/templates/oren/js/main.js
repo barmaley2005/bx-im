@@ -1,5 +1,41 @@
 window.addEventListener('DOMContentLoaded', () => { // Ждём загрузки DOM дерева 
   'use strict';
+
+  // Всплывающий лейбл в карточке
+  function findAncestor (el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls));
+    return el;
+  }
+
+  const labels = document.querySelectorAll('.collections-head__label')
+  if(labels){
+    labels.forEach( e =>{
+      e.addEventListener('mouseover', () => {
+        let 
+          differenceX = null,
+          differenceY = null,
+          parentElem = findAncestor(e, 'collections-head'),
+          parenElemX = parentElem.getBoundingClientRect().x,
+          parenElemY = parentElem.getBoundingClientRect().y,
+          label = e.querySelector('.collections-head__box'),
+          styles = window.getComputedStyle(label),
+          elemX = label.getBoundingClientRect().x,
+          elemY = label.getBoundingClientRect().y
+
+        if(elemX < parenElemX){
+          differenceX = parenElemX - elemX
+          label.style.left = `calc(${ styles.left } + ${ differenceX - 14 }px)` 
+        }
+
+        if(elemY < parenElemY){
+          differenceY = parenElemY - elemY
+          label.style.top = `calc(${ styles.top } + ${ differenceY - 14 }px)` 
+        }
+
+      })
+    })
+  }
+
   const
     body = document.body,
     width = body.offsetWidth;
