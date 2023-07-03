@@ -165,4 +165,126 @@ function DoIBlockAfterSave($arg1, $arg2 = false)
 		}
 	}
 }
+
+if ($_GET["type"] == "catalog" && $_GET["mode"] == "import") {
+    if ($_SESSION["BX_CML2_IMPORT"]["zip"]) {
+        $saveFilePath = $_SERVER['DOCUMENT_ROOT'] . '/logs/1c-import/' . date('Y.m.d H-i') . ' ' . pathinfo($_SESSION["BX_CML2_IMPORT"]["zip"], PATHINFO_BASENAME);
+        CheckDirPath($saveFilePath);
+        copy($_SESSION["BX_CML2_IMPORT"]["zip"], $saveFilePath);
+    } else {
+
+        if ($_SESSION["BX_CML2_IMPORT"]["TEMP_DIR"] <> '')
+            $DIR_NAME = $_SESSION["BX_CML2_IMPORT"]["TEMP_DIR"];
+        else
+            $DIR_NAME = $_SERVER["DOCUMENT_ROOT"] . "/" . COption::GetOptionString("main", "upload_dir", "upload") . "/1c_catalog/";
+
+        if (
+            isset($_GET["filename"])
+            && ($_GET["filename"] <> '')
+            && ($DIR_NAME <> '')
+        ) {
+            $filename = preg_replace("#^(/tmp/|upload/1c/webdata)#", "", $_GET["filename"]);
+            $filename = trim(str_replace("\\", "/", trim($filename)), "/");
+
+            $io = CBXVirtualIo::GetInstance();
+            $bBadFile = HasScriptExtension($filename)
+                || IsFileUnsafe($filename)
+                || !$io->ValidatePathString("/" . $filename);
+
+            if (!$bBadFile) {
+                $FILE_NAME = rel2abs($DIR_NAME, "/" . $filename);
+                if ((mb_strlen($FILE_NAME) > 1) && ($FILE_NAME === "/" . $filename)) {
+                    $ABS_FILE_NAME = $DIR_NAME . $filename;
+                    if (file_exists($ABS_FILE_NAME)) {
+                        $saveFilePath = $_SERVER['DOCUMENT_ROOT'] . '/logs/1c-import/' . date('Y.m.d H-i') . ' ' . pathinfo($ABS_FILE_NAME, PATHINFO_BASENAME);
+                        CheckDirPath($saveFilePath);
+                        copy($ABS_FILE_NAME, $saveFilePath);
+                    }
+                }
+            }
+
+        }
+    }
+
+    AddEventHandler("main", "OnEndBufferContent", function($content) {
+
+        DevBxLogger::getInstance('1c-import/%Y-%m-%d %H-%i-%s response.log')->logVar($content);
+
+    });
+}
+
+if ($_GET["type"] == "sale") {
+    if($_GET["mode"] == "file" && strlen($_SESSION["BX_CML2_EXPORT"]["version"]) <= 0)// old version
+    {
+        if (
+            isset($_GET["filename"])
+            && ($_GET["filename"] <> '')
+        ) {
+            $DATA = file_get_contents("php://input");
+
+            $filename = preg_replace("#^(/tmp/|upload/1c/webdata)#", "", $_GET["filename"]);
+            $filename = trim(str_replace("\\", "/", trim($filename)), "/");
+
+            $saveFilePath = $_SERVER['DOCUMENT_ROOT'] . '/logs/1c-export/' . date('Y.m.d H-i') . ' ' . pathinfo($filename, PATHINFO_BASENAME);
+            CheckDirPath($saveFilePath);
+
+            file_put_contents($saveFilePath, $DATA);
+        }
+    } elseif($_GET["mode"] == "import" && $_SESSION["BX_CML2_EXPORT"]["zip"] && strlen($_SESSION["BX_CML2_EXPORT"]["zip"]) > 1)
+    {
+        $saveFilePath = $_SERVER['DOCUMENT_ROOT'] . '/logs/1c-export/' . date('Y.m.d H-i') . ' ' . pathinfo($_SESSION["BX_CML2_EXPORT"]["zip"], PATHINFO_BASENAME);
+        CheckDirPath($saveFilePath);
+        copy($_SESSION["BX_CML2_EXPORT"]["zip"], $saveFilePath);
+    } elseif ($_GET["mode"] == "import")
+    {
+        if ($_SESSION["BX_CML2_EXPORT"]["zip"]) {
+            $saveFilePath = $_SERVER['DOCUMENT_ROOT'] . '/logs/1c-export/' . date('Y.m.d H-i') . ' ' . pathinfo($_SESSION["BX_CML2_EXPORT"]["zip"], PATHINFO_BASENAME);
+            CheckDirPath($saveFilePath);
+            copy($_SESSION["BX_CML2_EXPORT"]["zip"], $saveFilePath);
+        } else {
+
+            if ($_SESSION["BX_CML2_EXPORT"]["TEMP_DIR"] <> '')
+                $DIR_NAME = $_SESSION["BX_CML2_EXPORT"]["TEMP_DIR"];
+            else
+                $DIR_NAME = $_SERVER["DOCUMENT_ROOT"] . "/" . COption::GetOptionString("main", "upload_dir", "upload") . "/1c_catalog/";
+
+            if (
+                isset($_GET["filename"])
+                && ($_GET["filename"] <> '')
+                && ($DIR_NAME <> '')
+            ) {
+                $filename = preg_replace("#^(/tmp/|upload/1c/webdata)#", "", $_GET["filename"]);
+                $filename = trim(str_replace("\\", "/", trim($filename)), "/");
+
+                $io = CBXVirtualIo::GetInstance();
+                $bBadFile = HasScriptExtension($filename)
+                    || IsFileUnsafe($filename)
+                    || !$io->ValidatePathString("/" . $filename);
+
+                if (!$bBadFile) {
+                    $FILE_NAME = rel2abs($DIR_NAME, "/" . $filename);
+                    if ((mb_strlen($FILE_NAME) > 1) && ($FILE_NAME === "/" . $filename)) {
+                        $ABS_FILE_NAME = $DIR_NAME . $filename;
+                        if (file_exists($ABS_FILE_NAME)) {
+                            $saveFilePath = $_SERVER['DOCUMENT_ROOT'] . '/logs/1c-export/' . date('Y.m.d H-i') . ' ' . pathinfo($ABS_FILE_NAME, PATHINFO_BASENAME);
+                            CheckDirPath($saveFilePath);
+                            copy($ABS_FILE_NAME, $saveFilePath);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    if($_GET["mode"] == "query" || $_POST["mode"] == "query")
+    {
+        AddEventHandler("main", "OnEndBufferContent", function($content) {
+
+            DevBxLogger::getInstance('1c-export/%Y-%m-%d %H-%i-%s response.log')->logVar($content);
+
+        });
+    }
+}
+
 ?>
