@@ -85,7 +85,7 @@ $APPLICATION->SetTitle("Подарочный сертификат");
 		"OFFER_ADD_PICT_PROP" => "-",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
-			0 => "BASE",
+			0 => "Интернет магазин",
 		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",

@@ -48,8 +48,10 @@ $arResult['MORE_PHOTO'] = \Local\Lib\Utils::getCatalogElementImages($arResult);
 foreach ($arResult['MORE_PHOTO'] as $k=>$arFile)
 {
     $arPreview = \CFile::ResizeImageGet($arFile, array('width'=>95,'height'=>124),BX_RESIZE_IMAGE_PROPORTIONAL);
+    $arBig = \CFile::ResizeImageGet($arFile, array('width'=>800,'height'=>800),BX_RESIZE_IMAGE_PROPORTIONAL);
 
     $arResult['MORE_PHOTO'][$k]['PREVIEW_SRC'] = $arPreview['src'];
+    $arResult['MORE_PHOTO'][$k]['SRC'] = $arBig['src'];
 }
 
 $iblockId = \Local\Lib\Utils::getIblockIdByCode('STYLIST_ADVICE');

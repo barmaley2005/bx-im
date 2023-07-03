@@ -84,7 +84,7 @@ ob_start();
         "OFFERS_SORT_ORDER2" => "desc",
         "OFFER_ADD_PICT_PROP" => "-",
         "PARTIAL_PRODUCT_PROPERTIES" => "N",
-        "PRICE_CODE" => array("BASE"),
+        "PRICE_CODE" => array("Интернет магазин"),
         "PRICE_VAT_INCLUDE" => "Y",
         "PRICE_VAT_SHOW_VALUE" => "N",
         "PRODUCT_ID_VARIABLE" => "id",

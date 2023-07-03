@@ -101,10 +101,10 @@ if ($arPrice['PERCENT']>0)
 
             if (empty($arPictures))
             {
-                if (is_array($arItem['PREVIEW_PICTURE']))
-                    $arPictures[] = $arItem['PREVIEW_PICTURE'];
-                elseif (is_array($arItem['DETAIL_PICTURE']))
+                if (is_array($arItem['DETAIL_PICTURE']))
                     $arPictures[] = $arItem['DETAIL_PICTURE'];
+                elseif (is_array($arItem['PREVIEW_PICTURE']))
+                    $arPictures[] = $arItem['PREVIEW_PICTURE'];
             }
 
             foreach ($arPictures as $arFile)

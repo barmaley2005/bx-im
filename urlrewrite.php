@@ -56,20 +56,20 @@ $arUrlRewrite=array (
     'PATH' => '/personal/index.php',
     'SORT' => 100,
   ),
-  11 => 
-  array (
-    'CONDITION' => '#^/catalog/#',
-    'RULE' => '',
-    'ID' => 'bitrix:catalog',
-    'PATH' => '/catalog/index.php',
-    'SORT' => 100,
-  ),
   12 => 
   array (
     'CONDITION' => '#^/en/blog/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/en/blog/index.php',
+    'SORT' => 100,
+  ),
+  15 => 
+  array (
+    'CONDITION' => '#^/catalog/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/catalog/index.php',
     'SORT' => 100,
   ),
   1 => 

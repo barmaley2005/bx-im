@@ -38,7 +38,7 @@ $APPLICATION->SetTitle("Catalog");
 		"FILTER_VIEW_MODE" => "VERTICAL",
 		"USE_COMPARE" => "N",
 		"PRICE_CODE" => array(
-			0 => "BASE",
+			0 => "Интернет магазин",
 		),
 		"USE_PRICE_COUNT" => "N",
 		"SHOW_PRICE_COUNT" => "1",

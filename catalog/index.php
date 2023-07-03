@@ -38,7 +38,7 @@ $APPLICATION->SetTitle("Каталог");
 		"FILTER_VIEW_MODE" => "VERTICAL",
 		"USE_COMPARE" => "N",
 		"PRICE_CODE" => array(
-			0 => "BASE",
+			0 => "Интернет магазин",
 		),
 		"USE_PRICE_COUNT" => "N",
 		"SHOW_PRICE_COUNT" => "1",
@@ -229,6 +229,7 @@ $APPLICATION->SetTitle("Каталог");
 			"element" => "#SECTION_CODE#/#ELEMENT_CODE#/",
 			"compare" => "compare/",
 			"smart_filter" => "#SECTION_CODE#/filter/#SMART_FILTER_PATH#/apply/",
+			"sections_smart_filter" => "filter/#SMART_FILTER_PATH#/apply/",
 		)
 	),
 	false

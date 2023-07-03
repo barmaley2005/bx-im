@@ -226,7 +226,7 @@ if (!$elementId)
         "OFFER_TREE_PROPS_3" => array(),
         "PAGE_ELEMENT_COUNT" => "30",
         "PARTIAL_PRODUCT_PROPERTIES" => "N",
-        "PRICE_CODE" => array("BASE"),
+        "PRICE_CODE" => array("Интернет магазин"),
         "PRICE_VAT_INCLUDE" => "Y",
         "PRODUCT_ID_VARIABLE" => "id",
         "PRODUCT_PROPS_VARIABLE" => "prop",

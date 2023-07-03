@@ -30,7 +30,7 @@
         "MESS_NOT_AVAILABLE" => "Нет в наличии",
         "PAGE_ELEMENT_COUNT" => "9",
         "PARTIAL_PRODUCT_PROPERTIES" => "N",
-        "PRICE_CODE" => array("BASE"),
+        "PRICE_CODE" => array("Интернет магазин"),
         "PRICE_VAT_INCLUDE" => "Y",
         "PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
         "PRODUCT_ID_VARIABLE" => "id",

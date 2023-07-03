@@ -52,7 +52,7 @@ $GLOBALS['arrFavFilter'] = array('=ID'=>$ar);
 		"OFFERS_SORT_ORDER" => "asc",
 		"OFFERS_SORT_ORDER2" => "desc",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => array("BASE"),
+		"PRICE_CODE" => array("Интернет магазин"),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
 		"PRODUCT_DISPLAY_MODE" => "N",
