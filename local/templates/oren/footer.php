@@ -201,7 +201,7 @@ if ($iblockId)
 <div class="menu-footer">
     <div class="container">
         <div class="menu-footer-container">
-            <div class="menu-footer-item">
+            <a href="<?=SITE_DIR?>catalog/?q=" class="menu-footer-item">
                 <div class="menu-footer-item__img">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.6484 19.4116L24.7073 26.4704" stroke="#C5A994" stroke-miterlimit="10" stroke-linecap="round"
@@ -214,7 +214,7 @@ if ($iblockId)
                 <div class="menu-footer-item__text">
                     <span><?=GetMessage('FOOTER_SEARCH')?></span>
                 </div>
-            </div>
+            </a>
             <a href="<?=SITE_DIR?>personal/favorite/" class="menu-footer-item">
                 <div class="menu-footer-item__img">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
